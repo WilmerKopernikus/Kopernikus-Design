@@ -26,6 +26,12 @@ body, h1, h2, h3, p {
     max-height: 100%; 
     z-index: 0;
 }
+
+#fallback-gif {
+    display: none; /* Hide the GIF by default */
+    width: 80%;
+    height: auto;
+}
  
 .header {
     background-color: #ffffff00;
@@ -55,6 +61,16 @@ body, h1, h2, h3, p {
     background-color: rgba(255, 255, 255, 0.5); 
     padding: 20px; 
     font-weight: 600;
+}
+
+@media (max-width: 700px) {
+    #background-video {
+        display: none;  /* Hide the video */
+    }
+
+    #fallback-gif {
+        display: block; /* Show the GIF */
+    }
 }
 
 
