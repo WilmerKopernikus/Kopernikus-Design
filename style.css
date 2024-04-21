@@ -180,7 +180,7 @@ a {
     color: white;
 }
 
-@media (max-width: 700px) {
+@media (max-width: 750px) {
     #background-video {
         display: none;  /* Hide the video */
     }
@@ -204,9 +204,9 @@ a {
    
 }
 
-@media (min-width: 700px) and (max-width: 900px) {
+@media (min-width: 750px) and (max-width: 1000px) {
     h3 {
-        font-size: 40px;
+        font-size: 35px;
     }
 
     .overlay-image {
