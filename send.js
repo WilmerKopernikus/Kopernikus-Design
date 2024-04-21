@@ -1,22 +1,19 @@
-
-document.getElementById('contact-form').addEventListener('submit', function(event) {
-    event.preventDefault(); // Stop the form from submitting normally
-
+document.querySelector('form').addEventListener('submit', function(event) {
+    event.preventDefault();
     var form = this;
-    var data = new FormData(form);
-
     fetch("/", {
         method: "POST",
-        headers: { "Content-Type": "application/x-www-form-urlencoded" },
-        body: new URLSearchParams(data).toString(),
-        })
-        .then(response => {
-            if (response.ok) {
-                form.style.display = 'none'; // Hide the form
-                document.getElementById('thank-you-message').style.display = 'block'; // Show the thank-you message
-            } else {
-                alert('Oops! There was a problem with your submission. Please try again.');
-            }
-        })
-        .catch(error => alert('Error occurred: ' + error));
+        body: new FormData(form),
+        headers: {
+            "Accept": "application/x-www-form-urlencoded;charset=UTF-8",
+            "Content-Type": "application/x-www-form-urlencoded;charset=UTF-8"
+        }
+    })
+    .then(() => {
+        form.innerHTML = '<p>Thank you for your message!</p>'; // Replace form with thank-you message
+    })
+    .catch((error) => {
+        form.innerHTML = '<p>Error submitting the form.</p>';
+        console.error('Error:', error);
+    });
 });
