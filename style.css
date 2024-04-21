@@ -37,14 +37,12 @@ h3 {
     font-size: 47px;
     font-weight: 500;
     font-family:  Anton, Tahoma, sans-serif;
-    font-weight: 400;
     color: #787878;
 }
 
 p {
     font-size: 17px;
     font-family: Tahoma, sans-serif;
-    color: white;
     font-weight: 300;
 }
 
@@ -114,7 +112,7 @@ p {
     border-radius: 15px; 
     text-align: center; 
     z-index: 10; 
-    color: rgb(255, 255, 255); 
+    color: rgb(0, 0, 0); 
     background-color: rgb(0, 0, 0);
     padding: 20px; 
     font-weight: 500;
@@ -125,7 +123,7 @@ p {
 
 #manifiesto-bild {
     height: 100px;              /* Adjust this as needed, ensure it fits within the container */
-    width: auto;               /* Maintains the aspect ratio of the image */
+    width: auto;              
 }
 
 
@@ -140,15 +138,13 @@ p {
     z-index: 10; 
     margin-top: 10px;
     margin-bottom: 50px;
-    display: flex;             /* Enables flexbox */
-    align-items: center;       /* Centers children vertically in the container */
+    display: flex;          
+    align-items: center;      
     justify-content: center; 
-
 }
+ 
 
-
-
-
+/* -------------------------------------------------------------------------------- */
 #projects {
 
     height: 100px;
@@ -165,19 +161,73 @@ p {
 #call-to-action {
     top: 10px;
     bottom: 20px; 
-    height: 50px;
-    width: 95%;
+    width: 400px;
     text-align: center; 
     z-index: 10; 
-    color: rgb(0, 0, 0); 
-    background-color: rgb(0, 0, 0);
+    background-color: rgb(31, 0, 155);
     padding: 20px; 
     font-weight: 600;
     border-radius: 15px;
+    color: rgb(199, 199, 199);
 }
 
 a {
     color: white;
+}
+
+/*--------------------------------------------------------------------------------------------
+ ----------------------------------------------------------------------------------------------
+ -------------------------------------- Form --------------------------------------------------
+ ----------------------------------------------------------------------------------------------
+ ----------------------------------------------------------------------------------------------*/
+
+
+ form {
+    background-color: #f8f9fa;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    font-family: 'Arial', sans-serif;
+    color: #333;
+}
+
+
+input {
+    width: 100%;
+    padding: 8px;
+    margin-top: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box; 
+}
+
+textarea {
+    width: 100%;     
+    height: 200px;   
+    padding: 10px;   
+    border: 1px solid #ccc; 
+    border-radius: 4px; 
+    box-sizing: border-box; 
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+button {
+    background-color: #007bff;
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: #0056b3;
 }
 
 @media (max-width: 750px) {
@@ -200,8 +250,7 @@ a {
 
     #manifiesto-bild {
         height: 80px; 
-}
-   
+} 
 }
 
 @media (min-width: 750px) and (max-width: 1000px) {
@@ -210,16 +259,9 @@ a {
     }
 
     .overlay-image {
-
         bottom: 50px; 
-
     }
 
     #manifiesto-bild {
         height: 90px; 
-}
-
-
-
-
-  
+}}
