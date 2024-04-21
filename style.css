@@ -34,7 +34,7 @@ h1 {
 }
 
 h3 {
-    font-size: 40px;
+    font-size: 47px;
     font-weight: 500;
     font-family:  Anton, Tahoma, sans-serif;
     font-weight: 400;
@@ -186,24 +186,27 @@ a {
     }
 
     #fallback-gif {
-        display: block; /* Show the GIF */
+        display: block;
+
     }
 
     h3 {
-        font-size: 30px;
+        font-size: 32px;
     }
 
     .overlay-image {
-
         bottom: 100px; 
-
     }
+
+    #manifiesto-bild {
+        height: 80px; 
+}
    
 }
 
 @media (min-width: 700px) and (max-width: 900px) {
     h3 {
-        font-size: 35px;
+        font-size: 40px;
     }
 
     .overlay-image {
@@ -212,7 +215,8 @@ a {
 
     }
 
-
+    #manifiesto-bild {
+        height: 90px; 
 }
 
 
