@@ -82,8 +82,10 @@ p {
 }
 
 #fallback-gif {
-    display: none; 
-    width: 95%;
+    display: flex;
+    justify-content: center; 
+    align-items: center; 
+    width: 93%;
     height: auto;
 }
 
