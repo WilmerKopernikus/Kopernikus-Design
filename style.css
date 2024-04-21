@@ -1,5 +1,6 @@
 html, body {
-    width: 100%;
+
+margin: 0;
     height: 100%;
     overflow-x: hidden;
     max-width: 100%;
@@ -9,14 +10,57 @@ html, body {
 body, h1, h2, h3, p {
     margin: 0;
     padding: 0;
-    font-family: 'Courier New', Courier, monospace;
+
+}
+
+.header {
+    background-color: #ffffff00;
+    color: #000000;
+    width: 100%;
+    display: flex; 
+    justify-content: left;
+    align-items: center;
+    height: 100px;
+    z-index: 10;
+    left: 0; 
+}
+
+h1 {
+    font-size: 50px;
+    font-weight: 400;
+    font-family: Jersey, Impact, Arial;
+}
+
+h3 {
+    font-size: 40px;
+    font-weight: 500;
+    font-family: Impact, Arial;
+    color: #505050;
+}
+
+p {
+    font-size: 17px;
+    font-family: Tahoma, sans-serif;
+    color: white;
+    font-weight: 300;
+}
+
+.logo {
+    margin-left: 5%;
+}
+
+@font-face {
+    font-family: 'Jersey'; 
+    src: url('fonts/Jersey15-Regular.ttf') format('woff2'); 
+    font-weight: normal; 
+    font-style: normal; 
 }
 
 .video_container {
     display: flex;
     justify-content: center; 
     align-items: center; 
-    width: 100vw;
+    width: 100%;
     height: 100vh;
     overflow: hidden; 
     position: relative;
@@ -29,51 +73,97 @@ body, h1, h2, h3, p {
 }
 
 #fallback-gif {
-    display: none; /* Hide the GIF by default */
+    display: none; 
     width: 80%;
     height: auto;
 }
 
 .overlay-image {
     position: absolute;
-    bottom: 0; /* Aligns the image to the bottom of the video_container */
-    right: 25%; /* Adjusts to place the image correctly horizontally */
-    width: auto; /* Keeps the original width of the image */
-    height: 70px; /* Sets a fixed height */
-    transform: translateY(50%); /* Moves the image partially below the container */
+    bottom: 0; 
+    right: 25%; 
+    width: auto; 
+    height: 70px; 
+    transform: translateY(50%); 
 }
  
-.header {
-    background-color: #ffffff00;
-    color: #000000;
-    width: 100%;
-    display: flex; 
-    justify-content: left;
+
+
+.container {
+    display: flex;
+    flex-direction: column;
     align-items: center;
-    height: 100px;
-    position: fixed;
-    z-index: 10;
-    font-size: 20px;
-    left: 0; 
-}
-
-.logo {
-    margin-left: 5%;
-}
-
-.call-to-action {
-    position: relative;
-    top: 10px;
-    bottom: 20px; 
     width: 100%;
-    height: 50px;
-    text-align: center; 
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
 
+#manifiesto {
+    height: 130px;
+    width: 95%;
+    border-radius: 15px; 
+    text-align: center; 
+    z-index: 10; 
     color: rgb(255, 255, 255); 
-    background-image: linear-gradient(to right, rgb(255, 0, 140), rgb(255, 238, 3));
+    background-image:linear-gradient(rgb(0, 102, 255), rgb(0, 0, 0));
+    padding: 20px; 
+    font-weight: 500;
+
+}
+
+#manifiesto-bild {
+    height: 130px;
+}
+
+
+
+#statement-content {
+
+    height: 250px;
+    width: 70%;
+    text-align: center; 
+    z-index: 10; 
+    background-color:rgb(255, 255, 255);
+    padding: 20px; 
+    z-index: 10; 
+
+    margin-top: 10px;
+    margin-bottom: 50px;
+    font-family: Jersey, Impact, Arial;
+    
+
+}
+
+
+
+
+#projects {
+
+    height: 100px;
+    text-align: center; 
+    z-index: 10; 
+    color: rgb(255, 255, 255); 
+    background-color:rgb(0, 0, 0);
     padding: 20px; 
     font-weight: 600;
 }
+
+
+
+#call-to-action {
+    top: 10px;
+    bottom: 20px; 
+
+    height: 50px;
+    text-align: center; 
+    z-index: 10; 
+    color: rgb(0, 0, 0); 
+    background-color: rgb(0, 0, 0);
+    padding: 20px; 
+    font-weight: 600;
+}
+
+
 
 @media (max-width: 700px) {
     #background-video {
@@ -83,8 +173,18 @@ body, h1, h2, h3, p {
     #fallback-gif {
         display: block; /* Show the GIF */
     }
+
+    h3 {
+        font-size: 27px;
+    }
+   
 }
 
+@media (min-width: 700px) and (max-width: 900px) {
+    h3 {
+        font-size: 33px;
+    }
+}
 
 
 
