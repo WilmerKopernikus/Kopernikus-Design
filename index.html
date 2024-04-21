@@ -54,20 +54,14 @@
         <div class="container">
             <div id="statement-content">
                 <form name="contact" method="POST" data-netlify="true">
-                    <input type="hidden" name="form-name" value="contact" />
-                    <p>
-                      <label>Your Name: <input type="text" name="name" required></label>
-                    </p>
-                    <p>
-                      <label>Your E-Mail: <input type="email" name="email" required></label>
-                    </p>
-                    <p>
-                      <label>Message: <textarea name="message" required></textarea></label>
-                    </p>
-                    <p>
-                      <button type="submit">Send</button>
-                    </p>
-                  </form>
+                    <p><input type="text" name="name" placeholder="Your name" required></p>
+                    <p><input type="email" name="email" placeholder="Your email" required></p>
+                    <p><textarea name="message" placeholder="Your message" required></textarea></p>
+                    <p><button type="submit">Send</button></p>
+                </form>
+                <div id="thank-you-message" style="display:none;">
+                    Thank you for your message!
+                </div>
             </div>
         </div>
 
@@ -77,6 +71,7 @@
 
     </div>
     <script src="script.js"></script>
+    <script src="send.js"></script>
 </body>
 </html>
 
