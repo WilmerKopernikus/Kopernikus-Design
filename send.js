@@ -1,4 +1,4 @@
-<script>
+
 document.getElementById('contact-form').addEventListener('submit', function(event) {
     event.preventDefault(); // Stop the form from submitting normally
 
@@ -20,4 +20,3 @@ document.getElementById('contact-form').addEventListener('submit', function(even
         })
         .catch(error => alert('Error occurred: ' + error));
 });
-</script>
