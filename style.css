@@ -30,7 +30,7 @@ body, h1, h2, h3, p {
 h1 {
     font-size: 35px;
     font-weight: 400;
-    font-family: Jersey20, Impact, Arial;
+    font-family: Jersey20, Arial;
 }
 
 h3 {
@@ -48,6 +48,10 @@ p {
 
 .logo {
     margin-left: 5%;
+}
+
+#logo-bild {
+    width: 300px;
 }
 
 @font-face {
@@ -82,9 +86,7 @@ p {
 }
 
 #fallback-gif {
-    display: flex;
-    justify-content: center; 
-    align-items: center; 
+    display: none;
     width: 93%;
     height: 85vh;
     height: auto;
@@ -116,7 +118,7 @@ p {
     text-align: center; 
     z-index: 10; 
     color: rgb(0, 0, 0); 
-    background-color: rgb(0, 0, 0);
+    background-image: url(imagenes/FONDO.png);
     padding: 20px; 
     font-weight: 500;
     display: flex;             
