@@ -113,7 +113,7 @@ p {
 
 #manifiesto {
     height: 130px;
-    width: 95%;
+    width: 90%;
     border-radius: 15px; 
     text-align: center; 
     z-index: 10; 
@@ -260,7 +260,11 @@ button:hover {
 
     #manifiesto-bild {
         height: 80px; 
-} 
+    } 
+
+    #manifiesto {
+        width: 80%
+    }
 }
 
 @media (min-width: 750px) and (max-width: 1000px) {
@@ -274,4 +278,9 @@ button:hover {
 
     #manifiesto-bild {
         height: 90px; 
-}}
+    }
+
+    #manifiesto {
+        width: 85%
+    }
+}
