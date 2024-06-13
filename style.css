@@ -76,12 +76,12 @@ p {
     height: 85vh;
     overflow: hidden; 
     position: relative;
+    
 
 }
 
 #background-video {
     width: 80%; 
-    max-height: 100%; 
     z-index: 0;
 }
 
@@ -128,7 +128,7 @@ p {
 }
 
 #manifiesto-bild {
-    height: 100px;              /* Adjust this as needed, ensure it fits within the container */
+    height: 100px;             
     width: auto;              
 }
 
