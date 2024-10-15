@@ -3,7 +3,10 @@ let colors = ['#035D2D', '#FAAB0C', '#E1DF1A', '#32C0E8', '#0696DF', '#591F87', 
 
 
 function setup() {
-	createCanvas(windowWidth, windowHeight);
+	let canvas = createCanvas(windowWidth, windowHeight);
+	canvas.position(0, 0);
+	canvas.style('z-index', '-1'); // Ensures it stays behind content
+	canvas.style('position', 'fixed');
 	rectMode(CENTER);
 	addObj();
 	background(0);

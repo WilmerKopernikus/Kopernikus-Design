@@ -3,9 +3,14 @@
 let particles = [];
 var fade;          // for the fade effect
 var fadeAmount = 1;
+var canvas;
+
+
 
 function setup() {
-  createCanvas(windowWidth, windowHeight);
+  canvas = createCanvas(windowWidth, windowHeight);
+  canvas.position(0,0);
+  canvas.style('z-index', '-1');
   fade = 0;
   for (var i = -100; i < width + 100; i += 20) {  // Start particles further outside the canvas
     for (var o = -100; o < height + 100; o += 5) {  // Start particles further outside the canvas

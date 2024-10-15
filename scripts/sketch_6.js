@@ -1,7 +1,10 @@
 let theShader;
 
 function setup() {
-  createCanvas(windowWidth, windowHeight, WEBGL);
+  let canvas = createCanvas(windowWidth, windowHeight, WEBGL);
+  canvas.position(0, 0);
+  canvas.style('z-index', '-1'); // Ensures it stays behind content
+  canvas.style('position', 'fixed'); 
   
   // Define the vertex shader as a string
   const vertexShader = `

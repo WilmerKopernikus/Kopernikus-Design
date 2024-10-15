@@ -7,20 +7,43 @@
 
 
 html, body {
-    width: 100%;
-    height: 100%;
-
-    max-width: 100%;
-    font-family: Arial, sans-serif;
-}
-
-body, h1, h2, h3, p {
     margin: 0;
-    padding-top:0px;
+    padding: 0;
+    height: 100%;
     overflow-x: hidden;
-    color: #ffffff;
-
 }
+
+
+
+
+.header-logo {
+    color: #ffffff;
+    z-index: 1;
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    
+}
+
+.content {
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    background-color: rgba(255, 255, 255, 0.747); /* Semi-transparent black background */
+    width: 25%;                  /* Adjust the width to your preference */             /* Optional: Sets a maximum width */
+    height: auto;                 /* Adjust height if needed, or let it be automatic */
+    padding: 50px;                /* Padding around the content */
+    margin-top: 200px;
+    margin-bottom: 200px;
+    margin-left: 10%;            /* Centers the div horizontally and adds some space at the top and bottom */
+    border-radius: 30px;          /* Optional: Adds rounded corners */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3); /* Sombra inicial */
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+    color: #7c7c7c;
+  }
+  
+  .content:hover {
+    transform: scale(1.1); /* Aumenta ligeramente el tamaño */
+      box-shadow: 0 8px 20px rgb(255, 255, 255); 
+      background-color: rgba(255, 255, 255, 0.814);
+      color: #000000;
+  }
 
 /*--------------------------------------------------------------------------------------------
  ---------------------------------------------------------------------------------------------
@@ -131,91 +154,17 @@ body, h1, h2, h3, p {
 
 
 
-#logo-bild {
-    width: 400px;
-    margin-top: 10px;
-}
 
-/*--------------------------------------------------------------------------------------------
- ---------------------------------------------------------------------------------------------
- ------------------------------------------ Video --------------------------------------------
- ---------------------------------------------------------------------------------------------
- -------------------------------------------------------------------------------------------*/
 
- .video_container {
-    display: flex;
-    justify-content: center; 
-    align-items: center; 
-    width: 100vw;
-    height: 100vh;
-    margin-bottom: 20px;
-    overflow: hidden; 
-    position: relative;
-}
 
-#background-video {
-    width: 80%; 
-    z-index: 0;
-}
 
-#fallback-gif {
-    display: none;
-    width: 93%;
-    height: 85vh;
-    height: auto;
-}
 
-.arrow {
-    position: absolute;
-    bottom: 0; 
-    right: 25%; 
-    width: auto; 
-    height: 70px; 
-    transform: translateY(50%); 
-}
 
-/*--------------------------------------------------------------------------------------------
- ---------------------------------------------------------------------------------------------
- ----------------------------------------- Text --------------------------------------------
- ---------------------------------------------------------------------------------------------
- -------------------------------------------------------------------------------------------*/
 
-h1 {
-    font-size: 37px;
-    font-weight: 400;
-    font-family: Anton, Tahoma, sans-serif;
-}
 
-h2 {
-    font-size: 34px;
-    font-weight: 400;
-    font-family: Anton, Tahoma, sans-serif;
-    
-}
 
-h3 {
-    font-size: 23px;
-    font-weight: 300;
-    font-family: Anton, Tahoma, sans-serif;
-    color: #001a8e;
-}
 
-h3 a {
-    text-decoration: none;
-    color: inherit; /* This will ensure the link takes the color of the h3 */
-}
 
-h3 a:hover {
-    color: #002fff; /* Change to your desired hover color */
-    font-size: 24px; /* Change to your desired hover size */
-}
-
-@font-face {
-    font-family: 'Anton'; 
-    src: url('fonts/Anton/Anton-Regular.ttf') format('truetype'); 
-    font-weight: normal; 
-    font-style: normal; 
-}
 
 /*--------------------------------------------------------------------------------------------
  ---------------------------------------------------------------------------------------------

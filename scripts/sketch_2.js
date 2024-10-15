@@ -19,20 +19,20 @@ function setup() {
 	centerX = width/2;
 	centerY = height/2;
 	
-	colors = [color("#581845"), color("#900C3F"), color("#C70039"), color("#FF5733"), color("#FFC30F")];
+	colors = [color("#E32C36"), color("#FF5733"), color("#DCA80D"), color("#1AC7C4")];
 }
 
 function draw() {
 
 	
-	if(mouseIsPressed){
+	if(mouseX, mouseY){
 		for(let i = 0; i < 20; i++){
 			let x = mouseX + random(-100, 100);
 			let y = mouseY + random(-100, 100);
 			var blob = {
 				x : getXPos(x),
 				y : getYPos(y),
-				size : random(1, 5),
+				size : random(1, 1),
 				lastX : x,
 				lastY : y,
 				color : colors[floor(random(colors.length))],
@@ -49,7 +49,7 @@ function draw() {
 		fill(255);
 		textSize(30);
 		textAlign(CENTER, TOP); 
-		let textContent = "Click to activate";
+		let textContent = "";
 
 		textWrap(WORD); 
 		let textWidth = width * 0.5; 
