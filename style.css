@@ -1,8 +1,8 @@
 /*--------------------------------------------------------------------------------------------
  ---------------------------------------------------------------------------------------------
- --------------------------------  Wilmer Aderbert Florez Lopez-------------------------------
+ ----------------------------------KOPERNIKUS DESIGN------------------------------------------
  ---------------------------------------------------------------------------------------------
-  ------------------------------Frontend Entwickler & Web Designer----------------------------
+  --------------------------------------------------------------------------------------------
  -------------------------------------------------------------------------------------------*/
 
 
@@ -17,15 +17,21 @@ body {
     background-color: #000000;
 }
 
-
-
-
 .header-logo {
     color: #ffffff;
     z-index: 1;
     font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-    
 }
+
+.content-welcome {
+    width: 100vw;                /* Full viewport width */
+    height: 100vh;               /* Full viewport height */
+  }
+
+
+
+  
+
 
 .content {
     font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
@@ -33,6 +39,7 @@ body {
     width: 25%;                  /* Adjust the width to your preference */             /* Optional: Sets a maximum width */
     height: auto;                 /* Adjust height if needed, or let it be automatic */
     padding: 50px;                /* Padding around the content */
+   
     margin-top: 200px;
     margin-bottom: 200px;
     margin-left: 10%;            /* Centers the div horizontally and adds some space at the top and bottom */

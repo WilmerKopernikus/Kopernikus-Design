@@ -1,150 +1,107 @@
+let objs = [];
+let colors = ['#035D2D', '#FAAB0C', '#E1DF1A', '#32C0E8', '#0696DF', '#591F87', '#943077', '#f3f7fa', '#F9107D', '#F91F0E', '#FA7610'];
 
-
-var blobs = [];
-var colors;
-let variation = 0;
-let xScale, yScale, centerX, centerY;
-
-//auto change
-let changeDuration = 3000;
-let lastChange = 0;
 
 function setup() {
-	createCanvas(windowWidth, windowHeight);
-	textAlign(CENTER, CENTER);
-	
-	xScale = width/20;
-	yScale = height/20*(width/height);
-	
-	centerX = width/2;
-	centerY = height/2;
-	
-	colors = [color("#E32C36"), color("#FF5733"), color("#DCA80D"), color("#1AC7C4")];
+	let canvas = createCanvas(windowWidth, windowHeight);
+	canvas.position(0, 0);
+	canvas.style('z-index', '-1'); // Ensures it stays behind content
+	canvas.style('position', 'fixed');
+	rectMode(CENTER);
+	addObj();
+	background(0);
 }
 
 function draw() {
-
-	
-	if(mouseX, mouseY){
-		for(let i = 0; i < 20; i++){
-			let x = mouseX + random(-100, 100);
-			let y = mouseY + random(-100, 100);
-			var blob = {
-				x : getXPos(x),
-				y : getYPos(y),
-				size : random(1, 1),
-				lastX : x,
-				lastY : y,
-				color : colors[floor(random(colors.length))],
-				direction : random(0.1, 1) * (random() > 0.5 ? 1 : -1)
-			};
-			blobs.push(blob);
-		}
-	}
-	
-	var length = blobs.length;
-	if (length == 0) {
-		background("#1a0633");
-		noStroke();
-		fill(255);
-		textSize(30);
-		textAlign(CENTER, TOP); 
-		let textContent = "";
-
-		textWrap(WORD); 
-		let textWidth = width * 0.5; 
-		let textHeight = height * 0.5; 
-		let startY = (height - textHeight); 
-		text(textContent, centerX - textWidth / 2, startY, textWidth, textHeight);
-		return;
-	}
-	
-	noStroke();
-	fill(26, 6, 51, 10);
-	rect(0, 0, width, height);
-	
-	//auto change
-	let time = millis();
-	if(time - lastChange > changeDuration) {
-		lastChange = time;
-		variation++;
-		if(variation>11) variation = 0;
+	bkgd();
+	for (let i of objs) {
+		i.show();
+		i.move();
 	}
 
-	var stepsize = deltaTime*0.002;
-	for(var i = length-1; i >= 0; i--){
-		let blob = blobs[i];
+	if (frameCount % 20 == 0) {
+		addObj()
+	}
 
-		var x = getSlopeX(blob.x, blob.y);
-		var y = getSlopeY(blob.x, blob.y);
-		blob.x += blob.direction * x * stepsize;
-		blob.y += blob.direction * y * stepsize;
-		
-		x = getXPrint(blob.x);
-		y = getYPrint(blob.y);
-		stroke(blob.color);
-		strokeWeight(blob.size);
-		line(x, y, blob.lastX, blob.lastY);
-		blob.lastX = x;
-		blob.lastY = y;
-		
-		const border = 200;
-		if(x < -border || y < -border || x > width+border || y > height+border){
-			blobs.splice(i,1);
+	for (let i = 0; i < objs.length; i++) {
+		if (objs[i].isDead) {
+			objs.splice(i, 1);
 		}
 	}
 }
 
-function getSlopeY(x, y){
-	switch(variation){
-		case 0:return Math.sin(x);
-		case 1:return Math.sin(x*5)*y*0.3;
-		case 2:return Math.cos(x*y);
-		case 3:return Math.sin(x)*Math.cos(y);
-		case 4:return Math.cos(x)*y*y;
-		case 5:return Math.log(Math.abs(x))*Math.log(Math.abs(y));
-		case 6:return Math.tan(x)*Math.cos(y);
-		case 7:return -Math.sin(x*0.1)*3;//orbit
-		case 8:return (x-x*x*x)*0.01;//two orbits
-		case 9:return -Math.sin(x);
-		case 10:return -y-Math.sin(1.5*x) + 0.7;
-		case 11:return Math.sin(x)*Math.cos(y);
-	}
-}
-	
-function getSlopeX(x,y){
-	switch(variation){
-		case 0:return Math.cos(y);
-		case 1:return Math.cos(y*5)*x*0.3;
-		case 2: 
-		case 3: 
-		case 4: 
-		case 5: 
-		case 6:return 1;
-		case 7:return Math.sin(y*0.1)*3;//orbit
-		case 8:return y/3;//two orbits
-		case 9:return -y;		
-		case 10:return -1.5*y;
-		case 11:return Math.sin(y)*Math.cos(x);
+function addObj(){
+	let num = int(random(1, 50));
+	for (let i = 0; i < num; i++) {
+		objs.push(new OBR(random(width), random(height)));
 	}
 }
 
-function getXPos(x){
-	return (x-centerX)/xScale;
+function bkgd() {
+	let wid = width * 1.2;
+	let c = 90;
+	let w = wid / c;
+	let pos = [];
+
+	background('#00000015');
+	for (let i = 0; i < c; i++) {
+		for (let j = 0; j < c; j++) {
+			let x = i * w + (w / 2) + (width - wid) / 2;
+			let y = j * w + (w / 2) + (height - wid) / 2;
+			noStroke();
+			fill(255, 30);
+			circle(x, y, width * 0.001);
+		}
+	}
 }
-function getYPos(y){
-	return (y-centerY)/yScale;
+
+class OBR {
+	constructor(x, y) {
+		this.x = x;
+		this.y = y;
+		this.d = 0;
+		this.sw = width * 0.005;
+		this.isDead = false;
+		this.dStep = random(0.2, 0.7);
+		this.swStep = random(0.05, 0.009);
+		this.col = color(random(colors));
+		this.t1 = random(23904);
+		this.t2 = random(43894);
+		this.xStep = random(-1, 1) * 2;
+		this.yStep = random(-1, 1) * 2;
+		this.t1Step = random(0.1) * random();
+		this.t2Step = random(0.1) * random();
+		this.aStep = random(1, 2);
+		this.rnd = int(random(2));
+		this.alp = 255;
+	}
+
+	show() {
+
+		if (this.rnd) {
+			noFill();
+			stroke(this.col);
+			strokeWeight(this.sw);
+		} else {
+			noStroke();
+			this.col.setAlpha(this.alp);
+			fill(this.col);
+		}
+		circle(this.x, this.y, this.d);
+
+	}
+
+	move() {
+		this.d += this.dStep;
+		if (this.rnd)this.sw -= this.swStep;
+		else this.alp -= this.aStep;
+		if (this.sw <= 0 || this.alp <= 0) {
+			this.isDead = true;
+		}
+		this.x += this.xStep * sin(this.t1);
+		this.y += this.yStep * cos(this.t2);
+		this.t1 += this.t1Step;
+		this.t2 += this.t2Step;
+	}
 }
-
-function getXPrint(x){
-	return xScale*x+centerX;
-}
-function getYPrint(y){
-	return yScale*y+centerY;
-}
-
-
-
-
-
-
+  

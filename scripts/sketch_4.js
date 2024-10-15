@@ -1,146 +1,157 @@
-let objs = [];
-let colors = ['#182350', '#3360b1', '#859ac5', '#d5be4e', '#dbd5a1', '#182350'];
+const TOTAL = 4000;
+
+var blobs = [];
+var colors;
+let variation = 0;
+let xScale, yScale, centerX, centerY;
+
+//auto change
+let changeDuration = 3000;
+let lastChange = 0;
 
 function setup() {
-	createCanvas(windowWidth, windowHeight);
-	rectMode(CENTER);
-	let gridSize = width * 1.0;
-	let cellCount = 15;
-	let cellSize = gridSize / cellCount;
-	for (let i = 0; i < cellCount; i++) {
-		for (let j = 0; j < cellCount; j++) {
-			let x = i * cellSize + (cellSize / 2) + ((width - gridSize) / 2);
-			let y = j * cellSize + (cellSize / 2) + ((width - gridSize) / 2);
-			objs.push(new SuperSquare(x, y, cellSize));
-		}
+	let canvas = createCanvas(windowWidth, windowHeight);
+	canvas.position(0, 0);
+	canvas.style('z-index', '-1'); // Ensures it stays behind content
+	canvas.style('position', 'fixed'); 
+
+	background(0);
+	
+	colors = [color("#E32C36"), color("#FF5733"), color("#DCA80D"), color("#1AC7C4")];
+	
+	start();
+}
+
+function start() {
+	centerX = width/2;
+	centerY = height/2;
+	
+	xScale = width/20;
+	yScale = height/20*(width/height);
+	
+	blobs = [];
+	background("#1a0633");
+	variation = 0;
+	lastChange = millis();
+	for(let i = 0; i < TOTAL; i++){
+		addParticle();
 	}
-	shuffle(objs, true);
 }
 
 function draw() {
-	background(0);
-	for (let i of objs) {
-		i.show();
-		i.move();
+
+
+
+	
+	while(blobs.length < TOTAL){
+		addParticle();
+	}
+	
+	//fade
+	noStroke();
+	fill(0, 10);
+	rect(0, 0, width, height);
+	
+	//auto change
+	let time = millis();
+	if(time - lastChange > changeDuration) {
+		lastChange = time;
+		variation++;
+		if(variation>10) variation = 0;
+	}
+
+	var stepsize = deltaTime*0.0008;
+	for(var i = blobs.length-1; i >= 0; i--){
+		let blob = blobs[i];
+
+		var x = getSlopeX(blob.x, blob.y);
+		var y = getSlopeY(blob.x, blob.y);
+		blob.x += blob.direction * x * stepsize;
+		blob.y += blob.direction * y * stepsize;
+		
+		x = getXPrint(blob.x);
+		y = getYPrint(blob.y);
+		stroke(blob.color);
+		strokeWeight(blob.size);
+		line(x, y, blob.lastX, blob.lastY);
+		blob.lastX = x;
+		blob.lastY = y;
+		
+		const border = 200;
+		if(x < -border || y < -border || x > width+border || y > height+border){
+			blobs.splice(i,1);
+		}
 	}
 }
 
-function easeInOutQuint(x) {
-	return x < 0.5 ? 16 * x * x * x * x * x : 1 - Math.pow(-2 * x + 2, 5) / 2;
+function windowResized() {
+  resizeCanvas(windowWidth, windowHeight);
 }
 
-class SuperSquare {
-	constructor(x, y, w) {
-		this.x = x;
-		this.y = y;
-		this.w = w;
-		this.originX = x;
-		this.originY = y;
-		this.currentX = x;
-		this.currentY = y;
-		this.fromX = this.currentX;
-		this.fromY = this.currentY;
-		this.xpm = random([-1, 1]);
-		this.ypm = random([-1, 1]);
-		this.len = int(random(1, 4));
-		this.toX = this.originX + this.w * this.len * this.xpm;
-		this.toY = this.originY + this.w * this.len * this.ypm;
-		this.time = -int(random(500));
-		this.time1 = 60;
-		this.time2 = this.time1 + 200;
-		this.time3 = this.time2 + 60;
-		this.clr = random(colors);
+function addParticle(){
+		let x = random(width);
+		let y = random(height);
+		var blob = {
+			x : getXPos(x),
+			y : getYPos(y),
+			size : 1,
+			lastX : x,
+			lastY : y,
+			color : random(colors),
+			direction : random(0.1, 1) * random([-1, 1])
+		};
+		blobs.push(blob);
+}
+
+function getSlopeY(x, y){
+	switch(variation){
+		case 0:return Math.sin(x);
+		case 1:return Math.sin(x*5)*y*0.3;
+		case 2:return Math.cos(x*y);
+		case 3:return Math.sin(x)*Math.cos(y);
+		case 4:return Math.cos(x)*y*y;
+		case 5:return Math.log(Math.abs(x))*Math.log(Math.abs(y));
+		case 5:return Math.log(Math.abs(x))*Math.log(Math.abs(y));
+		case 6:return Math.tan(x)*Math.cos(y);
+		case 7:return -Math.sin(x*0.1)*3;//orbit
+		case 8:return -Math.sin(x*0.1)*3;//orbit
+		case 9:return (x-x*x*x)*0.01;//two orbits
+		case 10:return -Math.sin(x);
+		case 11:return -y-Math.sin(1.5*x) + 0.7;
+		case 12:return Math.sin(x)*Math.cos(y);
+
 	}
-	show() {
-		noStroke();
-		fill(this.clr);
+}
+	
+function getSlopeX(x,y){
+	switch(variation){
+		case 0:return Math.cos(y);
+		case 1:return Math.cos(y*5)*x*0.3;
+		case 2: 
+		case 3: 
+		case 4: 
+		case 5:
+		case 6:return 1;
+		case 7:return Math.sin(y*0.1)*3;//orbit
+		case 8:return Math.sin(y*0.1)*3;//orbit
+		case 9:return y/3;//two orbits
+		case 10:return -y;		
+		case 11:return -1.5*y;
+		case 12:return Math.sin(y)*Math.cos(x);
 
-		beginShape(QUADS);
-		vertex(this.originX - this.w / 2, this.originY - this.w / 2);
-		vertex(this.originX + this.w / 2, this.originY - this.w / 2);
-		vertex(this.currentX + this.w / 2, this.currentY - this.w / 2);
-		vertex(this.currentX - this.w / 2, this.currentY - this.w / 2);
-
-		vertex(this.originX + this.w / 2, this.originY - this.w / 2);
-		vertex(this.originX + this.w / 2, this.originY + this.w / 2);
-		vertex(this.currentX + this.w / 2, this.currentY + this.w / 2);
-		vertex(this.currentX + this.w / 2, this.currentY - this.w / 2);
-
-		vertex(this.originX + this.w / 2, this.originY + this.w / 2);
-		vertex(this.originX - this.w / 2, this.originY + this.w / 2);
-		vertex(this.currentX - this.w / 2, this.currentY + this.w / 2);
-		vertex(this.currentX + this.w / 2, this.currentY + this.w / 2);
-
-		vertex(this.originX - this.w / 2, this.originY + this.w / 2);
-		vertex(this.originX - this.w / 2, this.originY - this.w / 2);
-		vertex(this.currentX - this.w / 2, this.currentY - this.w / 2);
-		vertex(this.currentX - this.w / 2, this.currentY + this.w / 2);
-
-		fill(0);
-		vertex(this.currentX - this.w / 2, this.currentY - this.w / 2);
-		vertex(this.currentX + this.w / 2, this.currentY - this.w / 2);
-		vertex(this.currentX + this.w / 2, this.currentY + this.w / 2);
-		vertex(this.currentX - this.w / 2, this.currentY + this.w / 2);
-		endShape();
-
-		beginShape(QUADS);
-
-
-		if (this.ypm == 1) {
-			fill(0, 75);
-			vertex(this.originX - this.w / 2, this.originY - this.w / 2);
-			vertex(this.originX + this.w / 2, this.originY - this.w / 2);
-			vertex(this.currentX + this.w / 2, this.currentY - this.w / 2);
-			vertex(this.currentX - this.w / 2, this.currentY - this.w / 2);
-		}
-
-		if (this.xpm == -1) {
-			fill(0, 150);
-			vertex(this.originX + this.w / 2, this.originY - this.w / 2);
-			vertex(this.originX + this.w / 2, this.originY + this.w / 2);
-			vertex(this.currentX + this.w / 2, this.currentY + this.w / 2);
-			vertex(this.currentX + this.w / 2, this.currentY - this.w / 2);
-		}
-
-		if (this.ypm == -1) {
-			fill(255, 150);
-			vertex(this.originX + this.w / 2, this.originY + this.w / 2);
-			vertex(this.originX - this.w / 2, this.originY + this.w / 2);
-			vertex(this.currentX - this.w / 2, this.currentY + this.w / 2);
-			vertex(this.currentX + this.w / 2, this.currentY + this.w / 2);
-		}
-
-		if (this.xpm == 1) {
-			fill(255, 75);
-			vertex(this.originX - this.w / 2, this.originY + this.w / 2);
-			vertex(this.originX - this.w / 2, this.originY - this.w / 2);
-			vertex(this.currentX - this.w / 2, this.currentY - this.w / 2);
-			vertex(this.currentX - this.w / 2, this.currentY + this.w / 2);
-		}
-		endShape();
-		fill(this.clr);
-		square(this.currentX, this.currentY, this.w);
 	}
-	move() {
-		if (0 < this.time && this.time < this.time1) {
-			let n = norm(this.time, 0, this.time1 - 1);
-			this.currentX = lerp(this.fromX, this.toX, easeInOutQuint(n));
-			this.currentY = lerp(this.fromY, this.toY, easeInOutQuint(n));
-		}
-		else if (this.time2 < this.time && this.time < this.time3) {
-			let n = norm(this.time, this.time2, this.time3 - 1);
-			this.currentX = lerp(this.toX, this.fromX, easeInOutQuint(n));
-			this.currentY = lerp(this.toY, this.fromY, easeInOutQuint(n));
-		}
-		if (this.time > this.time3) {
-			this.time = -int(random(500));
+}
 
-			this.xpm = random([-1, 1]);
-			this.ypm = random([-1, 1]);
-			this.len = int(random(1, 4));
-			this.toX = this.originX + this.w * this.len * this.xpm;
-			this.toY = this.originY + this.w * this.len * this.ypm;
-		}
-		this.time++;
-	}
+function getXPos(x){
+	return (x-centerX)/xScale;
+}
+function getYPos(y){
+	return (y-centerY)/yScale;
+}
+
+function getXPrint(x){
+	return xScale*x+centerX;
+}
+function getYPrint(y){
+	return yScale*y+centerY;
 }
