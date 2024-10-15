@@ -166,8 +166,20 @@ h2 {
 @media (min-width: 750px) and (max-width: 1000px) {}
 @media (max-width: 750px) {
 
+    h1 {
+        font-size: 25px;
+    }
+
     h2 {
         font-size: 20px;
+    }
+
+    .hamburger-menu {
+        right: 20px;
+    }
+    
+    .hamburger {
+        width: 30px;
     }
 
     .content {
@@ -175,7 +187,8 @@ h2 {
         width: 50%;                  
         padding: 30px;                
         margin-left: 7%;            
-        border-radius: 30px;         
+        border-radius: 30px;    
+        margin-top: 250px;     
         box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3); 
         box-shadow: 0 8px 20px rgb(255, 255, 255); 
         background-color: rgba(255, 255, 255, 0.814);
