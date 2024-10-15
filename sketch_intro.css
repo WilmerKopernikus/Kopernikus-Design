@@ -4,6 +4,22 @@
 ------------------------------------------------------------------------------------------------------------
 ----------------------------------------------------------------------------------------------------------*/
 
+@font-face {
+    font-family: 'Source Code';
+    src: url('fonts/SourceCodePro-ExtraLight.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Source Code Bold';
+    src: url('fonts/SourceCodePro-ExtraBold.ttf') format('truetype');
+    font-weight: bold;
+    font-style: normal;
+}
+
+
+
 html, body {
     margin: 0;
     padding: 0;
@@ -18,15 +34,21 @@ body {
 .header-logo {
     color: #ffffff;
     z-index: 1;
-    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-family:'Source Code Bold';
+    font-size: 45px;
 }
 
-a {
+a, li {
     text-decoration: none;
 }
 
+li {
+
+    font-family:'Source Code', sans-serif;
+}
+
 h2 {
-    font-size: 40px;
+    font-size: 30px;
 }
 
 .content-welcome {
@@ -37,7 +59,7 @@ h2 {
   .content {
     font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
     background-color: rgba(255, 255, 255, 0.747); 
-    width: 25%;                  
+    width: 35%;                  
     height: auto;                 
     padding: 50px;                
     margin-top: 200px;
@@ -90,17 +112,22 @@ h2 {
 .menu-overlay {
     position: fixed;
     top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-image: linear-gradient(to bottom, #0c0036, #2b00c8);
-    color: white;
-    display: none;
+    left: 150%;
+    right: 0;
+    bottom: 0;
+    background-color: #000000c3;
+    display: flex; 
+    flex-direction: column;
     justify-content: center;
     align-items: center;
-    z-index: 999;
-    flex-direction: column;
+    z-index: 9;
+    transition: left 0.5s ease-in-out; /* Añade una transición suave */
 }
+
+
+.menu-overlay.show {
+    left: 0; /* Mueve el menú completamente a la vista */
+  }
 
 .menu-overlay ul {
     list-style: none;
@@ -114,15 +141,20 @@ h2 {
 }
 
 .menu-overlay a {
-    color: white;
+    color: rgb(255, 255, 255);
     text-decoration: none;
-    font-size: 24px;
-    transition: color 0.3s;
+    font-size: 40px;
+    font-weight: 800;
+    transition: font-size 0.3s, color 0.3s, box-shadow 0.3s; 
+    box-shadow: none;
 }
 
 .menu-overlay a:hover {
-    color: #000000;
-    font-weight: 800;
+    color: #ffffff;
+    font-size: 45px;
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.8), 0 0 20px rgba(242, 242, 242, 0.5);
+    padding: 10px;
+    border-radius: 10px;
 }
 
 .hamburger.open span:nth-child(1) {
@@ -150,7 +182,7 @@ h2 {
 ----------------------------------------------------------------------------------------------------------*/
  
 .header {
-    background-image: linear-gradient(to bottom, #000000, #565656);
+    background-color: rgba(255, 255, 255, 0);
     width: 100%;
     display: flex; 
     justify-content: left;
@@ -182,13 +214,15 @@ h2 {
         width: 30px;
     }
 
+
+
     .content {
         background-color: rgba(255, 255, 255, 0.747); 
         width: 50%;                  
         padding: 30px;                
         margin-left: 7%;            
         border-radius: 30px;    
-        margin-top: 250px;     
+        margin-top: 200px;     
         box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3); 
         box-shadow: 0 8px 20px rgb(255, 255, 255); 
         background-color: rgba(255, 255, 255, 0.814);
