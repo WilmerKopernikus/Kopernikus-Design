@@ -17,9 +17,9 @@ function setup() {
 	if (proportion >= 0.75) {
 		textSize(200);  // Para pantallas más anchas
 	} else if (proportion < 0.75) {
-		textSize(100);  // Para pantallas con proporción entre 0.5 y 0.7
+		textSize(50);  // Para pantallas con proporción entre 0.5 y 0.7
 	} else if (proportion < 0.58) {
-		textSize(70);  // Para pantallas más altas
+		textSize(30);  // Para pantallas más altas
 	} else {
 		textSize(50);  // Para pantallas muy altas (verticales)
 	}
