@@ -103,7 +103,6 @@ h2 {
   .case-item {
     flex: 1; /* Los div se ajustan proporcionalmente */
     padding: 40px;
-    margin: 0 0;
     border-radius: 5px;
     text-align: center; /* Centra el contenido dentro de cada div */
 }
@@ -249,15 +248,21 @@ h2 {
     }
 
     .content {
-        background-color: rgba(255, 255, 255, 0.747); 
-        width: 50%;                  
-        padding: 30px;                              
-        margin-top: 200px;     
-        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3); 
+        background-color: rgba(255, 255, 255, 0.747);                                              
         box-shadow: 0 8px 20px rgb(255, 255, 255); 
         background-color: rgba(255, 255, 255, 0.814);
         color: #000000;
         transition: none;
+      }
+
+      .welcome {
+        margin-top: 200px; 
+        margin-bottom: 0;
+      }
+
+      .cases {
+        width: 100%;
+        margin-top: 0; 
       }
 
       .content:hover {
@@ -268,9 +273,7 @@ h2 {
         font-size: 20px;
       }
 
-      .cases {
-        width: 100%;
-      }
+
 
       .case-image {
         width: 200px;
