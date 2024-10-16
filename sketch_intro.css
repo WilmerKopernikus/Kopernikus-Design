@@ -34,20 +34,22 @@ body {
 .header-logo {
     color: #ffffff;
     z-index: 1;
-    font-family:'Source Code Bold';
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
     font-size: 45px;
+    font-weight: 700;
 }
 
 a, li {
     text-decoration: none;
 }
 
-li, h2 {
-
+li {
+    
     font-family:'Source Code', sans-serif;
 }
 
 h2 {
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
     font-size: 40px;
 }
 
@@ -58,25 +60,25 @@ h2 {
 
   .content {
 
-    background-color: rgba(255, 255, 255, 0.747);            
+    background-color: rgba(255, 255, 255, 0.758);            
     height: auto;                                
     border-radius: 30px;         
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3); 
+    box-shadow: 0 4px 10px rgba(195, 195, 195, 0.615); 
     transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
     color: #7c7c7c;
   }
   
   .content:hover {
-    transform: scale(1.1); 
+    transform: scale(1.03); 
       box-shadow: 0 8px 20px rgb(255, 255, 255); 
-      background-color: rgba(255, 255, 255, 0.814);
+      background-color: rgba(255, 255, 255, 0.856);
       color: #000000;
   }
 
   .welcome {
     margin-top: 200px;
     margin-bottom: 200px;
-    width: 35%;
+    width: 30%;
     margin-left: 10%; 
     padding: 50px;
   }
@@ -146,7 +148,7 @@ h2 {
 .menu-overlay {
     position: fixed;
     top: 0;
-    left: 120%;
+    left: 150%;
     right: 0;
     bottom: 0;
     background-color: #000000d0;
@@ -171,13 +173,13 @@ h2 {
 }
 
 .menu-overlay li {
-    margin: 20px 0;
+    margin: 50px 0;
 }
 
 .menu-overlay a {
     color: rgb(255, 255, 255);
     text-decoration: none;
-    font-size: 40px;
+    font-size: 35px;
     font-weight: 800;
     transition: font-size 0.3s, color 0.3s, box-shadow 0.3s; 
     box-shadow: none;
@@ -185,7 +187,7 @@ h2 {
 
 .menu-overlay a:hover {
     color: #ffffff;
-    font-size: 45px;
+    font-size: 37px;
     box-shadow: 0 0 10px rgba(255, 255, 255, 0.8), 0 0 20px rgba(242, 242, 242, 0.5);
     padding: 10px;
     border-radius: 10px;
@@ -248,8 +250,6 @@ h2 {
         width: 30px;
     }
 
-
-
     .content {
         background-color: rgba(255, 255, 255, 0.747); 
         width: 50%;                  
@@ -266,6 +266,10 @@ h2 {
 
       .content:hover {
         transform: none 
+      }
+
+      .menu-overlay a {
+        font-size: 20px;
       }
 
 }
