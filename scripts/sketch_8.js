@@ -2,13 +2,13 @@ let num = 30;
 let startUnicode = 65;  
 let endUnicode = 90;  
 let counter = startUnicode;  
-let alphabet = ["SERVICES", "FULL-STACK", "DESIGN", "CREATIVITY", "FRONT-END", "BACK-END", "IDEAS", "BRANDING"]; 
+let alphabet = ["WHERE", "IMAGINATION", "MEETS", "DIGITAL", "INNOVATION"]; 
 let charChange = 0;  
 
 function setup() {
 	let canvas = createCanvas(windowWidth, windowHeight);  
     canvas.position(0, 0);  
-    canvas.style('z-index', '-1');  
+    canvas.style('z-index', '1');  
     textAlign(CENTER, CENTER); 
     textFont('Trebuchet MS');  
 
@@ -20,7 +20,7 @@ function setup() {
     } else if (proportion < 1 && proportion >= 0.8) {
         textSize(120);
     } else {
-        textSize(90);
+        textSize(75);
     } //Test 4 - crear formula para hacer services responsive
     }
 
@@ -47,14 +47,7 @@ function draw() {
 		rect(x, 0, width / num, height);  
 		drawingContext.clip();  
 		fill(255);  
-        // Movimiento condicional basado en la proporción
-        if (proportion >= 1) {
-            // Movimiento horizontal si proportion >= 1
-            text(alphabet[charChange], width / 2 + modifier * cos(frameCount * 0.02 + 1.8 * noise(x)), height / 2);
-        } else {
-            // Movimiento vertical si proportion < 1
-            text(alphabet[charChange], width / 2, height / 2 + modifier * cos(frameCount * 0.02 + 1.8 * noise(x)));
-        }
+		text(alphabet[charChange], width / 2 + modifier * cos(frameCount * 0.02 + 1.8 * noise(x)), height / 2); 
 		
 		
 		drawingContext.restore();  

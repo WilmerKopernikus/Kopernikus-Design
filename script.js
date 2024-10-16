@@ -13,6 +13,11 @@ function checkBrowserAndReplaceVideo() {
     }
 }
 
+function toggleContent(element) {
+    const content = element.querySelector('p'); // Selecciona solo el <p> dentro del <div> clicado
+    content.classList.toggle('show');
+}
+
 // Run the function when the document is ready
 document.addEventListener('DOMContentLoaded', checkBrowserAndReplaceVideo);
 
