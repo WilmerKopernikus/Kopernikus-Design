@@ -1,5 +1,5 @@
 let cellsrows, cellscols; // Declaramos las variables sin asignarles un valor aún
-const offset = 30; // Define el desplazamiento (offset) como 40
+const offset = 20; // Define el desplazamiento (offset) como 40
 const margin = offset / 4; // Calcula el margen como un cuarto del desplazamiento
 let w, h; // Declara variables para el ancho (w) y alto (h) de las celdas
 
@@ -11,10 +11,10 @@ function setup() {
   if (proportion >= 2) {
     cellsrows = 8;
     cellscols = 16;
-  } else if (proportion >= 0,66 && proportion < 2) {
-    cellsrows = 8;
-    cellscols = 8;
-  } else if (proportion <= 0,66) {
+  } else if (proportion >= 0.66 && proportion < 2) {
+    cellsrows = 6;
+    cellscols = 4;
+  } else if (proportion <= 0.66) {
     cellsrows = 8;
     cellscols = 4;
   }
