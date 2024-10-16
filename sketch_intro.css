@@ -42,13 +42,13 @@ a, li {
     text-decoration: none;
 }
 
-li {
+li, h2 {
 
     font-family:'Source Code', sans-serif;
 }
 
 h2 {
-    font-size: 30px;
+    font-size: 40px;
 }
 
 .content-welcome {
@@ -57,14 +57,9 @@ h2 {
   }
 
   .content {
-    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-    background-color: rgba(255, 255, 255, 0.747); 
-    width: 35%;                  
-    height: auto;                 
-    padding: 50px;                
-    margin-top: 200px;
-    margin-bottom: 200px;
-    margin-left: 10%;            
+
+    background-color: rgba(255, 255, 255, 0.747);            
+    height: auto;                                
     border-radius: 30px;         
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3); 
     transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
@@ -78,6 +73,45 @@ h2 {
       color: #000000;
   }
 
+  .welcome {
+    margin-top: 200px;
+    margin-bottom: 200px;
+    width: 35%;
+    margin-left: 10%; 
+    padding: 50px;
+  }
+
+  .cases {
+    width: 70%; 
+    margin: 0 auto;
+    text-align: center;
+    padding: 30px;
+
+  }
+
+  .items {
+    display: flex; /* Activamos flexbox */
+    justify-content: space-around; /* Espaciamos los div horizontalmente */
+    align-items: center; /* Alineamos verticalmente los elementos */
+    
+  }
+
+
+
+
+  .case-item {
+    flex: 1; /* Los div se ajustan proporcionalmente */
+    padding: 50px;
+
+    margin: 0 0;
+    border-radius: 5px;
+    text-align: center; /* Centra el contenido dentro de cada div */
+}
+
+.case-image {
+    width: 350px;
+    border-radius: 15px;
+}
 /*----------------------------------------------------------------------------------------------------------
  -----------------------------------------------------------------------------------------------------------
 ---------------------------------------------- Hamburger-Menu ----------------------------------------------
@@ -112,10 +146,10 @@ h2 {
 .menu-overlay {
     position: fixed;
     top: 0;
-    left: 150%;
+    left: 120%;
     right: 0;
     bottom: 0;
-    background-color: #000000c3;
+    background-color: #000000d0;
     display: flex; 
     flex-direction: column;
     justify-content: center;
