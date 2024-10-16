@@ -18,7 +18,7 @@ function setup() {
 	if (proportion >= 0.7) {
 		textSize(150);
 	} else if (proportion > 0.5 && proportion < 0.7) {
-		textSize(80);
+		textSize(50);
 	} else if (proportion <= 0.5) {
 		textSize(30);
 	}
