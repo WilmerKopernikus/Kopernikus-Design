@@ -20,7 +20,7 @@ function setup() {
     } else if (proportion < 1 && proportion >= 0.8) {
         textSize(120);
     } else {
-        textSize(90);
+        textSize(75);
     } //Test 4 - crear formula para hacer services responsive
     }
 
@@ -48,14 +48,19 @@ function draw() {
 		drawingContext.clip();  
 		fill(255);  
         // Movimiento condicional basado en la proporción
-        if (proportion >= 1) {
-            // Movimiento horizontal si proportion >= 1
-            text(alphabet[charChange], width / 2 + modifier * cos(frameCount * 0.02 + 1.8 * noise(x)), height / 2);
-        } else {
-            // Movimiento vertical si proportion < 1
-            text(alphabet[charChange], width / 2, height / 2 + modifier * cos(frameCount * 0.02 + 1.8 * noise(x)));
-        }
-		
+                // Movimiento condicional basado en la proporción
+                if (proportion >= 1) {
+                    // Movimiento horizontal si proportion >= 1
+                    text(alphabet[charChange], width / 2 + modifier * cos(frameCount * 0.02 + 1.8 * noise(x)), height / 2);
+                } else {
+                    // Mostrar palabras una debajo de otra en pantallas pequeñas, con movimiento horizontal
+                    for (let i = 0; i < alphabet.length; i++) {
+                        // Cada palabra en una nueva línea, pero moviéndose horizontalmente
+                        text(alphabet[i], width / 2 + modifier * cos(frameCount * 0.02 + 1.8 * noise(x)), height / 2 - (alphabet.length / 2 - i) * (textSize() + 20));
+                    }
+                }
+        
+        
 		
 		drawingContext.restore();  
 	}
