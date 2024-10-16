@@ -20,8 +20,8 @@ function setup() {
     } else if (proportion < 1 && proportion >= 0.8) {
         textSize(120);
     } else {
-        textSize(90);
-    } 
+        textSize(80);
+    } //Text 3 - crear formula para hacer services responsive
     }
 
 
