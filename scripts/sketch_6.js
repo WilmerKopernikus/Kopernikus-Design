@@ -14,7 +14,7 @@ function setup() {
     if (proportion >= 1) {
         textSize(200);
     } else if (proportion < 1 && proportion >= 0.8) {
-        textSize(120);
+        textSize(100);
     } else {
         textSize(75);
     }
@@ -48,7 +48,7 @@ function draw() {
             // Mostrar solo 3 palabras distribuidas verticalmente con el mismo texto cambiando
             for (let i = 0; i < 3; i++) {
                 text(alphabet[charChange], width / 2 + modifier * cos(frameCount * 0.02 + 1.7 * noise(x)), 
-                     height / 2 - (1 - i) * (textSize() + 100));  // 3 palabras distribuidas verticalmente
+                     height / 2 - (1 - i) * (textSize() + 90));  // 3 palabras distribuidas verticalmente
             }
         }
 
