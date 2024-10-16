@@ -25,7 +25,6 @@ html, body {
     padding: 0;
     height: 100%;
     width: 100%;
-
 }
 
 body {
@@ -91,33 +90,37 @@ p {
 
 
   .services {
-    background-color: rgba(0, 0, 0, 0.533); 
-    color: #ffffff;
-    width: 200px;
-    padding: 20px;
-    margin-top: 100px;
-    margin-left: auto;
-    margin-right: auto;
-  }
-
-
-
-  .content_services {         
-    height: auto;                                       
     box-shadow: 0 8px 20px rgb(255, 255, 255); 
     background-color: rgba(255, 255, 255, 0.856);
     color: #000000;
-    margin-top: 10px;
-    margin-bottom: 10px;
-    width: 90%;
-    margin-left: auto; 
+    width: 200px;
+    padding: 0;
+    margin-top: 500px;
+    margin-left: auto;
     margin-right: auto;
-    padding: 50px;
     border-radius: 30px; 
-    display: flex;
-    align-items: center;
-    flex-direction: column;
   }
+
+
+  .services_screen_display {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    column-gap: 20px; /* Asegura que no haya espacio entre columnas */
+    row-gap: 50px;
+    justify-content: center;
+    margin-left: 10%; 
+    margin-right: 10%;
+    margin-top: 400px;
+}
+
+.content_services {         
+    box-shadow: 0 8px 20px rgb(255, 255, 255); 
+    background-color: rgba(255, 255, 255, 0.856);
+    color: #000000;
+    padding: 50px;
+    border-radius: 30px;
+    width: 70%; /* Asegura que ocupen el 100% de la columna */
+}
 
   .welcome {
     margin-top: 200px;
@@ -275,8 +278,25 @@ p {
     padding-left: 5%;
 }
 
+.services_mobile_display {
+  display: none;
+}
+
+
+
 @media (min-width: 750px) and (max-width: 1000px) {}
 @media (max-width: 750px) {
+
+  .services_screen_display {
+    display: none;
+  }
+
+  .services_mobile_display {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    margin-top: 350px;
+  }
 
     .header-logo {
         font-size: 25px;
@@ -284,8 +304,12 @@ p {
     }
 
     h2 {
-        font-size: 20px;
+        font-size: 25px;
     }
+
+    h3 {
+      font-size: 20px;
+  }
 
     .hamburger-menu {
         right: 20px;
@@ -335,9 +359,7 @@ p {
       .content_services {
         width: 60%;
         padding: 25px;
-        display: flex;
-        align-items: center;
-        flex-direction: column;
+
         margin-top: 50px;
         margin-bottom: 50px;
         
@@ -346,6 +368,15 @@ p {
       p {
         font-size: 16px;
         line-height: 1.5;
+      }
+
+      .services {
+        width: 150px;
+        padding: 10px;
+        margin-top: 100px;
+        margin-left: auto;
+        margin-right: auto;
+        border-radius: 30px; 
       }
 
 }
