@@ -12,7 +12,18 @@ function setup() {
    // Fija la posición del lienzo para que no se desplace con el scroll
 	textAlign(CENTER, CENTER);
 	textFont('Trebuchet MS');   
-	textSize(200);
+
+	let proportion = windowWidth / windowHeight;
+
+	if (proportion >= 0.7) {
+		textSize(150);
+	} else if (proportion > 0.5 && proportion < 0.7) {
+		textSize(80);
+	} else if (proportion <= 0.5) {
+		textSize(30);
+	}
+
+	
 }
 
 function draw() {
