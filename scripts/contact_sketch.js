@@ -2,7 +2,7 @@ let num = 30;
 let startUnicode = 65;  
 let endUnicode = 90;  
 let counter = startUnicode;  
-let alphabet = ["CONTACT", "ADVISORY", "CONSULTING", "SUPPORT", "PARTNERSHIP", "EXPERTISE", "SOLUTIONS"]; 
+let alphabet = ["CONTACT", "ADVISORY", "SUPPORT", "EXPERTISE", "SOLUTIONS"]; 
 let charChange = 0;  
 
 function setup() {
