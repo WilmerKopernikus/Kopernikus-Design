@@ -2,7 +2,7 @@ let num = 30;
 let startUnicode = 65;  
 let endUnicode = 90;  
 let counter = startUnicode;  
-let alphabet = ["CONTACT US", "ADVISORY", "CONSULTING", "SUPPORT", "PARTNERSHIP", "EXPERTISE", "SOLUTIONS"]; 
+let alphabet = ["CONTACT", "ADVISORY", "CONSULTING", "SUPPORT", "PARTNERSHIP", "EXPERTISE", "SOLUTIONS"]; 
 let charChange = 0;  
 
 function setup() {
@@ -18,7 +18,7 @@ function setup() {
     if (proportion >= 1) {
         textSize(220);
     } else if (proportion < 1 && proportion >= 0.8) {
-        textSize(95);
+        textSize(90);
     } else {
         textSize(75);
     } //Test 4 - crear formula para hacer services responsive
