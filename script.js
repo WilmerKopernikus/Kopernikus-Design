@@ -13,6 +13,23 @@ function checkBrowserAndReplaceVideo() {
     }
 }
 
+//para hacer scrilling y cambiar el color del fondo
+window.addEventListener('scroll', () => {
+    const scrollY = window.scrollY;
+    const triggerPoint = 5000; // Punto en el que comienza la transición
+    const documentHeight = document.documentElement.scrollHeight - window.innerHeight;
+
+    if (scrollY > triggerPoint) {
+      const scrollPercent = (scrollY - triggerPoint) / (documentHeight - triggerPoint);
+
+      // Cambiar color de fondo desde negro a blanco a partir de 2000px
+      const newColor = `rgb(0, 0, ${scrollPercent * 150})`;
+      document.body.style.backgroundColor = newColor;
+    }
+  });
+
+
+
 function toggleContent(element) {
     const content = element.querySelector('p'); // Selecciona solo el <p> dentro del <div> clicado
     content.classList.toggle('show');
