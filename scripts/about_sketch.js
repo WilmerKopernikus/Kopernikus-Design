@@ -18,7 +18,7 @@ function setup() {
     if (proportion >= 1) {
         textSize(220);
     } else if (proportion < 1 && proportion >= 0.8) {
-        textSize(87);
+        textSize(90);
     } else {
         textSize(75);
     } //Test 4 - crear formula para hacer services responsive
@@ -34,7 +34,7 @@ function draw() {
     if (proportion >= 1) {
         modifier = 50;  // Larger screens, bigger effect
     } else if (proportion >= 0.8) {
-        modifier = 30;   // Medium screens
+        modifier = 27;   // Medium screens
     } else {
         modifier = 20;   // Smaller screens, smaller effect
     }

@@ -34,7 +34,7 @@ function draw() {
     if (proportion >= 1) {
         modifier = 50;  // Larger screens, bigger effect
     } else if (proportion >= 0.8) {
-        modifier = 30;   // Medium screens
+        modifier = 27;   // Medium screens
     } else {
         modifier = 20;   // Smaller screens, smaller effect
     }

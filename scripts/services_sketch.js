@@ -28,7 +28,7 @@ function draw() {
     if (proportion >= 1) {
         modifier = 50;  // Pantallas más grandes, mayor efecto
     } else if (proportion >= 0.8) {
-        modifier = 30;   // Pantallas medianas
+        modifier = 27;   // Pantallas medianas
     } else {
         modifier = 20;   // Pantallas más pequeñas, menor efecto
     }
