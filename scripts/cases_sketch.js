@@ -2,7 +2,7 @@ let num = 30;
 let startUnicode = 65;  
 let endUnicode = 90;  
 let counter = startUnicode;  
-let alphabet = ["WHERE", "IMAGINATION", "MEETS", "DIGITAL", "INNOVATION"]; 
+let alphabet = ["CASES", "PROJECTS", "PORTFOLIO", "DIGITAL", "SOLUTIONS"]; 
 let charChange = 0;  
 
 function setup() {
@@ -16,7 +16,7 @@ function setup() {
     console.log("Proporción:", proportion);  // Verifica el valor en cada frame
     
     if (proportion >= 1) {
-        textSize(200);
+        textSize(220);
     } else if (proportion < 1 && proportion >= 0.8) {
         textSize(100);
     } else {
