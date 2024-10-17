@@ -13,12 +13,12 @@ function setup() {
     
     if (proportion >= 1) {
         textSize(220);
-    } else if (proportion < 1 && proportion >= 0.8) {
-        textSize(90);
-    } else {
+    } else if (proportion < 1.1 && proportion >= 0.66){
+        textSize(137);
+    } else if (proportion < 0.69){
         textSize(60);
+        } 
     }
-}
 
 function draw() {
     let proportion = windowWidth / windowHeight;
@@ -27,10 +27,8 @@ function draw() {
     // Ajustar 'modifier' según la proporción de la pantalla
     if (proportion >= 1) {
         modifier = 50;  // Pantallas más grandes, mayor efecto
-    } else if (proportion >= 0.8) {
-        modifier = 27;   // Pantallas medianas
-    } else {
-        modifier = 20;   // Pantallas más pequeñas, menor efecto
+    } else  {
+        modifier = 18;   // Pantallas más pequeñas, menor efecto
     }
 
     for (let x = 0; x < width; x += width / num) {  
