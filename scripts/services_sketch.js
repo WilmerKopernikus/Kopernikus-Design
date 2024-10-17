@@ -12,9 +12,9 @@ function setup() {
     let proportion = windowWidth / windowHeight;
     
     if (proportion >= 1) {
-        textSize(200);
+        textSize(220);
     } else if (proportion < 1 && proportion >= 0.8) {
-        textSize(90);
+        textSize(95);
     } else {
         textSize(60);
     }

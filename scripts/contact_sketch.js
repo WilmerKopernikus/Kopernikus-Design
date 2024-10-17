@@ -16,9 +16,9 @@ function setup() {
     console.log("Proporción:", proportion);  // Verifica el valor en cada frame
     
     if (proportion >= 1) {
-        textSize(200);
+        textSize(220);
     } else if (proportion < 1 && proportion >= 0.8) {
-        textSize(100);
+        textSize(95);
     } else {
         textSize(75);
     } //Test 4 - crear formula para hacer services responsive
