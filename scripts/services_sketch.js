@@ -2,14 +2,28 @@ let num = 30;
 let alphabet = ["SERVICES", "FULL-STACK", "DESIGN", "CREATIVITY", "FRONT-END", "BACK-END", "IDEAS", "BRANDING"]; 
 let charChange = 0;  
 
+
 function setup() {
-    let canvas = createCanvas(windowWidth, windowHeight);  
+    
+    let proportion = windowWidth / windowHeight;
+    let h;
+    if (proportion >= 1) {
+         h = windowHeight;
+    } else if (proportion < 1.1 && proportion >= 0.66){
+        h = 500;
+    }else if (proportion < 0.66){
+        h = 300;
+    }
+    
+     
+
+    let canvas = createCanvas(windowWidth, h);
     canvas.position(0, 0);  
     canvas.style('z-index', '-1');  
     textAlign(CENTER, CENTER); 
     textFont('Trebuchet MS');  
 
-    let proportion = windowWidth / windowHeight;
+    
     
     if (proportion >= 1) {
         textSize(220);

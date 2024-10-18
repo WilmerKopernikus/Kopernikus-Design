@@ -20,7 +20,6 @@
 
 
 .sketch-container {
-  border: 1px solid black;
   width: 400px;
   height: 400px;
   margin: 10px;
@@ -56,6 +55,7 @@ body {
     margin-top: 12px;
     width: 350px;
 }
+
 
 a, li {
     text-decoration: none;
@@ -133,12 +133,6 @@ p {
     max-width: 300px;       
     height: auto;           
     border-radius: 15px;
-  }
-
-  .flex-container {
-    display: flex;          
-    align-items: center;    
-    gap: 50px;              
   }
   
 
@@ -329,6 +323,8 @@ p {
     display: flex;
 }
 
+
+
 /*----------------------------------------------------------------------------------------------------------
  -----------------------------------------------------------------------------------------------------------
 --------------------------------------------------- Header -------------------------------------------------
@@ -349,34 +345,71 @@ p {
     padding-left: 5%;
 }
 
-.services_mobile_display {
+.services-mobile-display {
   display: none;
 }
 
 
 
-@media (min-width: 750px) and (max-width: 1000px) {}
-@media (max-width: 750px) {
-
-  .services_screen_display {
+@media (max-width: 1000px) {
+  .services-screen-display {
     display: none;
   }
 
-  .services_mobile_display {
+  .services-mobile-display  {
+    margin-top: 500px;
+    color: #ffffff;
+    z-index: 10; /* Asegura que el elemento esté al frente */
+    position: relative;
+    margin-left: 10%;
+    margin-right: 10%;
+    text-align: justify;
+
     display: flex;
+    flex-direction: column; /* Asegura que los elementos estén en una columna */
+    justify-content: center; /* Centra verticalmente */
     align-items: center;
-    flex-direction: column;
-    margin-top: 350px;
+}
+
+
+h2 {
+  font-size: 20px;
+}
+
+p {
+  font-size: 14px;
+  line-height: 2;
+}
+
+.sketch-container-2 {
+  width: 200px;
+  height: 200px;
+  margin-top: 30px;
+
+}
+
+
+}
+@media (max-width: 750px) {
+
+  .services-screen-display {
+    display: none;
+    
   }
+
+  .services-mobile-display  {
+
+    margin-top: 250px;
+
+}
+
 
     .header-logo {
         font-size: 25px;
         width: 250px;
     }
 
-    h2 {
-        font-size: 25px;
-    }
+
 
     h3 {
       font-size: 20px;
@@ -436,10 +469,7 @@ p {
         
       }
 
-      p {
-        font-size: 16px;
-        line-height: 1.5;
-      }
+
 
       .services {
         width: 150px;
