@@ -1,19 +1,4 @@
-function checkBrowserAndReplaceVideo() {
-    var userAgent = navigator.userAgent.toLowerCase();
-    var isWeChatBrowser = /micromessenger/.test(userAgent);
-
-    if (isWeChatBrowser) {
-        var videoElement = document.getElementById('background-video');
-        var gifElement = document.getElementById('fallback-gif');
-
-        if (videoElement && gifElement) {
-            videoElement.style.display = 'none';  // Hide the video element
-            gifElement.style.display = 'block';   // Show the GIF image instead
-        }
-    }
-}
-
-//para hacer scrilling y cambiar el color del fondo
+//para hacer scrolling y cambiar el color del fondo
 window.addEventListener('scroll', () => {
     const scrollY = window.scrollY;
     const triggerPoint = 5000; // Punto en el que comienza la transición
@@ -30,13 +15,6 @@ window.addEventListener('scroll', () => {
 
 
 
-function toggleContent(element) {
-    const content = element.querySelector('p'); // Selecciona solo el <p> dentro del <div> clicado
-    content.classList.toggle('show');
-}
-
-// Run the function when the document is ready
-document.addEventListener('DOMContentLoaded', checkBrowserAndReplaceVideo);
 
 document.addEventListener("DOMContentLoaded", function() {
     const hamburger = document.getElementById("hamburger");

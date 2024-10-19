@@ -1,329 +1,59 @@
 /*----------------------------------------------------------------------------------------------------------
  -----------------------------------------------------------------------------------------------------------
----------------------------------------------- General Styles ----------------------------------------------
+--------------------------------------------------- Fonts --------------------------------------------------
 ------------------------------------------------------------------------------------------------------------
 ----------------------------------------------------------------------------------------------------------*/
 
 @font-face {
-    font-family: 'Source Code';
-    src: url('fonts/SourceCodePro-ExtraLight.ttf') format('truetype');
-    font-weight: normal;
-    font-style: normal;
+  font-family: 'Roboto';
+  src: url('fonts/RobotoCondensed-Light.ttf') format('truetype');
+  font-weight: light;
+  font-style: normal;
 }
 
-@font-face {
-    font-family: 'Source Code Bold';
-    src: url('fonts/SourceCodePro-ExtraBold.ttf') format('truetype');
-    font-weight: bold;
-    font-style: normal;
-}
-
-
-.sketch-container {
-  width: 400px;
-  height: 400px;
-  margin: 10px;
-}
-
-
-
-html, body {
-    margin: 0;
-    padding: 0;
-    height: 100%;
-    width: 100%;
-    
-}
-
-body {
-    background-color: #000000;
-    transition: background-color 0.5s ease;
-}
-
-.trigger-point {
-  margin-top: 2000px; /* Punto donde se activa la transición */
-  height: 100px;
-  background-color: red;
-}
-
-.header-logo {
-    color: #ffffff;
-    z-index: 1;
-    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-    font-size: 45px;
-    font-weight: 700;
-    margin-top: 12px;
-    width: 350px;
-}
-
-
-a, li {
-    text-decoration: none;
-}
-
-li {
-    
-    font-family:'Source Code', sans-serif;
+h2, h3, li, p {
+  font-family: 'Roboto', sans-serif;
 }
 
 h2 {
-    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-    font-size: 40px;
-}
-
-h3, p {
-  font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  font-size: 40px;
 }
 
 h3 {
   font-size: 25px;
 }
 
+a, li {
+  text-decoration: none;
+}
+
 p {
-  font-size: 20px;
+  font-size: 22px;
 }
 
-.content-welcome {
-    width: 100%;      
-    height: 100vh; 
-  }
-
-  .content {
-    background-color: rgba(255, 255, 255, 0.703);            
-    height: auto;                                       
-    box-shadow: 0 4px 10px rgba(195, 195, 195, 0.615); 
-    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
-    color: #3b3b3b;
-  }
-  
-  .content:hover {
-    transform: scale(1.03); 
-      box-shadow: 0 8px 20px rgb(255, 255, 255); 
-      background-color: rgba(255, 255, 255, 0.856);
-      color: #000000;
-  }
-
-  .services-screen-display {
-    margin-top: 100vh;
-    color:rgb(255, 255, 255);
-    display: flex;
-    align-items: center;
-    flex-direction: column;
-    justify-content: center;
-    font-weight: 100;
-    width: 60%;
-    margin-left: auto;
-    margin-right: auto;
-  }
-
-  .flex-container {
-    display: flex;          
-    align-items: center;    
-    gap: 50px;              
-  }
-  
-  .flex-container p {
-    flex: 1;    
-    text-align: justify;
-    line-height: 2;
-
-  }
-  
-  .flex-container img {
-    max-width: 300px;       
-    height: auto;           
-    border-radius: 15px;
-  }
-  
-
-
-  .services_screen_display {
-    display: flex;
-    align-items: center;
-    flex-direction: column;
-    justify-content: center;
-    margin-left: 10%; 
-    margin-right: 10%;
-    margin-top: 400px;
-}
-
-.content_services {
-  cursor: pointer;
-}
-
-.content_services p {
-    max-height: 0;
-    overflow: hidden;
-    transition: max-height 0.5s ease-in-out;
-}
-
-.content_services p.show {
-    max-height: 100px; /* Ajusta este valor según la altura del contenido */
-    display: block;
-}
-
-.content_services {         
-    box-shadow: 0 8px 20px rgb(255, 255, 255); 
-    background-color: rgba(255, 255, 255, 0.856);
-    color: #000000;
-    padding: 10px 40px;
-    border-radius: 30px;
-    width: 50%; /* Asegura que ocupen el 100% de la columna */
-    margin-bottom: 50px;
-    /* Flexbox para centrar contenido vertical y horizontalmente */
-    display: flex;
-    flex-direction: column;
-    justify-content: center; /* Centrado vertical */
-    align-items: center; /* Centrado horizontal */
-    text-align: center; /* Opcional, para centrar el texto */
-}
-
-.content_services h3 {
-  text-align: center;
-}
-
-.content_services p {
-  text-align: justify;
-  display: none;
-}
-
-  .welcome {
-    margin-top: 200px;
-    margin-bottom: 200px;
-    width: 30%;
-    margin-left: 10%; 
-    padding: 50px;
-    border-radius: 30px; 
-  }
-
-  .cases {
-    width: 100%; 
-    margin-left: auto;
-    margin-right: auto;
-    text-align: center;
-    padding-top: 100px;
-    padding-bottom: 100px;
-  }
-
-  .items {
-    display: flex; 
-    justify-content: space-around; /* Espaciamos los div horizontalmente */
-    align-items: center; /* Alineamos verticalmente los elementos */
-    
-  }
-
-  .case-item {
-    flex: 1; /* Los div se ajustan proporcionalmente */
-    padding: 40px;
-    border-radius: 5px;
-    text-align: center; /* Centra el contenido dentro de cada div */
-}
-
-.case-image {
-    width: 350px;
-    border-radius: 15px;
-}
 /*----------------------------------------------------------------------------------------------------------
  -----------------------------------------------------------------------------------------------------------
----------------------------------------------- Hamburger-Menu ----------------------------------------------
+---------------------------------------------- General Styles ----------------------------------------------
 ------------------------------------------------------------------------------------------------------------
 ----------------------------------------------------------------------------------------------------------*/
 
-.hamburger-menu {
-    position: fixed;
-    top: 12px;
-    right: 50px;
-    z-index: 1000;
-    background-color: #0000006e;
-    padding: 10px;
-    border-radius: 5px;
+html, body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  width: 100%;  
 }
 
-.hamburger {
-    cursor: pointer;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-around;
-    width: 40px;
-    height: 30px;
+body {
+  background-color: rgb(30, 30, 30);
+  /*transition: background-color 0.5s ease;*/
 }
-
-.hamburger span {
-    display: block;
-    width: 100%;
-    height: 4px;
-    background-color: #ffffff;
-    transition: all 0.3s ease;
-    transform-origin: center;
-}
-
-.menu-overlay {
-    position: fixed;
-    top: 0;
-    left: 150%;
-    right: 0;
-    bottom: 0;
-    background-color: #000000d0;
-    display: flex; 
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    z-index: 10;
-    transition: left 0.5s ease-in-out; /* Añade una transición suave */
-}
-
-
-.menu-overlay.show {
-    left: 0; /* Mueve el menú completamente a la vista */
-  }
-
-.menu-overlay ul {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-    text-align: center;
-}
-
-.menu-overlay li {
-    margin: 50px 0;
-}
-
-.menu-overlay a {
-    color: rgb(255, 255, 255);
-    text-decoration: none;
-    font-size: 35px;
-    font-weight: 800;
-    transition: font-size 0.3s, color 0.3s, box-shadow 0.3s; 
-    box-shadow: none;
-}
-
-.menu-overlay a:hover {
-    color: #ffffff;
-    font-size: 37px;
-    box-shadow: 0 0 10px rgba(255, 255, 255, 0.8), 0 0 20px rgba(242, 242, 242, 0.5);
-    padding: 10px;
-    border-radius: 10px;
-}
-
-.hamburger.open span:nth-child(1) {
-    transform: rotate(45deg) translate(9px, 9px);
-    background-color: white;
-}
-
-.hamburger.open span:nth-child(2) {
-    opacity: 0;
-}
-
-.hamburger.open span:nth-child(3) {
-    transform: rotate(-45deg) translate(5px, -5px);
-    background-color: white;
-}
-
-.menu-overlay.show {
-    display: flex;
-}
-
-
+/*
+.trigger-point {
+  margin-top: 2000px; 
+  height: 100px;
+  background-color: red;
+}*/
 
 /*----------------------------------------------------------------------------------------------------------
  -----------------------------------------------------------------------------------------------------------
@@ -332,152 +62,241 @@ p {
 ----------------------------------------------------------------------------------------------------------*/
  
 .header {
-    background-color: rgb(0, 0, 0);
-    width: 100%;
-    display: flex; 
-    justify-content: left;
-    align-items: center;
-    height: 66px;
-    z-index: 20; 
-    left: 0; 
-    position: fixed;
-    top: 0;
-    padding-left: 5%;
+  background-color: rgb(0, 0, 0);
+  width: 100%;
+  display: flex; 
+  justify-content: left;
+  align-items: center;
+  height: 66px;
+  z-index: 20; 
+  left: 0; 
+  position: fixed;
+  top: 0;
+  padding-left: 5%;
 }
 
-.services-mobile-display {
+.header-logo {
+    z-index: 1;
+    margin-top: 12px;
+    width: 350px;
+}
+
+/*----------------------------------------------------------------------------------------------------------
+ -----------------------------------------------------------------------------------------------------------
+---------------------------------------------- Hamburger-Menu ----------------------------------------------
+------------------------------------------------------------------------------------------------------------
+----------------------------------------------------------------------------------------------------------*/
+
+.hamburger-menu {
+  position: fixed;
+  top: 12px;
+  right: 50px;
+  z-index: 1000;
+  background-color: #0000006e;
+  padding: 10px;
+  border-radius: 5px;
+}
+
+.hamburger {
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  width: 40px;
+  height: 30px;
+}
+
+.hamburger span {
+  display: block;
+  width: 100%;
+  height: 4px;
+  background-color: #ffffff;
+  transition: all 0.3s ease;
+  transform-origin: center;
+}
+
+.menu-overlay {
+  position: fixed;
+  top: 0;
+  left: 150%;
+  right: 0;
+  bottom: 0;
+  background-color: #000000d0;
+  display: flex; 
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  z-index: 10;
+  transition: left 0.5s ease-in-out; /* Añade una transición suave */
+}
+
+.menu-overlay.show {
+  left: 0; /* Mueve el menú completamente a la vista */
+}
+
+.menu-overlay ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  text-align: center;
+}
+
+.menu-overlay li {
+  margin: 50px 0;
+}
+
+.menu-overlay a {
+  color: rgb(255, 255, 255);
+  text-decoration: none;
+  font-size: 35px;
+  font-weight: 800;
+  transition: font-size 0.3s, color 0.3s, box-shadow 0.3s; 
+  box-shadow: none;
+}
+
+.menu-overlay a:hover {
+  color: #ffffff;
+  font-size: 37px;
+  box-shadow: 0 0 10px rgba(255, 255, 255, 0.8), 0 0 20px rgba(242, 242, 242, 0.5);
+  padding: 10px;
+  border-radius: 10px;
+}
+
+.hamburger.open span:nth-child(1) {
+  transform: rotate(45deg) translate(9px, 9px);
+  background-color: white;
+}
+
+.hamburger.open span:nth-child(2) {
+  opacity: 0;
+}
+
+.hamburger.open span:nth-child(3) {
+  transform: rotate(-45deg) translate(5px, -5px);
+  background-color: white;
+}
+
+.menu-overlay.show {
+  display: flex;
+}
+
+/*----------------------------------------------------------------------------------------------------------
+ -----------------------------------------------------------------------------------------------------------
+-------------------------------------------------- Content -------------------------------------------------
+------------------------------------------------------------------------------------------------------------
+----------------------------------------------------------------------------------------------------------*/
+
+.services-screen-display {
+  margin-top: 100vh;
+  color:rgb(255, 255, 255);
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  font-weight: 100;
+  width: 60%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.services-mobile-display{
   display: none;
 }
 
-
-
-@media (max-width: 1025px) {
-  .services-screen-display {
-    display: none;
-  }
-
-  .services-mobile-display  {
-    margin-top: 500px;
-    color: #ffffff;
-    z-index: 9; /* Asegura que el elemento esté al frente */
-    position: relative;
-    margin-left: 10%;
-    margin-right: 10%;
-    text-align: justify;
-
-    display: flex;
-    flex-direction: column; /* Asegura que los elementos estén en una columna */
-    justify-content: center; /* Centra verticalmente */
-    align-items: center;
+.flex-container {
+  display: flex;          
+  align-items: center;    
+  gap: 50px;              
 }
 
-
-h2 {
-  font-size: 20px;
-}
-
-p {
-  font-size: 14px;
+.flex-container p {
+  flex: 1;    
+  text-align: justify;
   line-height: 2;
 }
 
-.sketch-container-2 {
-  width: 200px;
-  height: 200px;
-  margin-top: 30px;
-
+.sketch-container {
+  width: 400px;
+  height: 400px;
+  margin: 10px;
 }
 
+/*----------------------------------------------------------------------------------------------------------
+ -----------------------------------------------------------------------------------------------------------
+-------------------------------------------------- Tablets -------------------------------------------------
+------------------------------------------------------------------------------------------------------------
+----------------------------------------------------------------------------------------------------------*/
+@media (max-width: 1025px) {
 
-}
-@media (max-width: 750px) {
-
+  h2 {
+    font-size: 20px;
+  }
+  
+  p {
+    font-size: 14px;
+    line-height: 2;
+  }
+  
+  .services-mobile-display  {
+    margin-top: 400px;
+    color: #ffffff;
+    z-index: 9; /* Asegura que el elemento esté al frente */
+    position: relative;
+    margin-left: 20%;
+    margin-right: 20%;
+    text-align: justify;
+    display: flex;
+    flex-direction: column; 
+    justify-content: center;
+    align-items: center;
+  }
+  
   .services-screen-display {
     display: none;
-    
   }
-
-  .services-mobile-display  {
-
-    margin-top: 250px;
+  
+  .sketch-container-2 {
+    width: 200px;
+    height: 200px;
+    margin-top: 30px;
+  }
 
 }
+/*----------------------------------------------------------------------------------------------------------
+ -----------------------------------------------------------------------------------------------------------
+-------------------------------------------------- Handys -------------------------------------------------
+------------------------------------------------------------------------------------------------------------
+----------------------------------------------------------------------------------------------------------*/
+@media (max-width: 750px) {
 
-
-    .header-logo {
-        font-size: 25px;
-        width: 250px;
-    }
-
-
-
-    h3 {
-      font-size: 20px;
+  h3 {
+    font-size: 20px;
   }
 
-    .hamburger-menu {
-        right: 20px;
-    }
-    
-    .hamburger {
-        width: 30px;
-    }
+  .hamburger {
+    width: 30px;
+  }
 
-    .content {
-        background-color: rgba(255, 255, 255, 0.747);                                              
-        box-shadow: 0 8px 20px rgb(255, 255, 255); 
-        background-color: rgba(255, 255, 255, 0.814);
-        color: #000000;
-        transition: none;
-      }
+  .hamburger-menu {
+    right: 20px;
+  }
 
-      .welcome {
-        margin-top: 200px; 
-        margin-bottom: 0;
-      }
+  .menu-overlay a {
+    font-size: 20px;
+  }
 
-      .cases {
-        width: 100%;
-        margin-top: 0; 
-      }
+  .menu-overlay a:hover {
+    font-size: 27px;
+  }
 
-      .content:hover {
-        transform: none 
-      }
+  .services-mobile-display {
+    margin-top: 250px;
+    margin-left: 10%;
+    margin-right: 10%;
+  }
 
-      .menu-overlay a {
-        font-size: 20px;
-      }
-
-
-
-      .case-image {
-        width: 200px;
-      }
-
-      .items {
-        flex-direction: column; 
-        justify-content: center; 
-      }
-
-      .content_services {
-        width: 60%;
-        padding: 25px;
-
-        margin-top: 50px;
-        margin-bottom: 50px;
-        
-      }
-
-
-
-      .services {
-        width: 150px;
-        padding: 10px;
-        margin-top: 100px;
-        margin-left: auto;
-        margin-right: auto;
-        border-radius: 30px; 
-      }
+  .header-logo {
+    width: 250px;
+  }
 
 }

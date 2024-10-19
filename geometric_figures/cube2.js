@@ -10,7 +10,7 @@ let overlaySketch2 = (p) => {
     };
 
     p.draw = () => {
-        p.background(0);
+        p.background(30);
         p.normalMaterial();  // Aplica un material básico a la caja
 
         if (isRotating) {
@@ -22,7 +22,7 @@ let overlaySketch2 = (p) => {
         p.push();
         p.fill(0, 0, 0, 100);  // Color de relleno de la caja
         p.stroke(255, 255, 255); // Color de borde (blanco)
-        p.strokeWeight(4);
+        p.strokeWeight(2);
         p.rotateX(rotationX);  // Aplica rotación continua en el eje X
         p.rotateY(rotationY);  // Aplica rotación continua en el eje Y
         p.box(70);  

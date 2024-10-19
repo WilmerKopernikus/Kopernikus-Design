@@ -7,7 +7,7 @@ let overlaySketch = (p) => {
     };
   
     p.draw = () => {
-      p.background(0);
+      p.background(30);
       p.orbitControl();  // Permite rotar la cámara con el mouse
       p.normalMaterial();  // Aplica un material básico a la caja
   
@@ -19,7 +19,7 @@ let overlaySketch = (p) => {
       p.rotateX(0.5);
       p.rotateY(-0.7);
       p.push();
-      p.fill(0, 0, 0, 100);  // Color de relleno de la caja (púrpura)
+      p.fill(0, 0, 0, 40);  // Color de relleno de la caja (púrpura)
       p.stroke(255, 255, 255); // Color de borde (amarillo)
       p.strokeWeight(4);
       p.rotateX(rotationX);  // Aplica rotación en el eje X

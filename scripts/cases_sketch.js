@@ -19,7 +19,7 @@ function setup() {
         textSize(220);
     } else if (proportion < 1.1 && proportion >= 0.66){
         textSize(137);
-    } else if (proportion < 0.69){
+    } else if (proportion < 0.66){
         textSize(60);
         } 
     }

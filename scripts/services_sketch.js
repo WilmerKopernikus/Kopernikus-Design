@@ -1,5 +1,5 @@
 let num = 30;  
-let alphabet = ["SERVICES", "FULL-STACK", "DESIGN", "CREATIVITY", "FRONT-END", "BACK-END", "IDEAS", "BRANDING"]; 
+let alphabet = ["SERVICES", "FULL-STACK", "DEVELOPMENT","DESIGN", "CREATIVITY", "FRONT-END", "BACK-END", "IDEAS", "BRANDING"]; 
 let charChange = 0;  
 
 
@@ -48,7 +48,7 @@ function draw() {
     for (let x = 0; x < width; x += width / num) {  
         drawingContext.save();  
         noStroke();  
-        fill(0, 30);  
+        fill(30, 30);  
         rect(x, 0, width / num, height);  
         drawingContext.clip();  
         fill(255);  

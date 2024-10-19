@@ -51,66 +51,21 @@
         </div>  
     </div>
 
-    <!--<a href="services.html">
-        <div class="content-welcome">
-            <div class="content welcome">
-                
-                <h2>Where imagination meets digital innovation</h2>
-            </div> 
-        </div>
-    </a>
-
-
-
-    <div>
-        <div class="content cases">
-            <h2>Cases</h2>
-            <div class="items">
-                <div class="case-item">
-                    <img class="case-image" src="imagenes/projects/JobLab.png">
-                </div>
-                <div class="case-item">
-                    <img class="case-image" src="imagenes/Blancec.png">
-                </div>
-            </div>
-            
-        </div> 
-    </div>
-    <div class="content-welcome">
-        <div class="content welcome">
-            <h2>We offer solutions for Web Design and Development</h2>
-            <h2>CLick to see our services</h2>
-        </div> 
-    </div>
-    <div>
-        <div class="content">
-            <h2>Footer</h2>
-        </div> 
-    </div>-->
     <script src="script.js"></script>
     <script>    function loadRandomSketch() {
-        // Array con las rutas de los scripts
         const scripts = [
           'scripts/sketch_1.js',
           'scripts/sketch_2.js',
           'scripts/sketch_3.js',
           'scripts/sketch_4.js'
         ];
-  
-        // Escoger un script al azar
         const randomIndex = Math.floor(Math.random() * scripts.length);
         const selectedScript = scripts[randomIndex];
-  
-        // Crear elemento <script> y cargar el archivo seleccionado
         const scriptElement = document.createElement('script');
         scriptElement.src = selectedScript;
-  
-        // Agregar el script al documento
         document.body.appendChild(scriptElement);
-      }
-  
-      // Llamar a la función para cargar el script aleatorio
-      loadRandomSketch();</script>
+        }
+    loadRandomSketch();</script>
 </body>
 </html>
 
