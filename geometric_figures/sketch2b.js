@@ -9,7 +9,7 @@ let sketch2b = (p) => {
     };
   
     p.draw = () => {
-      p.background(30);
+      p.background(0);
       p.normalMaterial();  // Aplica un material básico a la caja
       p.angleMode(p.DEGREES);
 

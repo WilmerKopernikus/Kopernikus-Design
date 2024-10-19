@@ -24,7 +24,7 @@ let sketch4 = function(p) {
     }
   
     p.draw = function() {
-      p.background(30);
+      p.background(0);
   
       for (let i of objs) {
         i.run();

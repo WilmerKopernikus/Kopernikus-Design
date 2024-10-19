@@ -7,7 +7,7 @@ let sketch2 = (p) => {
     };
   
     p.draw = () => {
-      p.background(30);
+      p.background(0);
       p.ambientLight(80, 80, 100);
       p.directionalLight(0, 0, 30, 0, 0, -1);
       p.directionalLight(0, 0, 20, 0, 0, 1);

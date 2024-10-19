@@ -12,14 +12,14 @@ let sketch5b = function(p) {
   
     p.draw = function() {
       p.randomSeed(rSeed);
-      p.background(30);
+      p.background(0);
   
       p.noStroke();
       p.fill(30);
-      p.rect(p.width / 2, p.height / 2, p.width * 0.95, p.height * 0.95);
+      p.rect(p.width / 2, p.height / 2, p.width, p.height);
   
       p.translate(p.width / 2, p.height / 2);
-      p.scale(0.8);
+      p.scale(0.9);
       p.translate(-p.width / 2, -p.height / 2);
   
       let seg = 9;
