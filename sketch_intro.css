@@ -206,7 +206,9 @@ body {
 .flex-container {
   display: flex;          
   align-items: center;    
-  gap: 50px;              
+  gap: 50px;        
+  margin-bottom: 100px;   
+  margin-top: 30px;   
 }
 
 .flex-container p {
@@ -219,6 +221,7 @@ body {
   width: 400px;
   height: 400px;
   margin: 10px;
+
 }
 
 /*----------------------------------------------------------------------------------------------------------

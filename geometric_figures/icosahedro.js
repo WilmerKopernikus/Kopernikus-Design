@@ -1,16 +1,13 @@
-let sketch2 = (p) => {
+let overlaySketch = (p) => {
 
     p.setup = () => {
       let canvas = p.createCanvas(400, 400, p.WEBGL);
-      canvas.parent("sketch2");  // Asigna el canvas al div con id 'sketch-container'
+      canvas.parent("cube");  // Asigna el canvas al div con id 'sketch-container'
       p.angleMode(p.DEGREES);
     };
   
     p.draw = () => {
       p.background(30);
-      p.ambientLight(80, 80, 100);
-      p.directionalLight(0, 0, 30, 0, 0, -1);
-      p.directionalLight(0, 0, 20, 0, 0, 1);
       p.orbitControl(6, 6, 0);  // Deshabilita el zoom con el tercer parámetro como 0
       p.normalMaterial();  // Aplica un material básico a la caja
   
@@ -21,9 +18,9 @@ let sketch2 = (p) => {
       p.rotateX(0.5);
       p.rotateY(-0.7);
       p.push();
-
-       // Color de borde (amarillo)
-    
+      p.fill(0, 0, 0, 40);  // Color de relleno de la caja (púrpura)
+      p.stroke(255, 255, 255); // Color de borde (amarillo)
+      p.strokeWeight(4);
       p.rotateX(rotationX);  // Aplica rotación en el eje X
       p.rotateY(rotationY);  // Aplica rotación en el eje Y
       p.box(150);  
@@ -31,4 +28,4 @@ let sketch2 = (p) => {
     };
   };
   
-  new p5(sketch2);
+  new p5(overlaySketch);
