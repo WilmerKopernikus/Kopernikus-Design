@@ -4,7 +4,7 @@ let overlaySketch2 = (p) => {
     let isRotating = true;  // Variable para controlar si el cubo está rotando o no
 
     p.setup = () => {
-        let canvas = p.createCanvas(150, 150, p.WEBGL);
+        let canvas = p.createCanvas(200, 200, p.WEBGL);
         canvas.parent("cube2");  // Asigna el canvas al div con id 'cube2'
         p.angleMode(p.DEGREES);
     };
@@ -32,7 +32,6 @@ let overlaySketch2 = (p) => {
     p.mousePressed = () => {
         let xDist = Math.abs(p.mouseX - p.width / 2);
         let yDist = Math.abs(p.mouseY - p.height / 2);
-        
         // Checa si el clic ocurrió dentro del área del cubo (en este caso, es un cuadrado de 70x70)
         if (xDist < 35 && yDist < 35) {
             isRotating = false;  // Detiene la rotación mientras el mouse esté presionado
