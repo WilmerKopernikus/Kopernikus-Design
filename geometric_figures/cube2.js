@@ -10,7 +10,7 @@ let overlaySketch2 = (p) => {
     };
 
     p.draw = () => {
-        p.background(30);
+        p.background(0);
         p.normalMaterial();  // Aplica un material básico a la caja
 
         if (isRotating) {

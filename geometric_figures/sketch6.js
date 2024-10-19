@@ -56,7 +56,7 @@ let sketch6 = function(p) {
       p.square(ww / 2, ww / 2, this.w);
       p.fill(this.col2);
       p.square(-ww / 2, -ww / 2, this.w);
-      p.fill(30);
+      p.fill(0);
       p.square(0, 0, this.cw + 1);
       p.pop();
     }

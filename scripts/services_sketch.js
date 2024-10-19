@@ -48,7 +48,7 @@ function draw() {
     for (let x = 0; x < width; x += width / num) {  
         drawingContext.save();  
         noStroke();  
-        fill(30, 30);  
+        fill(0, 30);  
         rect(x, 0, width / num, height);  
         drawingContext.clip();  
         fill(255);  

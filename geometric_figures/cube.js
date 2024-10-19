@@ -7,7 +7,7 @@ let overlaySketch = (p) => {
   };
 
   p.draw = () => {
-    p.background(30);
+    p.background(0);
     p.orbitControl(6, 6, 0);  // Deshabilita el zoom con el tercer parámetro como 0
     p.normalMaterial();  // Aplica un material básico a la caja
 

@@ -15,7 +15,7 @@ let sketch5b = function(p) {
       p.background(0);
   
       p.noStroke();
-      p.fill(30);
+      p.fill(0);
       p.rect(p.width / 2, p.height / 2, p.width, p.height);
   
       p.translate(p.width / 2, p.height / 2);
