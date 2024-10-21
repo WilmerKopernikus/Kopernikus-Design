@@ -221,8 +221,39 @@ body {
   width: 400px;
   height: 400px;
   margin: 10px;
-
 }
+
+.image-container {
+  position: relative;
+  width: 500px;
+}
+
+.cases-bild {
+  width: 100%;
+  border-radius: 20px;
+  transition: opacity 0.5s ease-in-out;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.hover-img {
+  opacity: 0;
+  z-index: 1;
+}
+
+.image-container:hover .hover-img {
+  opacity: 1;
+}
+
+.image-container:hover img:not(.hover-img) {
+  opacity: 0;
+}
+
+#services-images {
+  width: 400px;
+}
+
 
 /*----------------------------------------------------------------------------------------------------------
  -----------------------------------------------------------------------------------------------------------
