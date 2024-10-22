@@ -11,6 +11,8 @@
   font-style: normal;
 }
 
+
+
 h2, h3, li, p {
   font-family: 'Roboto', sans-serif;
 }
@@ -43,6 +45,10 @@ html, body {
   height: 100%;
   width: 100%; 
 
+}
+
+body.no-scroll {
+  overflow: hidden;
 }
 
 body {
