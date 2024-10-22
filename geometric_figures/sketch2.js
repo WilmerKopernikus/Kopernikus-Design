@@ -1,11 +1,11 @@
-let sketch2b = (p) => {
+let sketch2 = (p) => {
   let rotationX = 0;
   let rotationY = 0;
   let isRotating = true;  // Variable para controlar si el cubo está rotando o no
 
     p.setup = () => {
       let canvas = p.createCanvas(400, 400, p.WEBGL);
-      canvas.parent("sketch2b");  // Asigna el canvas al div con id 'sketch-container'
+      canvas.parent("sketch2");  // Asigna el canvas al div con id 'sketch-container'
     };
   
     p.draw = () => {
@@ -42,4 +42,4 @@ let sketch2b = (p) => {
   };
   };
   
-  new p5(sketch2b);
+  new p5(sketch2);

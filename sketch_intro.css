@@ -295,6 +295,11 @@ display: none;
 ----------------------------------------------------------------------------------------------------------*/
 @media (max-width: 1025px) {
 
+  html, body {
+    overflow-x: hidden; /* Elimina la barra de desplazamiento horizontal */
+    width: 100%; /* Asegura que el contenido no se extienda más allá de los bordes */
+}
+
   h2 {
     font-size: 20px;
   }

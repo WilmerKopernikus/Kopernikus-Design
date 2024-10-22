@@ -25,7 +25,7 @@ let sketch2b = (p) => {
     
       p.rotateX(rotationX);  // Aplica rotación en el eje X
       p.rotateY(rotationY);  // Aplica rotación en el eje Y
-      p.box(60);  
+      p.box(100);  
       p.pop();
     };
 
