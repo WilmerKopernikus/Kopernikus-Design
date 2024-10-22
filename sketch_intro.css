@@ -378,7 +378,7 @@ display: none;
     font-size: 26px;}
 
   .cases-mobile-display  {
-    margin-top: 0;
+    margin-top: 30px;
     color: #ffffff;
     z-index: 9; /* Asegura que el elemento esté al frente */
     position: relative;
@@ -428,22 +428,16 @@ display: none;
     font-size: 27px;
   }
 
-  .services-mobile-display {
-    margin-top: 250px;
-    margin-left: 10%;
-    margin-right: 10%;
-  }
-
-  .cases-mobile-display  {
-    margin-top: 150px;
-  }
-
   .cases-mobile-display img {
     margin-bottom: 100px;
   }
 
   .header-logo {
     width: 250px;
+  }
+
+  .title-video {
+    margin-top: 120px;
   }
 
 }
