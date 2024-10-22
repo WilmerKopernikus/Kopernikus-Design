@@ -25,7 +25,7 @@ let overlaySketch2 = (p) => {
         p.strokeWeight(2);
         p.rotateX(rotationX);  // Aplica rotación continua en el eje X
         p.rotateY(rotationY);  // Aplica rotación continua en el eje Y
-        p.box(70);  
+        p.box(100);  
         p.pop();
     };
 

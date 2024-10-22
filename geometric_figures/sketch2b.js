@@ -6,6 +6,7 @@ let sketch2b = (p) => {
     p.setup = () => {
       let canvas = p.createCanvas(200, 200, p.WEBGL);
       canvas.parent("sketch2b");  // Asigna el canvas al div con id 'sketch-container'
+      p.angleMode(p.DEGREES);
     };
   
     p.draw = () => {
@@ -24,7 +25,7 @@ let sketch2b = (p) => {
     
       p.rotateX(rotationX);  // Aplica rotación en el eje X
       p.rotateY(rotationY);  // Aplica rotación en el eje Y
-      p.box(70);  
+      p.box(60);  
       p.pop();
     };
 
