@@ -302,6 +302,10 @@ display: none;
     align-items: center;
   }
 
+  .cases-mobile-display video {
+    margin-top: 30px;
+  }
+
   .services-screen-display {
     display: none;
   }
@@ -314,6 +318,11 @@ display: none;
 
   #title-mobile {         
     margin-top: 100px;   
+  }
+
+  #services-images {
+    width: 200px;
+    border-radius: 0;
   }
 
 }
