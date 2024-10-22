@@ -1,7 +1,7 @@
 //para hacer scrolling y cambiar el color del fondo
 window.addEventListener('scroll', () => {
     const scrollY = window.scrollY;
-    const triggerPoint = 5000; // Punto en el que comienza la transición
+    const triggerPoint = 6000; // Punto en el que comienza la transición
     const documentHeight = document.documentElement.scrollHeight - window.innerHeight;
 
     if (scrollY > triggerPoint) {
