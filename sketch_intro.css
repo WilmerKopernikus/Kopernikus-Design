@@ -254,6 +254,10 @@ body {
   width: 400px;
 }
 
+.cases-mobile-display {
+display: none;
+}
+
 
 /*----------------------------------------------------------------------------------------------------------
  -----------------------------------------------------------------------------------------------------------
@@ -271,8 +275,8 @@ body {
     line-height: 2;
   }
   
-  .services-mobile-display  {
-    margin-top: 400px;
+  .cases-mobile-display  {
+    margin-top: 500px;
     color: #ffffff;
     z-index: 9; /* Asegura que el elemento esté al frente */
     position: relative;
@@ -284,7 +288,20 @@ body {
     justify-content: center;
     align-items: center;
   }
-  
+
+  .cases-mobile-display img {
+    width: 100%;
+    margin-bottom: 200px;
+    border-radius: 20px;
+  }
+
+  .flex-container-mobile {
+    display: flex;
+    flex-direction: column; /* Stacks the images in a column */
+    justify-content: center;
+    align-items: center;
+  }
+
   .services-screen-display {
     display: none;
   }
@@ -300,6 +317,8 @@ body {
   }
 
 }
+
+
 /*----------------------------------------------------------------------------------------------------------
  -----------------------------------------------------------------------------------------------------------
 -------------------------------------------------- Handys -------------------------------------------------
@@ -335,6 +354,14 @@ body {
     margin-top: 250px;
     margin-left: 10%;
     margin-right: 10%;
+  }
+
+  .cases-mobile-display  {
+    margin-top: 300px;
+  }
+
+  .cases-mobile-display img {
+    margin-bottom: 100px;
   }
 
   .header-logo {
