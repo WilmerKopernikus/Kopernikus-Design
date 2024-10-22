@@ -301,6 +301,16 @@ display: none;
   margin-top: 150px;
 }
 
+.video-size {
+  width: 40%;
+}
+
+.video-size-cube {
+  width: 50%;
+}
+
+
+
 
 
 
@@ -317,7 +327,7 @@ display: none;
 }
 
   h2 {
-    font-size: 24px;
+    font-size: 35px;
     text-align: center;
   }
   
@@ -373,6 +383,9 @@ display: none;
 ------------------------------------------------------------------------------------------------------------
 ----------------------------------------------------------------------------------------------------------*/
 @media (max-width: 750px) {
+
+  h2 {
+    font-size: 30px;}
 
   .cases-mobile-display  {
     margin-top: 0;
