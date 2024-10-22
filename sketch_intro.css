@@ -317,7 +317,7 @@ video {
 }
 
   h2 {
-    font-size: 20px;
+    font-size: 24px;
     text-align: center;
   }
   
@@ -379,8 +379,8 @@ video {
     color: #ffffff;
     z-index: 9; /* Asegura que el elemento esté al frente */
     position: relative;
-    margin-left: 20%;
-    margin-right: 20%;
+    margin-left: 10%;
+    margin-right: 10%;
     text-align: justify;
     display: flex;
     flex-direction: column; 
@@ -406,7 +406,7 @@ video {
   }
 
   p {
-    font-size: 16px;
+    font-size: 18px;
   }
 
   .hamburger {
