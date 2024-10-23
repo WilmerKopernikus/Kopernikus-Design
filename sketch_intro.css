@@ -299,6 +299,10 @@ display: none;
   width: 40%;
 }
 
+.title-video-2 {
+  display: none;
+}
+
 
 
 
@@ -362,6 +366,16 @@ display: none;
   #services-images {
     width: 200px;
     border-radius: 0;
+  }
+
+  .title-video {
+    display: none;
+  }
+
+  .title-video-2 {
+    display: flex;
+    margin-top: 150px;
+    margin-bottom: 50px;
   }
 
 }
@@ -436,8 +450,5 @@ display: none;
     width: 250px;
   }
 
-  .title-video {
-    margin-top: 120px;
-  }
 
 }
