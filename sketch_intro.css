@@ -226,6 +226,21 @@ body {
   margin-left: auto;
   margin-right: auto;
   margin-top: 200px;
+
+}
+
+.cases-screen-display {
+  color:rgb(255, 255, 255);
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  font-weight: 100;
+  width: 60%;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 100px;
+  padding-bottom: 500px;
 }
 
 .services-mobile-display{
@@ -340,6 +355,10 @@ display: none;
     border-radius: 20px;
   }
 
+
+
+  
+
   .flex-container-mobile {
     display: flex;
     flex-direction: column; 
@@ -378,6 +397,26 @@ display: none;
     margin-bottom: 50px;
   }
 
+  .cases-screen-display {
+    display: none;
+  }
+
+
+
+  .cases-mobile-display  {
+    margin-top: 170px;
+    color: #ffffff;
+    z-index: 9; /* Asegura que el elemento esté al frente */
+    position: relative;
+    margin-left: 20%;
+    margin-right: 20%;
+    text-align: justify;
+    display: flex;
+    flex-direction: column; 
+    justify-content: center;
+    align-items: center;
+  }
+
 }
 
 
@@ -391,19 +430,19 @@ display: none;
   h2 {
     font-size: 26px;}
 
-  .cases-mobile-display  {
-    margin-top: 30px;
-    color: #ffffff;
-    z-index: 9; /* Asegura que el elemento esté al frente */
-    position: relative;
-    margin-left: 10%;
-    margin-right: 10%;
-    text-align: justify;
-    display: flex;
-    flex-direction: column; 
-    justify-content: center;
-    align-items: center;
-  }
+    .cases-mobile-display  {
+      margin-top: 100px;
+      color: #ffffff;
+      z-index: 9; /* Asegura que el elemento esté al frente */
+      position: relative;
+      margin-left: 10%;
+      margin-right: 10%;
+      text-align: justify;
+      display: flex;
+      flex-direction: column; 
+      justify-content: center;
+      align-items: center;
+    }
 
   #sketch2b {
     width: 200px; /* Ensure the div takes full width */
