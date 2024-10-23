@@ -21,3 +21,30 @@ document.addEventListener("DOMContentLoaded", function() {
         document.body.classList.remove("no-scroll");
     });
 });
+
+document.addEventListener('DOMContentLoaded', function () {
+    const lazyVideos = document.querySelectorAll('video[data-src]');
+
+    function lazyLoadVideo(video) {
+        const source = video.querySelector('source');
+        if (source && video.dataset.src) {
+            source.src = video.dataset.src;
+            video.load(); // Comienza la carga del video
+            video.play(); // Reproduce el video si es necesario
+        }
+    }
+
+    const observer = new IntersectionObserver(function (entries) {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                lazyLoadVideo(entry.target);
+                observer.unobserve(entry.target); // Deja de observar el video una vez cargado
+            }
+        });
+    });
+
+    lazyVideos.forEach(video => {
+        observer.observe(video);
+    });
+});
+
