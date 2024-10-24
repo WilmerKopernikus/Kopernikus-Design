@@ -1,7 +1,7 @@
 let sketch3 = function(p) {
     let objs = [];
     let colors = [
-      "#FF38D6", "#ff7d56", "#761DB0", "#00E2BA", "#2e00ec",
+      "#7ba9fd", "#005aff", "#003390", "#172a4d", "#355ba0"
     ];
   
     p.setup = function() {

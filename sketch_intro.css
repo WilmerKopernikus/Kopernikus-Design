@@ -87,7 +87,7 @@ body {
 ----------------------------------------------------------------------------------------------------------*/
  
 .header {
-  background-color: rgb(0, 0, 0);
+  background-color: rgb(30, 30, 30);
   width: 100%;
   display: flex; 
   justify-content: left;
@@ -117,7 +117,7 @@ body {
   top: 12px;
   right: 50px;
   z-index: 1000;
-  background-color: #0000006e;
+  background-color: rgb(30, 30, 30);
   padding: 10px;
   border-radius: 5px;
 }
@@ -146,7 +146,7 @@ body {
   left: 150%;
   right: 0;
   bottom: 0;
-  background-color: #000000d0;
+  background-color: #000000cd;
   display: flex; 
   flex-direction: column;
   justify-content: center;
@@ -185,6 +185,7 @@ body {
   box-shadow: 0 0 10px rgba(255, 255, 255, 0.8), 0 0 20px rgba(242, 242, 242, 0.5);
   padding: 10px;
   border-radius: 10px;
+  background-color: #000000;
 }
 
 .hamburger.open span:nth-child(1) {
@@ -222,11 +223,19 @@ body {
   flex-direction: column;
   justify-content: center;
   font-weight: 100;
-  width: 60%;
+  width: 70%;
   margin-left: auto;
   margin-right: auto;
   margin-top: 200px;
+}
 
+.div-texto {
+  background-color: rgb(40, 40, 40);
+  padding: 30px;
+  border-radius: 15px;
+  height: 350px;
+  display: flex;
+  align-items: center;
 }
 
 .cases-screen-display {
@@ -251,7 +260,7 @@ body {
   display: flex;          
   align-items: center;    
   gap: 50px;        
-  margin-bottom: 30px;   
+  margin-bottom: 200px;   
   margin-top: 30px;   
 }
 
@@ -317,7 +326,6 @@ display: none;
 .title-video-2 {
   display: none;
 }
-
 
 
 
