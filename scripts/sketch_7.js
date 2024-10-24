@@ -4,9 +4,9 @@ let x = [];
 let t = 0;
 
 function setup() {
-	let canvas = createCanvas(windowWidth, windowHeight); // Crea un lienzo en 3D que ocupa toda la ventana
-  canvas.position(0, 30); // Posiciona el lienzo en la esquina superior izquierda
-  canvas.style('z-index', '-1'); // Asegura que el lienzo esté detrás del contenido
+	let canvas = createCanvas(windowWidth, windowHeight); 
+  canvas.position(0, 30); 
+  canvas.style('z-index', '-1'); 
   canvas.style('position', 'fixed');
 	colorMode(HSB, 360, 100, 100, 100);
 	textSize(width / message.length * 0.85);

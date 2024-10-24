@@ -1,59 +1,38 @@
-/*----------------------------------------------------------------------------------------------------------
- -----------------------------------------------------------------------------------------------------------
---------------------------------------------------- Fonts --------------------------------------------------
-------------------------------------------------------------------------------------------------------------
-----------------------------------------------------------------------------------------------------------*/
-
+/*--------------------------------- Fonts ---------------------------------------*/
 @font-face {
   font-family: 'Roboto';
   src: url('fonts/RobotoCondensed-Light.ttf') format('truetype');
   font-weight: light;
   font-style: normal;
 }
-
-
-
 h2, h3, li, p {
   font-family: 'Roboto', sans-serif;
 }
-
 h2 {
   font-size: 40px;
 }
-
 h3 {
   font-size: 25px;
 }
-
 a, li {
   text-decoration: none;
 }
-
 p {
   font-size: 22px;
 }
-
-/*----------------------------------------------------------------------------------------------------------
- -----------------------------------------------------------------------------------------------------------
----------------------------------------------- General Styles ----------------------------------------------
-------------------------------------------------------------------------------------------------------------
-----------------------------------------------------------------------------------------------------------*/
-
+/*------------------------------ General Styles ------------------------------------*/
 html, body {
   margin: 0;
   padding: 0;
   height: 100%;
   width: 100%; 
-
 }
-
 body.no-scroll {
   overflow: hidden;
 }
-
 body {
   background-color: rgb(0, 0, 0);
-  /*transition: background-color 0.5s ease;*/
+
 }
 /*
 .trigger-point {
@@ -61,7 +40,6 @@ body {
   height: 100px;
   background-color: red;
 }*/
-
 #loader {
   position: fixed;
   width: 100%;
@@ -70,22 +48,13 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  z-index: 9999; /* Ensure it's on top of everything */
+  z-index: 9999; 
 }
-
 #loader img {
   width: 100px;
   height: 100px;
 }
-
-
-
-/*----------------------------------------------------------------------------------------------------------
- -----------------------------------------------------------------------------------------------------------
---------------------------------------------------- Header -------------------------------------------------
-------------------------------------------------------------------------------------------------------------
-----------------------------------------------------------------------------------------------------------*/
- 
+/*--------------------- Header -------------------------*/
 .header {
   background-color: rgb(30, 30, 30);
   width: 100%;
@@ -99,19 +68,12 @@ body {
   top: 0;
   padding-left: 5%;
 }
-
 .header-logo {
     z-index: 1;
     margin-top: 12px;
     width: 350px;
 }
-
-/*----------------------------------------------------------------------------------------------------------
- -----------------------------------------------------------------------------------------------------------
----------------------------------------------- Hamburger-Menu ----------------------------------------------
-------------------------------------------------------------------------------------------------------------
-----------------------------------------------------------------------------------------------------------*/
-
+/*----------------------- Hamburger-Menu --------------------------*/
 .hamburger-menu {
   position: fixed;
   top: 12px;
@@ -121,7 +83,6 @@ body {
   padding: 10px;
   border-radius: 5px;
 }
-
 .hamburger {
   cursor: pointer;
   display: flex;
@@ -130,7 +91,6 @@ body {
   width: 40px;
   height: 30px;
 }
-
 .hamburger span {
   display: block;
   width: 100%;
@@ -139,7 +99,6 @@ body {
   transition: all 0.3s ease;
   transform-origin: center;
 }
-
 .menu-overlay {
   position: fixed;
   top: 0;
@@ -152,24 +111,20 @@ body {
   justify-content: center;
   align-items: center;
   z-index: 10;
-  transition: left 0.5s ease-in-out; /* Añade una transición suave */
+  transition: left 0.5s ease-in-out; 
 }
-
 .menu-overlay.show {
-  left: 0; /* Mueve el menú completamente a la vista */
+  left: 0; 
 }
-
 .menu-overlay ul {
   list-style: none;
   padding: 0;
   margin: 0;
   text-align: center;
 }
-
 .menu-overlay li {
   margin: 50px 0;
 }
-
 .menu-overlay a {
   color: rgb(255, 255, 255);
   text-decoration: none;
@@ -178,7 +133,6 @@ body {
   transition: font-size 0.3s, color 0.3s, box-shadow 0.3s; 
   box-shadow: none;
 }
-
 .menu-overlay a:hover {
   color: #ffffff;
   font-size: 37px;
@@ -187,35 +141,24 @@ body {
   border-radius: 10px;
   background-color: #000000;
 }
-
 .hamburger.open span:nth-child(1) {
   transform: rotate(45deg) translate(9px, 9px);
   background-color: white;
 }
-
 .hamburger.open span:nth-child(2) {
   opacity: 0;
 }
-
 .hamburger.open span:nth-child(3) {
   transform: rotate(-45deg) translate(5px, -5px);
   background-color: white;
 }
-
 .menu-overlay.show {
   display: flex;
 }
-
 .title-video-mobile {
   display: none;
 }
-
-/*----------------------------------------------------------------------------------------------------------
- -----------------------------------------------------------------------------------------------------------
--------------------------------------------------- Content -------------------------------------------------
-------------------------------------------------------------------------------------------------------------
-----------------------------------------------------------------------------------------------------------*/
-
+/*-------------------------------------------------- Content -------------------------------------------------*/
 .services-screen-display {
   color:rgb(255, 255, 255);
   display: flex;
@@ -228,7 +171,6 @@ body {
   margin-right: auto;
   margin-top: 200px;
 }
-
 .div-texto {
   background-color: rgb(40, 40, 40);
   padding: 30px;
@@ -237,7 +179,6 @@ body {
   display: flex;
   align-items: center;
 }
-
 .cases-screen-display {
   color:rgb(255, 255, 255);
   display: flex;
@@ -251,11 +192,9 @@ body {
   margin-top: 100px;
   padding-bottom: 500px;
 }
-
 .services-mobile-display{
   display: none;
 }
-
 .flex-container {
   display: flex;          
   align-items: center;    
@@ -263,24 +202,20 @@ body {
   margin-bottom: 200px;   
   margin-top: 30px;   
 }
-
 .flex-container p {
   flex: 1;    
   text-align: justify;
   line-height: 2;
 }
-
 .sketch-container {
   width: 400px;
   height: 400px;
   margin: 10px;
 }
-
 .image-container {
   position: relative;
   width: 500px;
 }
-
 .cases-bild {
   width: 100%;
   border-radius: 20px;
@@ -289,132 +224,92 @@ body {
   top: 0;
   left: 0;
 }
-
 .hover-img {
   opacity: 0;
   z-index: 1;
 }
-
 .image-container:hover .hover-img {
   opacity: 1;
 }
-
 .image-container:hover img:not(.hover-img) {
   opacity: 0;
 }
-
 #services-images {
   width: 400px;
 }
-
 .cases-mobile-display {
 display: none;
 }
-
 .title-video {
   margin-top: 200px;
 }
-
 .video-size {
   width: 40%;
 }
-
 .video-size-cube {
   width: 40%;
 }
-
 .title-video-2 {
   display: none;
 }
-
-
-
-
-
-/*----------------------------------------------------------------------------------------------------------
- -----------------------------------------------------------------------------------------------------------
--------------------------------------------------- Tablets -------------------------------------------------
-------------------------------------------------------------------------------------------------------------
-----------------------------------------------------------------------------------------------------------*/
+/*------------------------------------------ Tablets -----------------------------------------------*/
 @media (max-width: 1025px) {
-
   html, body {
-    overflow-x: hidden; /* Elimina la barra de desplazamiento horizontal */
-    width: 100%; /* Asegura que el contenido no se extienda más allá de los bordes */
-}
-
+    overflow-x: hidden; 
+    width: 100%; 
+  }
   h2 {
     font-size: 35px;
     text-align: center;
   }
-  
   p {
     font-size: 18px;
     line-height: 2;
   }
-
-   .services-screen-display {
+  .services-screen-display {
   width: 80%;
   }
-
   .cases-mobile-display img {
     width: 100%;
     margin-bottom: 200px;
     border-radius: 20px;
   }
-
-
-
-  
-
   .flex-container-mobile {
     display: flex;
     flex-direction: column; 
     justify-content: center;
     align-items: center;
   }
-
   .cases-mobile-display video {
     margin-top: 30px;
   }
-
-
-  
   .sketch-container-2 {
     width: 200px;
     height: 200px;
     margin-top: 30px;
   }
-
   #title-mobile {         
     margin-top: 100px;   
   }
-
   #services-images {
     width: 200px;
     border-radius: 0;
   }
-
   .title-video {
     display: none;
   }
-
   .title-video-2 {
     display: flex;
     margin-top: 150px;
     margin-bottom: 50px;
   }
-
   .cases-screen-display {
     display: none;
   }
-
-
-
   .cases-mobile-display  {
     margin-top: 170px;
     color: #ffffff;
-    z-index: 9; /* Asegura que el elemento esté al frente */
+    z-index: 9; 
     position: relative;
     margin-left: 20%;
     margin-right: 20%;
@@ -424,24 +319,16 @@ display: none;
     justify-content: center;
     align-items: center;
   }
-
 }
-
-
-/*----------------------------------------------------------------------------------------------------------
- -----------------------------------------------------------------------------------------------------------
--------------------------------------------------- Handys -------------------------------------------------
-------------------------------------------------------------------------------------------------------------
-----------------------------------------------------------------------------------------------------------*/
+/*-------------------------------------------------- Handys -------------------------------------------------*/
 @media (max-width: 750px) {
 
   h2 {
     font-size: 26px;}
-
-    .cases-mobile-display  {
+  .cases-mobile-display  {
       margin-top: 100px;
       color: #ffffff;
-      z-index: 9; /* Asegura que el elemento esté al frente */
+      z-index: 9; 
       position: relative;
       margin-left: 10%;
       margin-right: 10%;
@@ -450,52 +337,39 @@ display: none;
       flex-direction: column; 
       justify-content: center;
       align-items: center;
-    }
-
+  }
   #sketch2b {
-    width: 200px; /* Ensure the div takes full width */
-    margin: 100px auto; /* Center the div horizontally */
+    width: 200px; 
+    margin: 100px auto; 
     display: flex;
-    justify-content: center; /* Center content inside the div */
+    justify-content: center; 
     align-items: center;
-    
-}
-
+  }
   .services-screen-display {
     display: none;
   }
-
   h3 {
     font-size: 22px;
   }
-
   p {
     font-size: 18px;
   }
-
   .hamburger {
     width: 30px;
   }
-
   .hamburger-menu {
     right: 20px;
   }
-
   .menu-overlay a {
     font-size: 20px;
   }
-
   .menu-overlay a:hover {
     font-size: 27px;
   }
-
   .cases-mobile-display img {
     margin-bottom: 100px;
   }
-
   .header-logo {
     width: 250px;
   }
-
-
 }
