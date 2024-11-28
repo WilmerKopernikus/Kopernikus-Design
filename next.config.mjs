@@ -1,11 +1,9 @@
-/** @type {import('next').NextConfig} */
-const nextConfig = {
-    reactStrictMode: true, // Activa el modo estricto de React
-    swcMinify: true, // Usa SWC para la minificación (mejor rendimiento)
+export default {
+    reactStrictMode: true,
+    swcMinify: true,
     experimental: {
-      appDir: true, // Activa el App Router (si usas la nueva estructura de Next.js)
+      appDir: true,
     },
   };
   
-  module.exports = nextConfig;
   
