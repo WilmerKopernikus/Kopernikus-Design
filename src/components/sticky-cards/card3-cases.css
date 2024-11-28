@@ -1,0 +1,136 @@
+.left {
+  grid-area: left; /* Assign to the left area of the grid */
+  background-color: #232323;
+  padding-left: 50px;
+  padding-right: 50px;
+  padding-top: 0;
+  border-top: 1px solid white; /* Visual separation */
+}
+
+.right {
+  grid-area: right; /* Assign to the right area of the grid */
+  background-color: #000000;
+  padding: 50px;
+  border-top: 1px solid white; /* Optional if needed */
+}
+
+#joblab-images{
+  background-color: #232323;
+}
+
+#responsive-sketch {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#center-services {
+  display: flex;
+  justify-content: center;
+  height: 100%;
+  flex-direction: column;
+  background-color: #000000;
+}
+
+.image-container {
+  position: relative;
+  width: 100%; /* Full width of parent */
+  height: 100%; /* Full height minus padding */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.image-container img {
+  max-width: 100%; /* Ensure the image does not overflow */
+  max-height: 100%; /* Ensure the image fits within the container */
+  height: auto; /* Maintain aspect ratio */
+  border-radius: 15px; /* Rounded corners */
+}
+
+#gif-container img {
+  width: auto; /* Allow width to adjust to maintain aspect ratio */
+  height: 75vh; /* Adjust height to fill the container */
+  object-fit: cover; /* Crop the image if necessary to fit */
+}
+
+.image-container-mobile {
+  display: none;
+}
+
+#color,
+#black-and-white {
+  position: absolute; 
+  top: 50%; /* Center vertically */
+  left: 50%; /* Center horizontally */
+  transform: translate(-50%, -50%); /* Center origin */
+  opacity: 0; /* Hidden by default */
+  transition: opacity 0.5s ease-in-out; /* Smooth fade transition */
+}
+
+#black-and-white {
+  opacity: 1; /* Default visible image */
+}
+
+.justify {
+  text-align: justify;
+}
+
+
+
+@media (max-width: 821px) {
+
+  .image-container-mobile {
+    position: relative;
+    width: 100%; /* Full width of parent */
+    height: 90%; /* Full height minus padding */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+  }
+  
+  .image-container-mobile img {
+    max-width: 100%; /* Ensure the image does not overflow */
+    max-height: 100%; /* Ensure the image fits within the container */
+    height: auto; /* Maintain aspect ratio */
+    border-radius: 15px; /* Rounded corners */
+  }
+  
+  .image-container {
+    display: none;
+  }
+
+  .left {
+    padding-left: 30px;
+    padding-right: 30px;
+    background-color: #000000;
+  } 
+
+  .right {
+    border-top: none;
+    padding: 30px;
+  }
+
+  #transparente {
+    display: none;
+  }
+
+  #color,
+#black-and-white {
+  top: 40%; /* Center vertically */
+}
+
+#center-services{
+  background-color: #232323;
+}
+
+}
+
+@media (max-width: 380px) and (max-height: 670px) {
+
+  .right {
+    border-top: 1px solid #232323; /* Optional if needed */
+  }
+}
+  
