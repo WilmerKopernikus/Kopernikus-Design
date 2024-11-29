@@ -61,7 +61,9 @@ const CardJobLab = () => {
           <p className="justify cases-text">
             <strong>Overview</strong>
             <br />
-            In May and June 2024, the DAAD in China organized the project Job Lab in collaboration with the German Embassy, the Goethe-Institut, and other renowned institutions. Under the motto "With German into the Future," the fair offered career perspectives for Chinese students of German to support them on their path to the working world.
+            In May and June 2024, the DAAD in China organized the project Job Lab in collaboration with the German 
+            Embassy, the Goethe-Institut, and other renowned institutions. Under the motto &quot;With German into the Future,&quot;
+             the fair offered career perspectives for Chinese students of German to support them on their path to the working world.
           </p>
           {/* Wrap the button with Link */}
           <Link href="/joblab">

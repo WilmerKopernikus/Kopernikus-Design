@@ -15,7 +15,7 @@ const Card12 = () => {
         <div className="right" id="responsive-sketch">
           <video id="services-animation" autoPlay loop muted>
             <source src="/videos/cube.mp4" type="video/mp4" />
-            Your browser doesn't support video reproductions.
+            Your browser doesn&apos;t support video reproductions
           </video>
         </div>
       </div>

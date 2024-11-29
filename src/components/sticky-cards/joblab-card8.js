@@ -10,7 +10,7 @@ const JoblabCard8 = () => {
           <p className="joblab-text justify">
           The Job Lab attracted a total of around 300 visitors and was very well 
           received, as reflected in lively discussions, interested inquiries, and the 
-          participation of most visitors in the entire day's program. The successful 
+          participation of most visitors in the entire day&apos;s program. The successful 
           implementation of the Job Lab in Guangzhou, Shanghai, and Beijing laid the 
           foundation for a possible annual continuation of the project.
           </p>

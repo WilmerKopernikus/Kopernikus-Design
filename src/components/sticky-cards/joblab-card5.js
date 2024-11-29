@@ -12,7 +12,7 @@ const JoblabCard5 = () => {
           in Guangzhou, Shanghai, and Beijing, the German Centre Shanghai, the German Centre Beijing, 
           the AHK Greater China, Advantage Austria, the OeAD, and the Goethe-Institut Beijing. By 
           involving DAAD lecturers from across China as workshop leaders, it also functioned as a 
-          comprehensive project within the Lecturers' Program.
+          comprehensive project within the Lecturers&apos; Program.
           </p>
         </div>
         <div className="right" id="joblab-images">

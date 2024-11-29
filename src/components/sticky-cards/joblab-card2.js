@@ -8,9 +8,9 @@ const JoblabCard2 = () => {
         <div className="left" id="center-services">
           <h2 className="cases-title">With German into the Future</h2>
           <p className="joblab-text justify">
-          In May and June 2024, the DAAD in China, as part of the Lecturers' Program initiated by 
+          In May and June 2024, the DAAD in China, as part of the Lecturers&apos; Program initiated by 
           DAAD lecturers Katharina Eberle and Katharina Quicker, organized the innovative project 
-          Job Lab. Under the motto "With German into the Future," the fair offered career perspectives 
+          Job Lab. Under the motto &quot;With German into the Future,&quot; the fair offered career perspectives 
           for Chinese learners of German to support them on their path into the working world.
           </p>
         </div>
