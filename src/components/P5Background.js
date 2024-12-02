@@ -112,15 +112,27 @@ const P5Background = () => {
       };
     };
 
+    // Create the p5 instance when the component mounts
     p5InstanceRef.current = new p5(sketch, sketchRef.current);
 
-    // Expose pause and resume methods
-    window.pauseP5Sketch = () => p5InstanceRef.current.noLoop();
-    window.resumeP5Sketch = () => p5InstanceRef.current.loop();
+    // Dynamically assign pause and resume methods to the global object
+    const setGlobalMethods = () => {
+      if (typeof window !== "undefined") {
+        window.pauseP5Sketch = () => p5InstanceRef.current.noLoop();
+        window.resumeP5Sketch = () => p5InstanceRef.current.loop();
+      }
+    };
+
+    setGlobalMethods();
 
     return () => {
+      // Cleanup the p5 instance and global methods when the component unmounts
       if (p5InstanceRef.current) {
         p5InstanceRef.current.remove();
+      }
+      if (typeof window !== "undefined") {
+        delete window.pauseP5Sketch;
+        delete window.resumeP5Sketch;
       }
     };
   }, []);
@@ -129,4 +141,3 @@ const P5Background = () => {
 };
 
 export default P5Background;
-
