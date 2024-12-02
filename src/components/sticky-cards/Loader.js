@@ -1,8 +1,6 @@
 "use client";
-
 import React from "react";
 import "./loader.css"; // Asegúrate de crear este archivo CSS
-
 const Loader = () => {
   return (
     <div className="loader-container">
@@ -10,5 +8,4 @@ const Loader = () => {
     </div>
   );
 };
-
 export default Loader;
