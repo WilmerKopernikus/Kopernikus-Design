@@ -26,7 +26,7 @@ const StickyCardsContainer = () => {
 
   useEffect(() => {
     // Simula la carga completa después de 2 segundos
-    const timer = setTimeout(() => setIsLoading(false), 2000);
+    const timer = setTimeout(() => setIsLoading(false), 2500);
     return () => clearTimeout(timer); // Limpia el timer al desmontar
   }, []);
 
