@@ -1,4 +1,3 @@
-'use client';
 import React, { useState } from 'react';
 import './card3-cases.css';
 import './contact-form.css';

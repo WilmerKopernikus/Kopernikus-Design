@@ -1,6 +1,4 @@
-"use client"; // Ensure this is a client component
-
-import React, { useEffect } from "react";
+import React from "react";
 
 const Card5 = () => {
   return (
