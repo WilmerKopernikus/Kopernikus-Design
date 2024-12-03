@@ -10,14 +10,14 @@
   },
   "dependencies": {
     "next": "^15.0.3",
-    "p5": "^1.11.1",
-    "react": "^19.0.0-rc-66855b96-20241106",
-    "react-dom": "^19.0.0-rc-66855b96-20241106",
-    "sass": "^1.81.0"
+    "p5": "^1.11.2",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1",
+    "sass": "^1.81.1"
   },
   "devDependencies": {
     "@netlify/plugin-nextjs": "^5.8.1",
-    "eslint": "^8",
+    "eslint": "^9.16.0",
     "eslint-config-next": "15.0.3"
   }
 }

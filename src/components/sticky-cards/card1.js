@@ -51,11 +51,15 @@ const Card1 = () => {
   }, [hasStartedTyping, typeWriter, txt1, txt2, txt3]);
 
   return (
+    
     <div id="card1" className="card" style={{ height: '100vh' }}>
       <div className="intro-body card-body">
         <h1 id="line1">{line1}</h1>
         <p id="line2">{line2}</p>
         <p id="line3">{line3}</p>
+      </div>
+      <div className="card1-image">
+            <img src="/images/Kopernikus2.jpg" alt="Kopernikus" />
       </div>
     </div>
   );
