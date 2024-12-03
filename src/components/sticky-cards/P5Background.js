@@ -7,50 +7,120 @@ const P5Sketch = () => {
   const sketchRef = useRef();
 
   useEffect(() => {
+    // Define el sketch de p5.js
     const sketch = (p) => {
-      let canvas;
+      const TOTAL = 4000;
+      let blobs = [];
+      let colors;
+      let variation = 0;
+      let xScale, yScale, centerX, centerY;
+      let changeDuration = 3000;
+      let lastChange = 0;
 
       p.setup = () => {
-        canvas = p.createCanvas(p.windowWidth, p.windowHeight);
-        canvas.position(0, 0);
-        canvas.style("z-index", "-1");
-        canvas.style("position", "fixed");
+        p.createCanvas(p.windowWidth, p.windowHeight).style("position", "fixed").style("z-index", "-1");
+        p.background(0, 0, 70);
+
+        colors = [p.color("#E32C36"), p.color("#FF5733"), p.color("#DCA80D"), p.color("#1AC7C4")];
+        start();
+      };
+
+      const start = () => {
+        centerX = p.width / 2;
+        centerY = p.height / 2;
+        xScale = p.width / 20;
+        yScale = (p.height / 20) * (p.width / p.height);
+
+        blobs = [];
+        p.background("#1a0633");
+        variation = 0;
+        lastChange = p.millis();
+
+        for (let i = 0; i < TOTAL; i++) {
+          addParticle();
+        }
       };
 
       p.draw = () => {
-        p.background("#000000");
+        while (blobs.length < TOTAL) {
+          addParticle();
+        }
 
-        let ctx = p.drawingContext;
-        let gradient = ctx.createLinearGradient(0, 0, p.width, 0);
-        gradient.addColorStop(0, "#000000");
-        gradient.addColorStop(0.25, "yellow");
-        gradient.addColorStop(0.5, "orange");
-        gradient.addColorStop(0.75, "red");
-        gradient.addColorStop(1, "#000000");
-        ctx.strokeStyle = gradient;
+        p.noStroke();
+        p.fill(0, 10);
+        p.rect(0, 0, p.width, p.height);
 
-        p.strokeWeight(1);
-        p.line(0, p.height / 2, p.width, p.height / 2);
-        p.line(p.width / 2, 0, p.width / 2, p.height);
+        let time = p.millis();
+        if (time - lastChange > changeDuration) {
+          lastChange = time;
+          variation++;
+          if (variation > 10) variation = 0;
+        }
 
-        let centerX = p.width / 2;
-        let centerY = p.height / 2;
-        let circleX = centerX + (p.mouseX - centerX) / 8;
-        let circleY = centerY + (p.mouseY - centerY) / 4;
-        let circleX2 = centerX - (p.mouseX - centerX) / 8;
-        let circleY2 = centerY - (p.mouseY - centerY) / 4;
-        let circleX3 = centerX - (p.mouseX - centerX) / 8;
-        let circleY3 = centerY + (p.mouseY - centerY) / 4;
-        let circleX4 = centerX + (p.mouseX - centerX) / 8;
-        let circleY4 = centerY - (p.mouseY - centerY) / 4;
+        const stepsize = p.deltaTime * 0.0008;
+        for (let i = blobs.length - 1; i >= 0; i--) {
+          let blob = blobs[i];
+          const x = getSlopeX(blob.x, blob.y);
+          const y = getSlopeY(blob.x, blob.y);
+          blob.x += blob.direction * x * stepsize;
+          blob.y += blob.direction * y * stepsize;
 
-        p.noFill();
-        p.ellipse(circleX, circleY, 250, 250);
-        p.ellipse(circleX2, circleY2, 250, 250);
-        p.ellipse(circleX3, circleY3, 250, 250);
-        p.ellipse(circleX4, circleY4, 250, 250);
-        p.ellipse(p.windowWidth / 2, p.windowHeight / 2, 250, 250);
+          const printX = getXPrint(blob.x);
+          const printY = getYPrint(blob.y);
+          p.stroke(blob.color);
+          p.strokeWeight(blob.size);
+          p.line(printX, printY, blob.lastX, blob.lastY);
+          blob.lastX = printX;
+          blob.lastY = printY;
+
+          const border = 200;
+          if (printX < -border || printY < -border || printX > p.width + border || printY > p.height + border) {
+            blobs.splice(i, 1);
+          }
+        }
       };
+
+      const addParticle = () => {
+        const x = p.random(p.width);
+        const y = p.random(p.height);
+        const blob = {
+          x: getXPos(x),
+          y: getYPos(y),
+          size: 1,
+          lastX: x,
+          lastY: y,
+          color: p.random(colors),
+          direction: p.random(0.1, 1) * p.random([-1, 1]),
+        };
+        blobs.push(blob);
+      };
+
+      const getSlopeX = (x, y) => {
+        switch (variation) {
+          case 0: return Math.cos(y);
+          case 1: return Math.cos(y * 5) * x * 0.3;
+          case 7: return Math.sin(y * 0.1) * 3;
+          case 9: return y / 3;
+          case 10: return -y;
+          default: return 1;
+        }
+      };
+
+      const getSlopeY = (x, y) => {
+        switch (variation) {
+          case 0: return Math.sin(x);
+          case 1: return Math.sin(x * 5) * y * 0.3;
+          case 7: return -Math.sin(x * 0.1) * 3;
+          case 9: return (x - x * x * x) * 0.01;
+          case 10: return -Math.sin(x);
+          default: return Math.sin(x) * Math.cos(y);
+        }
+      };
+
+      const getXPos = (x) => (x - centerX) / xScale;
+      const getYPos = (y) => (y - centerY) / yScale;
+      const getXPrint = (x) => xScale * x + centerX;
+      const getYPrint = (y) => yScale * y + centerY;
 
       p.windowResized = () => {
         p.resizeCanvas(p.windowWidth, p.windowHeight);
@@ -60,9 +130,7 @@ const P5Sketch = () => {
     const p5Instance = new p5(sketch, sketchRef.current);
 
     return () => {
-      if (p5Instance) {
-        p5Instance.remove();
-      }
+      p5Instance.remove();
     };
   }, []);
 
