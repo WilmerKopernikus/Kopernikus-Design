@@ -1,0 +1,131 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+@font-face {
+  font-family: 'Roboto';
+  src: url('font/RobotoCondensed-Light.ttf') format('truetype');
+  font-weight: 300;
+  font-style: normal;
+}
+
+body {
+  font-family: 'Roboto', Arial, Helvetica, sans-serif;
+  overflow-x: hidden;
+  background-color: #000000;
+}
+
+body::-webkit-scrollbar {
+  display: none;
+}
+
+h2 {
+  font-size: 6em;
+}
+
+.cases-title{
+  font-size: 2.1rem;
+  margin-top: 35px;
+  margin-bottom: 20px;
+  color: #ffffff;
+}
+
+.cases-text{
+  font-size: 1.3rem;
+  line-height: 1.4;
+}
+
+.services-title{
+  font-size: 2.1rem;
+  margin-bottom: 30px;
+}
+
+.services-text {
+  font-size: 1.3rem;
+  line-height: 1.4;
+  margin-bottom: 30px;
+}
+
+
+
+#center-services {
+  display: flex;
+  justify-content: center;
+  height: 100%;
+  flex-direction: column;
+}
+
+.justify {
+  text-align: justify;
+}
+
+.intro-div {
+  margin-top: 100vh;
+}
+
+.media-container {
+  background-color: #000000;
+  display: flex;
+  justify-content: center;
+}
+
+#card1 h1 {
+  font-size: 4em;
+  padding-bottom: 0;
+  padding-top: 5vh;
+}
+
+#card1 p {
+  font-size: 3em;
+  line-height: 1;
+  padding-right: 20vw;;
+}
+
+@media (max-width: 750px) {
+  
+  :root {
+    --cardHeight: calc(100vh - 55px);
+  }
+
+  #cube-video {
+    display: block;
+  }
+}
+
+@media (max-width: 380px) and (max-height: 670px) {
+  #card1 h1 {
+    font-size: 2em;
+  }
+
+  #card1 p {
+    font-size: 1.7em;
+  }
+
+  .intro-image {
+    width: 100%;
+    bottom: 12vh;
+  }
+
+  .cases-title{
+    font-size: 1.5rem;
+    margin-top: 10px;
+    margin-bottom: 10px;
+  }
+
+  .cases-text{
+    font-size: 0.9rem;
+    line-height: 1.1;
+  }
+
+  .services-title{
+    font-size: 1.4rem;
+    margin-bottom: 30px;
+  }
+  
+  .services-text {
+    font-size: 0.9rem;
+    line-height: 1.4;
+  }
+}

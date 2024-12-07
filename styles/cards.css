@@ -1,0 +1,254 @@
+:root {
+  --cards: 1;
+  --cardHeight: calc(100vh - 66px);
+  --cardTopPadding: 0px;
+  --cardMargin: 4vw;
+}
+
+#cases-cards-container {
+  --cards: 2;
+}
+
+#services-cards-container {
+  --cards: 7;
+}
+
+#contact-cards-container {
+  --cards: 1;
+}
+
+#card1 {
+  --index: 1;
+  margin-top: 66px;
+}
+
+#card1-cases {
+  --index: 1;
+  margin-top: 66px;
+}
+
+#card2-cases {
+  --index: 2;
+  margin-top: 66px;
+}
+
+#card1-services {
+  --index: 1;
+  margin-top: 66px;
+}
+
+#card2-services {
+  --index: 2;
+  margin-top: 66px;
+}
+
+#card3-services {
+  --index: 3;
+  margin-top: 66px;
+}
+
+#card4-services {
+  --index: 4;
+  margin-top: 66px;
+}
+
+#card5-services {
+  --index: 5;
+  margin-top: 66px;
+}
+
+#card6-services {
+  --index: 6;
+  margin-top: 66px;
+}
+
+#card7-services {
+  --index: 7;
+  margin-top: 66px;
+}
+
+#card1-contact {
+  --index: 1;
+  margin-top: 66px;
+}
+
+#card1 .card-body-intro {
+  background-color: #00000087;
+}
+  
+#card1-cases .card-body {
+  background-color: #000000;
+}
+  
+#card2-cases .card-body {
+   background-color: #000000;
+}
+
+#card1-services .card-body {
+  background-color: #000000;
+}
+
+#card2-services .card-body {
+  background-color: #000000;
+}
+
+#card3-services .card-body {
+  background-color: #000000;
+}
+
+#card4-services .card-body {
+  background-color: #000000;
+}
+
+#card5-services .card-body {
+  background-color: #000000;
+}
+
+#card6-services .card-body {
+  background-color: #000000;
+}
+
+#card7-services .card-body {
+  background-color: #000000;
+}
+
+#card1-contact .card-body {
+  background-color: #000000;
+}
+
+.container {
+  width: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+#cards {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: repeat(var(--cards), var(--cardHeight));
+  gap: var(--cardMargin);
+  padding-bottom: calc(var(--cards) * var(--cardTopPadding));
+  margin-bottom: var(--cardMargin);   
+}
+
+.card {
+  position: sticky;
+  top: 66px;
+  padding-top: calc(var(--index) * var(--cardTopPadding));
+  scroll-margin-top: 66px; 
+}
+
+.card-body {
+  display: grid; 
+  grid-template-areas: 
+    "left right"; 
+  grid-template-columns: 50% 50%; 
+  height: var(--cardHeight); 
+  color: #ffffff; 
+  border-top: 1px solid white; 
+  box-sizing: border-box;
+}
+
+.card-body-intro {
+  box-sizing: border-box;
+  height: var(--cardHeight);
+  display: flex;
+  flex-direction: column; 
+  justify-content: flex-start; 
+  color: #ffffff;
+  border-top: 1px solid white;
+  padding: 20px; 
+  margin-top: 20px; 
+}
+
+.left {
+  grid-area: left; 
+  background-color: #232323;
+  padding-left: 50px;
+  padding-right: 50px;
+  padding-top: 0;
+  border-top: 1px solid white; 
+}
+  
+.right {
+  grid-area: right; 
+  background-color: #000000;
+  padding: 50px;
+  border-top: 1px solid white; 
+}
+
+.send-button {
+  width: 200px; 
+  padding: 15px;
+  background-color: #ffcc00;
+  color: #000000;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: background-color 0.3s;
+}
+  
+.send-button:hover {
+  background-color: #ff7300;
+}
+
+@media (max-width: 750px) {
+
+  :root {
+    --cardHeight: calc(100vh - 55px);
+  }
+
+  #cases-cards-container {
+    --cardHeight: calc(100vh - 50px);
+  }
+
+  #services-cards-container {
+    --cardHeight: calc(100vh - 50px);
+  }
+
+  #contact-cards-container {
+    --cardHeight: calc(100vh - 50px);
+  }
+
+  .card {
+    top: 50px;
+  }
+
+  .card-body {
+    grid-template-areas: 
+      "left"
+      "right"; /* Stack sections vertically */
+    grid-template-columns: 1fr; /* Single column layout */
+    grid-template-rows: 50% 50%; /* Equal height for both rows */
+  }
+
+  #cases{
+    grid-template-rows: 65% 35%;
+  }
+
+  #services {
+    grid-template-rows: 40% 60%;
+  }
+
+  .send-button{
+    width: 150px;
+  }
+
+  .left {
+    background-color: #000000;
+    padding-left: 20px;
+    padding-right: 30px;
+  } 
+
+  .right {
+    padding: 20px;
+    border-top: 1px solid rgb(0, 0, 0); 
+  }
+
+  #contact-proportion{
+    grid-template-rows: 100% 0%;
+  }
+
+
+}
