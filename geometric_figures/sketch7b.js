@@ -5,7 +5,7 @@ let sketch7b = function (p) {
     ];
   
     p.setup = function () {
-      p.createCanvas(300, 300);
+      p.createCanvas(250, 250);
       p.rectMode(p.CENTER);
       let c = 10;
       let w = p.width / c;

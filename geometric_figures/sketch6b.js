@@ -3,7 +3,7 @@ let sketch6b = function(p) {
   let colors = ["#E32C36", "#FF5733", "#DCA80D", "#1AC7C4"];
 
   p.setup = function() {
-    p.createCanvas(300, 300);
+    p.createCanvas(250, 250);
     p.rectMode(p.CENTER);
     let c = 6;
     let w = p.width / c;

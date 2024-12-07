@@ -3,7 +3,7 @@ let sketch5b = function(p) {
     let rSeed;
   
     p.setup = function() {
-      p.createCanvas(300, 300);
+      p.createCanvas(250, 250);
       p.pixelDensity(2);
       p.rectMode(p.CENTER);
       rSeed = p.int(p.random(777));

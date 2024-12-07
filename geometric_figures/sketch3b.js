@@ -5,7 +5,7 @@ let sketch3b = function(p) {
     ];
   
     p.setup = function() {
-      p.createCanvas(300, 300);
+      p.createCanvas(250, 250);
       let c = 4;
       let w = p.width / c;
       for (let i = 0; i < c; i++) {

@@ -4,7 +4,7 @@ let sketch2b = (p) => {
   let isRotating = true;  
 
     p.setup = () => {
-      let canvas = p.createCanvas(300, 300, p.WEBGL);
+      let canvas = p.createCanvas(250, 250, p.WEBGL);
       canvas.parent("sketch2b");  
       p.angleMode(p.DEGREES);
     };
