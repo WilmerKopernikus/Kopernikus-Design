@@ -92,9 +92,7 @@ h2 {
   #cube-video {
     display: block;
   }
-}
 
-@media (max-width: 380px) and (max-height: 670px) {
   #card1 h1 {
     font-size: 2em;
   }
