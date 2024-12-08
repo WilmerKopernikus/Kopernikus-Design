@@ -119,7 +119,7 @@
 
     .header-logo {
         width: 200px;        
-        height: 26px; 
+        height: auto; 
         margin-top: 10px;   
         margin-left: 1px;    
     }
