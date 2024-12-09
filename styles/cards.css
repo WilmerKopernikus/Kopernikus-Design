@@ -17,6 +17,10 @@
   --cards: 1;
 }
 
+#joblab-cards-container {
+  --cards: 8;
+}
+
 #card1 {
   --index: 1;
   margin-top: 66px;
@@ -72,48 +76,48 @@
   margin-top: 66px;
 }
 
+#card1-joblab {
+  --index: 1;
+  margin-top: 66px;
+}
+
+#card2-joblab {
+  --index: 2;
+  margin-top: 66px;
+}
+
+#card3-joblab {
+  --index: 3;
+  margin-top: 66px;
+}
+
+#card4-joblab {
+  --index: 4;
+  margin-top: 66px;
+}
+
+#card5-joblab {
+  --index: 5;
+  margin-top: 66px;
+}
+
+#card6-joblab {
+  --index: 6;
+  margin-top: 66px;
+}
+
+#card7-joblab {
+  --index: 7;
+  margin-top: 66px;
+}
+
+#card8-joblab {
+  --index: 8;
+  margin-top: 66px;
+}
+
 #card1 .card-body-intro {
   background-color: #00000087;
-}
-  
-#card1-cases .card-body {
-  background-color: #000000;
-}
-  
-#card2-cases .card-body {
-   background-color: #000000;
-}
-
-#card1-services .card-body {
-  background-color: #000000;
-}
-
-#card2-services .card-body {
-  background-color: #000000;
-}
-
-#card3-services .card-body {
-  background-color: #000000;
-}
-
-#card4-services .card-body {
-  background-color: #000000;
-}
-
-#card5-services .card-body {
-  background-color: #000000;
-}
-
-#card6-services .card-body {
-  background-color: #000000;
-}
-
-#card7-services .card-body {
-  background-color: #000000;
-}
-
-#card1-contact .card-body {
-  background-color: #000000;
 }
 
 .container {
@@ -177,6 +181,13 @@
   border-top: 1px solid white; 
 }
 
+.right-gif {
+  grid-area: right; 
+  background-color: #000000;
+  padding: 2vh;
+  border-top: 1px solid white; 
+}
+
 .send-button {
   width: 200px; 
   padding: 15px;
@@ -231,6 +242,14 @@
     grid-template-rows: 40% 60%;
   }
 
+  #joblab-services {
+    grid-template-rows: 50% 50%;
+  }
+
+  #gif-services {
+    grid-template-rows: 25% 70%;
+  }
+
   .send-button{
     width: 150px;
   }
@@ -242,6 +261,11 @@
   } 
 
   .right {
+    padding: 20px;
+    border-top: 1px solid rgb(0, 0, 0); 
+  }
+
+  .right-gif {
     padding: 20px;
     border-top: 1px solid rgb(0, 0, 0); 
   }

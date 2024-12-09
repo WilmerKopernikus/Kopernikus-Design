@@ -25,6 +25,11 @@ h2 {
   font-size: 6em;
 }
 
+a {
+  text-decoration: none;
+  color: #ffcc00;
+}
+
 .cases-title{
   font-size: 2.1rem;
   margin-top: 35px;
