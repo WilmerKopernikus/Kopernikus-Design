@@ -285,6 +285,10 @@
     grid-template-rows: 50% 50%;
   }
 
+  #blancec-services {
+    grid-template-rows: 40% 60%;
+  }
+
   #gif-services {
     grid-template-rows: 25% 70%;
   }
@@ -314,4 +318,10 @@
   }
 
 
+}
+
+@media (max-width: 380px) {
+  #blancec-services {
+    grid-template-rows: 50% 50%;
+  }
 }
