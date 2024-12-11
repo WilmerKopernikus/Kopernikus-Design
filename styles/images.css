@@ -132,6 +132,19 @@ display: none;
   display: none;
 }
 
+.blancec_video {
+  width: 100%;
+  height: auto;
+}
+
+.blancec_video video {
+  display: block;
+  width: 100%;
+  height: auto;
+  max-width: 100%;
+}
+
+
 @media (max-width: 750px) {
 
   .video-container {
