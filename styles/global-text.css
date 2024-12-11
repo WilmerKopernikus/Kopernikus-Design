@@ -62,6 +62,13 @@ a {
   flex-direction: column;
 }
 
+#center-services-mobile {
+  display: flex;
+  justify-content: flex-start;
+  height: 100%;
+  flex-direction: column;
+}
+
 .justify {
   text-align: justify;
 }
