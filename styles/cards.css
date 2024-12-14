@@ -26,7 +26,7 @@
 }
 
 #joblab-cards-container {
-  --cards: 8;
+  --cards: 6;
 }
 
 #blancec-cards-container {
@@ -115,16 +115,6 @@
 
 #card6-joblab {
   --index: 6;
-  margin-top: 66px;
-}
-
-#card7-joblab {
-  --index: 7;
-  margin-top: 66px;
-}
-
-#card8-joblab {
-  --index: 8;
   margin-top: 66px;
 }
 
