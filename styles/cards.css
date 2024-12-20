@@ -14,7 +14,11 @@
 }
 
 #cases-cards-container {
-  --cards: 2;
+  --cards: 3;
+}
+
+#cases-cards-container-mobile {
+  --cards: 4;
 }
 
 #services-cards-container {
@@ -49,6 +53,31 @@
 
 #card2-cases {
   --index: 2;
+  margin-top: 66px;
+}
+
+#card3-cases {
+  --index: 3;
+  margin-top: 66px;
+}
+
+#card1-cases-mobile {
+  --index: 1;
+  margin-top: 66px;
+}
+
+#card2-cases-mobile {
+  --index: 2;
+  margin-top: 66px;
+}
+
+#card3-cases-mobile {
+  --index: 3;
+  margin-top: 66px;
+}
+
+#card4-cases-mobile {
+  --index: 4;
   margin-top: 66px;
 }
 
