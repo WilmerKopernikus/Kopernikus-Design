@@ -1,4 +1,4 @@
-const TOTAL = 4000;
+const TOTAL = 5000;
 
 var blobs = [];
 var colors;
@@ -110,7 +110,6 @@ function getSlopeY(x, y){
 		case 2:return Math.cos(x*y);
 		case 3:return Math.sin(x)*Math.cos(y);
 		case 4:return Math.cos(x)*y*y;
-		case 5:return Math.log(Math.abs(x))*Math.log(Math.abs(y));
 		case 5:return Math.log(Math.abs(x))*Math.log(Math.abs(y));
 		case 6:return Math.tan(x)*Math.cos(y);
 		case 7:return -Math.sin(x*0.1)*3;//orbit
