@@ -42,7 +42,7 @@
 }
 
 #blancec-cards-container {
-  --cards: 7;
+  --cards: 8;
 }
 
 #card1 {
@@ -247,6 +247,16 @@
 
 #card7-blancec {
   --index: 7;
+  margin-top: 66px;
+}
+
+#card8-blancec {
+  --index: 8;
+  margin-top: 66px;
+}
+
+#card9-blancec-mobile {
+  --index: 9;
   margin-top: 66px;
 }
 
