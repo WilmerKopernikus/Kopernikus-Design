@@ -25,6 +25,10 @@
   --cards: 1;
 }
 
+#contact-cards-container-mobile {
+  --cards: 2;
+}
+
 #joblab-cards-container {
   --cards: 6;
 }
@@ -150,6 +154,16 @@
 
 #card7-blancec {
   --index: 7;
+  margin-top: 66px;
+}
+
+#card1-contact-mobile {
+  --index: 1;
+  margin-top: 66px;
+}
+
+#card2-contact-mobile {
+  --index: 2;
   margin-top: 66px;
 }
 
