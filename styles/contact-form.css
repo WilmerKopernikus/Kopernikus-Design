@@ -72,3 +72,53 @@
       min-height: 80px;
     }
   }
+
+
+@media screen and (max-width: 415px) and (orientation: portrait) {
+  .form-group label {
+    font-size: 1.3rem
+  }
+
+  #message {
+    min-height: 200px;
+  }
+}
+
+@media screen and (max-width: 376px) and (orientation: portrait) {
+  .form-group label {
+    font-size: 1rem
+  }
+
+  #message {
+    min-height: 150px;
+  }
+
+  .contact-form {
+    gap: 15px;
+  } 
+}
+
+@media screen and (max-height: 415px) and (orientation: landscape) {
+  .contact-form {
+    gap: 5px;
+  } 
+
+  .form-group input,
+  .form-group textarea {
+    padding: 3px;
+  }
+
+  #message {
+    min-height: 50px;
+  }
+
+  .send-button {
+    width: 150px; 
+    padding: 5px;
+    margin-top: 5px;
+  }
+
+  .form-group label {
+    font-size: 0.9rem
+  }
+}

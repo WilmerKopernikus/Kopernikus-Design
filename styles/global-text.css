@@ -140,9 +140,41 @@ a {
     font-size: 0.9rem;
     line-height: 1.4;
   }
+}
 
+@media screen and (max-width: 415px) and (orientation: portrait) {
+  .contact-text{
+    font-size: 1.3rem;
+    line-height: 1.4;
+  }
+
+  .services-title{
+    font-size: 2.1rem;
+    margin-bottom: 20px;
+    margin-top: 0;
+  }
+}
+
+@media screen and (max-width: 376px) and (orientation: portrait) {
+  .services-title{
+    font-size: 1.6rem;
+  }
+  
   .contact-text{
     font-size: 0.9rem;
-    line-height: 1.4;
+    line-height: 1.6;
+  }
+}
+
+
+@media screen and (max-height: 415px) and (orientation: landscape) {
+  .contact-text{
+    font-size: 0.9rem;
+    line-height: 1.2;
+  }
+
+  .services-title{
+    font-size: 1.2rem;
+    margin-bottom: 10px;
   }
 }

@@ -143,3 +143,35 @@
         font-size: 27px;
     }
    }
+
+@media screen and (max-height: 415px) and (orientation: landscape) {
+  .header {
+    padding-left: 15px;
+    height: 40px;
+  }
+
+  .header-logo {
+    width: 170px;
+    height: auto;
+    margin-top: 5px;
+    margin-left: 45px;
+  }
+
+  .hamburger {
+    width: 25px;
+  }
+
+  .hamburger-menu {
+    right: 30px;
+    top: 0;
+    padding: 3px;
+  }
+
+  .menu-overlay a {
+    font-size: 20px;
+  }
+
+  .menu-overlay a:hover {
+    font-size: 27px;
+  }
+}

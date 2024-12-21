@@ -145,7 +145,7 @@ display: none;
 }
 
 
-@media (max-width: 750px) {
+@media screen and (max-width: 750px) and (orientation: portrait) {
 
   .video-container {
     height: calc(100vh - 50px);
@@ -194,5 +194,11 @@ display: none;
 
   #sketch-small{
     display: block;
+  }
+}
+
+@media screen and (max-height: 415px) and (orientation: landscape) {
+  .video-background-cube {
+    display: none !important;
   }
 }
