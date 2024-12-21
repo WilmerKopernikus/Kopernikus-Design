@@ -76,12 +76,16 @@
 
 @media screen and (max-width: 415px) and (orientation: portrait) {
   .form-group label {
-    font-size: 1.3rem
+    font-size: 1.1rem
   }
 
   #message {
-    min-height: 200px;
+    min-height: 150px;
   }
+
+  .contact-form {
+    gap: 15px;
+  } 
 }
 
 @media screen and (max-width: 376px) and (orientation: portrait) {
