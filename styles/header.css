@@ -144,6 +144,27 @@
     }
    }
 
+
+@media screen and (max-width: 1025px) and (min-width: 822px) and (orientation: portrait) {
+  .menu-overlay a {
+    font-size: 2.7rem;
+  }
+
+  .menu-overlay a:hover {
+    font-size: 2.8rem;
+}
+
+  .menu-overlay li {
+    margin: 100px 0;
+  }
+}
+
+@media screen and (max-width: 431px) and (orientation: portrait) {
+  .header-logo {
+    margin-left: 10px;
+  }
+}
+
 @media screen and (max-height: 415px) and (orientation: landscape) {
   .header {
     padding-left: 15px;
@@ -173,5 +194,15 @@
 
   .menu-overlay a:hover {
     font-size: 27px;
+  }
+}
+
+@media screen and (min-width: 2560px) and (orientation: landscape) {
+  .header {
+    height: 100px;
+  }
+
+  .header-logo {
+    width: 350px;
   }
 }

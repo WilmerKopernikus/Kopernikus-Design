@@ -43,13 +43,19 @@ a {
 }
 
 .services-title{
-  font-size: 2.1rem;
-  margin-bottom: 30px;
+  font-size: 1.6rem;
+  margin-bottom: 10px;
+}
+
+.impressum-title {
+  font-size: 1.6rem;
+  margin-top: 30px;
+  margin-bottom: 10px;
 }
 
 .contact-text{
-  font-size: 1.3rem;
-  line-height: 2.1;
+  font-size: 1rem;
+  line-height: 1.7;
 }
 
 .services-text {
@@ -142,7 +148,34 @@ a {
   }
 }
 
-@media screen and (max-width: 415px) and (orientation: portrait) {
+
+@media screen and (max-width: 1025px) and (min-width: 822px) and (orientation: portrait) {
+  .contact-text{
+    font-size: 1.7rem;
+    line-height: 1.5;
+  }
+
+  .services-title{
+    font-size: 2.7rem;
+    margin-bottom: 20px;
+    margin-top: 0;
+  }
+}
+
+@media screen and (max-width: 821px) and (min-width: 431px) and (orientation: portrait) {
+  .contact-text{
+    font-size: 1.6rem;
+    line-height: 1.6;
+  }
+
+  .services-title{
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    margin-top: 0;
+  }
+}
+
+@media screen and (max-width: 431px) and (orientation: portrait) {
   .contact-text{
     font-size: 1.1rem;
     line-height: 1.4;
@@ -176,5 +209,40 @@ a {
   .services-title{
     font-size: 1.2rem;
     margin-bottom: 10px;
+  }
+}
+
+@media screen and (width: 540px) and (height: 720px) and (orientation: portrait) {
+  .services-title{
+    font-size: 1.7rem;
+  }
+  
+  .contact-text{
+    font-size: 1.1rem;
+    line-height: 1.6;
+  }
+}
+
+@media screen and (width: 1024px) and (height: 600px) and (orientation: landscape) {
+  .services-title{
+    font-size: 1.7rem;
+    margin-top: 0;
+  }
+  
+  .contact-text{
+    font-size: 1.1rem;
+    line-height: 1.2;
+  }
+}
+
+@media screen and (min-width: 2560px) and (orientation: landscape) {
+  .services-title{
+    font-size: 3.8rem;
+    margin-top: 0;
+  }
+  
+  .contact-text{
+    font-size: 2.4rem;
+    line-height: 1.2;
   }
 }
