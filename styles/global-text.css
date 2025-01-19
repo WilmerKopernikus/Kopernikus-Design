@@ -183,8 +183,8 @@ a {
 
   .services-title{
     font-size: 1.7rem;
-    margin-bottom: 20px;
-    margin-top: 0;
+    margin-bottom: 10px;
+    margin-top: 0px;
   }
 }
 
@@ -195,7 +195,7 @@ a {
   
   .contact-text{
     font-size: 0.9rem;
-    line-height: 1.6;
+    line-height: 1.4;
   }
 }
 
