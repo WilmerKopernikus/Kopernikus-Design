@@ -37,6 +37,10 @@
   --cards: 9;
 }
 
+#services-cards-container-mobile-landscape {
+  --cards: 8;
+}
+
 #contact-cards-container {
   --cards: 1;
 }
@@ -191,6 +195,45 @@
 #card9-services-mobile {
   --index: 9;
   margin-top: 66px;
+}
+
+#card1-services-mobile-landscape {
+  --index: 1;
+  margin-top: 40px;
+}
+
+#card2-services-mobile-landscape {
+  --index: 2;
+  margin-top: 40px;
+}
+
+#card3-services-mobile-landscape {
+  --index: 3;
+  margin-top: 40px;
+}
+#card4-services-mobile-landscape {
+  --index: 4;
+  margin-top: 40px;
+}
+
+#card5-services-mobile-landscape {
+  --index: 5;
+  margin-top: 40px;
+}
+
+#card6-services-mobile-landscape {
+  --index: 6;
+  margin-top: 40px;
+}
+
+#card7-services-mobile-landscape {
+  --index: 7;
+  margin-top: 40px;
+}
+
+#card8-services-mobile-landscape {
+  --index: 8;
+  margin-top: 40px;
 }
 
 #card1-contact {
@@ -497,6 +540,10 @@
   --cardHeight: calc(100vh - 40px);
 }
 
+#services-cards-container {
+  --cardHeight: calc(100vh - 40px);
+}
+
   .cards-mobile {
     display: none;
   }
@@ -546,7 +593,9 @@
   }
 
   .card {
+    position: sticky;
     top: 40px;
+    padding-top: calc(var(--index) * var(--cardTopPadding));
     scroll-margin-top: 40px; 
   }
 }
