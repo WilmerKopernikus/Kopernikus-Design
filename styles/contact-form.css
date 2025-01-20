@@ -151,10 +151,15 @@
     width: 150px; 
     padding: 5px;
     margin-top: 5px;
+    font-size: 0.9rem;
   }
 
   .form-group label {
-    font-size: 0.9rem
+    font-size: 0.7rem;
+  }
+
+  #message {
+    min-height: 100px;
   }
 }
 
@@ -214,6 +219,6 @@
   }
 
   .send-button{
-    font-size: 2rem
+    font-size: 2rem;
   }
 }

@@ -6,6 +6,10 @@
   display: block;
 }
 
+.cards-mobile-landscape {
+  display: none;
+}	
+
 :root {
   --cards: 1;
   --cardHeight: calc(100vh - 66px);
@@ -19,6 +23,10 @@
 
 #cases-cards-container-mobile {
   --cards: 4;
+}
+
+#cases-cards-container-mobile-landscape {
+  --cards: 3;
 }
 
 #services-cards-container {
@@ -83,6 +91,21 @@
 #card4-cases-mobile {
   --index: 4;
   margin-top: 66px;
+}
+
+#card1-cases-mobile-landscape {
+  --index: 1;
+  margin-top: 40px;
+}
+
+#card2-cases-mobile-landscape {
+  --index: 2;
+  margin-top: 40px;
+}
+
+#card3-cases-mobile-landscape {
+  --index: 3;
+  margin-top: 40px;
 }
 
 #card1-services {
@@ -368,6 +391,7 @@
   background-color: #ff7300;
 }
 
+
 @media (max-width: 830px) and (orientation: portrait) {
 
   .card-body {
@@ -467,35 +491,45 @@
   } 
 }
 
-@media screen and (max-height: 376px) and (orientation: landscape) {
-  .right {
-    padding: 10px;
-  }
+@media screen and (max-height: 415px) and (orientation: landscape) {
 
-  #contact-cards-container-mobile {
-    --cardHeight: calc(100vh - 40px);
-  }
+#cases-cards-container-mobile-landscape{
+  --cardHeight: calc(100vh - 40px);
+}
 
   .cards-mobile {
-    display: block;
+    display: none;
   }
   
   .cards-screens {
     display: none;
   }
 
+  .cards-mobile-landscape {
+    display: block;
+  }
+
   .card-body {
+    display: grid; 
     grid-template-areas: 
-      "left"
-      "right"; /* Stack sections vertically */
-    grid-template-columns: 1fr; /* Single column layout */
-    grid-template-rows: 100% 0%; /* Equal height for both rows */
+      "left right"; 
+    grid-template-columns: 50% 50%; 
+    height: var(--cardHeight); 
+    color: #ffffff; 
+    border-top: 1px solid white; 
+    box-sizing: border-box;
   }
 
   .left {
+    background-color: #232323;
+    padding: 20px;
+  }
+
+  .right {
     background-color: #000000;
-    padding: 60px;
-  } 
+    padding: 30px; 
+  }
+
 
   #contact-cards-container-mobile {
     --cards: 2;
