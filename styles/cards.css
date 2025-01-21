@@ -485,6 +485,8 @@
     --cardHeight: calc(100vh - 50px);
   }
 
+
+
   .card {
     top: 50px;
   }
@@ -542,6 +544,14 @@
 
 #services-cards-container {
   --cardHeight: calc(100vh - 40px);
+}
+
+#blancec-cards-container {
+  --cardHeight: calc(100vh - 39px);
+}
+
+#joblab-cards-container {
+  --cardHeight: calc(100vh - 39px);
 }
 
   .cards-mobile {

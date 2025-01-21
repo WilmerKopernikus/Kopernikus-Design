@@ -206,3 +206,9 @@
     width: 350px;
   }
 }
+
+@media screen and (max-height: 415px) and (orientation: landscape) {
+  .header-logo {
+    margin-left: 5px;
+  }
+}
