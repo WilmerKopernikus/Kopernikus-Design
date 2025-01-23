@@ -15,7 +15,6 @@
   .form-group label {
     margin-bottom: 8px;
     color: #ffffff;
-    font-size: 1rem;
   }
   
   .form-group input,
@@ -49,7 +48,6 @@
     font-weight: bold;
     transition: background-color 0.3s;
     font-family: 'Roboto', Arial, Helvetica, sans-serif;
-    font-size: 1rem;
   }
   
   .send-button:hover {

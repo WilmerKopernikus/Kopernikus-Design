@@ -434,6 +434,30 @@
   background-color: #ff7300;
 }
 
+@media screen and (min-width: 2560px) and (orientation: landscape) {
+  .right {
+    padding-right: 200px;
+    padding-left: 200px;
+  }
+
+  .left {
+    padding-right: 200px;
+    padding-left: 200px;
+  }
+
+  #card1-contact {
+    margin-top: 100px;
+  }
+
+  .card {
+    top: 100px;
+    scroll-margin-top: 100px; 
+  }
+
+  #contact-cards-container {
+    --cardHeight: calc(100vh - 100px);
+  }
+}
 
 @media (max-width: 830px) and (orientation: portrait) {
 
@@ -491,9 +515,7 @@
     top: 50px;
   }
 
-  #cases{
-    grid-template-rows: 35% 65%;
-  }
+
 
   #services {
     grid-template-rows: 40% 60%;
@@ -587,7 +609,6 @@
     padding: 30px; 
   }
 
-
   #contact-cards-container-mobile {
     --cards: 2;
   }
@@ -610,33 +631,16 @@
   }
 }
 
+@media (max-width: 415px) and (orientation: portrait){
+  #cases{
+    grid-template-rows: 35% 65%;
+  }
+}
+
 @media (max-width: 380px) {
   #blancec-services {
     grid-template-rows: 50% 50%;
   }
+
 }
 
-@media screen and (min-width: 2560px) and (orientation: landscape) {
-  .right {
-    padding-right: 200px;
-    padding-left: 200px;
-  }
-
-  .left {
-    padding-right: 200px;
-    padding-left: 200px;
-  }
-
-  #card1-contact {
-    margin-top: 100px;
-  }
-
-  .card {
-    top: 100px;
-    scroll-margin-top: 100px; 
-  }
-
-  #contact-cards-container {
-    --cardHeight: calc(100vh - 100px);
-  }
-}
