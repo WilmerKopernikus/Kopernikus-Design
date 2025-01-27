@@ -149,11 +149,6 @@
     width: 150px; 
     padding: 5px;
     margin-top: 5px;
-    font-size: 0.9rem;
-  }
-
-  .form-group label {
-    font-size: 0.7rem;
   }
 
   #message {
@@ -180,14 +175,6 @@
     padding: 5px;
     margin-top: 5px;
   }
-
-  .form-group label {
-    font-size: 1.1rem
-  }
-
-  .send-button{
-    font-size: 1.1rem
-  }
 }
 
 @media screen and (width: 1024px) and (height: 600px) and (orientation: landscape) {
@@ -202,9 +189,6 @@
 }
 
 @media screen and (min-width: 2560px) and (orientation: landscape) {
-  .form-group label {
-    font-size: 2rem;
-  }
 
   #message {
     min-height: 250px;

@@ -495,7 +495,9 @@
 
 @media (max-width: 750px) {
 
-
+  #intro-cards-container-mobile{
+    --cardHeight: calc(100vh - 55px);
+  }
 
   :root {
     --cardHeight: calc(100vh - 55px);
@@ -560,21 +562,29 @@
 
 @media screen and (max-height: 415px) and (orientation: landscape) {
 
-#cases-cards-container-mobile-landscape{
-  --cardHeight: calc(100vh - 40px);
-}
+  #intro-cards-container-mobile-landscape{
+    --cardHeight: calc(100vh - 40px);
+  }
 
-#services-cards-container {
-  --cardHeight: calc(100vh - 40px);
-}
+  #cases-cards-container-mobile-landscape{
+    --cardHeight: calc(100vh - 40px);
+  }
 
-#blancec-cards-container {
-  --cardHeight: calc(100vh - 39px);
-}
+  #services-cards-container {
+    --cardHeight: calc(100vh - 40px);
+  }
 
-#joblab-cards-container {
-  --cardHeight: calc(100vh - 39px);
-}
+  #blancec-cards-container {
+    --cardHeight: calc(100vh - 39px);
+  }
+
+  #joblab-cards-container {
+    --cardHeight: calc(100vh - 39px);
+  }
+
+  #services-cards-container-mobile-landscape{
+    --cardHeight: calc(100vh - 39px);
+  }
 
   .cards-mobile {
     display: none;
@@ -629,6 +639,7 @@
     padding-top: calc(var(--index) * var(--cardTopPadding));
     scroll-margin-top: 40px; 
   }
+
 }
 
 @media (max-width: 415px) and (orientation: portrait){
