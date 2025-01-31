@@ -80,14 +80,14 @@
   .menu-overlay a {
     color: rgb(255, 255, 255);
     text-decoration: none;
-    font-size: 35px;
+    font-size: 1.7rem;
     font-weight: 800;
     transition: font-size 0.3s, color 0.3s, box-shadow 0.3s; 
     box-shadow: none;
   }
   .menu-overlay a:hover {
     color: #ffffff;
-    font-size: 37px;
+    font-size: 1.8rem;
     box-shadow: 0 0 10px rgba(255, 255, 255, 0.8), 0 0 20px rgba(242, 242, 242, 0.5);
     padding: 10px;
     border-radius: 10px;
@@ -210,5 +210,11 @@
 @media screen and (max-height: 415px) and (orientation: landscape) {
   .header-logo {
     margin-left: 5px;
+  }
+}
+
+@media screen and (max-height: 376px) and (orientation: landscape) {
+  .menu-overlay li {
+    margin: 30px 0;
   }
 }
