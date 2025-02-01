@@ -57,7 +57,7 @@ function draw() {
 		background("#1a0633");
 		noStroke();
 		fill(255);
-		textSize(40);
+		textSize(20);
 		text("Drücken Sie, um Sterne zu erzeugen", centerX, centerY);
 		return;
 	}
