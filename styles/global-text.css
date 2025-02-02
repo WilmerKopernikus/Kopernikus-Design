@@ -145,7 +145,7 @@ a {
   }
 
   #card1 p {
-    font-size: 1.6em;
+    font-size: 1.5em;
   }
 
   .intro-image {
@@ -230,6 +230,8 @@ a {
   .send-button {
     font-size: 1rem;
   }
+
+  
 }
 
 
@@ -307,6 +309,14 @@ a {
   .form-group textarea {
     font-size: 0.8rem;
   }
+
+  #card1 h1 {
+    font-size: 1.8em;
+  }
+
+  #card1 p {
+    font-size: 1.5em;
+  }
 }
 
 
@@ -368,5 +378,13 @@ a {
   .form-group input,
   .form-group textarea {
     font-size: 0.7rem;
+  }
+
+  #card1 h1 {
+    font-size: 1.8em;
+  }
+  
+  #card1 p {
+    font-size: 1.2em;
   }
 }
