@@ -90,6 +90,7 @@ a {
   padding-bottom: 0;
   padding-top: 5vh;
   user-select: none;
+  font-weight: 800;
 }
 
 #card1 p {
@@ -97,6 +98,7 @@ a {
   line-height: 1;
   padding-right: 20vw;
   user-select: none;
+  font-weight: 800;
 }
 
 
