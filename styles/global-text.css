@@ -287,21 +287,21 @@ a {
   }
 
   .text{
-    font-size: 0.8rem;
+    font-size: 0.9rem;
     line-height: 1.2;
   }
 
   .form-group label {
-    font-size: 0.8rem;
+    font-size: 0.9rem;
   }
   
   .send-button {
-    font-size: 0.8rem;
+    font-size: 0.9rem;
   }
 
   .form-group input,
   .form-group textarea {
-    font-size: 0.8rem;
+    font-size: 0.9rem;
   }
 }
 
