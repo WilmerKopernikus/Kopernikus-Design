@@ -1,7 +1,7 @@
 // Text for each element
 let i = 0;
-const txt1 = 'Dies ist Kopernikus Design.';
-const txt2 = '\nWir gestalten. Wir programmieren. Wir liefern. \nWillkommen in einem neuen digitalen Kosmos. \n\nKlicken Sie auf das Menü, um unser Universum zu entdecken.\n Wo Kreativität auf digitale Innovation trifft.';
+const txt1 = 'Das ist Kopernikus Design.';
+const txt2 = '\nWillkommen in einem neuen digitalen Kosmos.\nWir gestalten. \nWir programmieren. \nWir liefern.  \n\nKlicken Sie auf das Menü, um unser Universum zu entdecken.\n Wo Kreativität auf digitale Innovation trifft.';
 const speed = 10;
 
 // Function for the first element (h1)
