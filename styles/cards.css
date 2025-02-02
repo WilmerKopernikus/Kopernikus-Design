@@ -630,6 +630,7 @@
 
   #card1 {
     margin-top: 40px;
+    --cardHeight: calc(100vh - 40px);
   }
 
   #card2-contact-mobile {
