@@ -340,7 +340,7 @@ a {
 @media screen and (max-height: 376px) and (orientation: landscape) {
   
   .title{
-    font-size: 1.28rem;
+    font-size: 1.127rem;
     margin-bottom: 10px;
   }
 
@@ -349,20 +349,20 @@ a {
   }
 
   .text{
-    font-size: 0.8rem;
+    font-size: 0.7rem;
     line-height: 1.1;
   }
 
   .form-group label {
-    font-size: 0.8rem;
+    font-size: 0.7rem;
   }
   
   .send-button {
-    font-size: 0.8rem;
+    font-size: 0.7rem;
   }
 
   .form-group input,
   .form-group textarea {
-    font-size: 0.8rem;
+    font-size: 0.7rem;
   }
 }
