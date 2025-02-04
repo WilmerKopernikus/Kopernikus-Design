@@ -49,7 +49,7 @@ function draw() {
 		noStroke();
 		fill(255);
 		textSize(30);
-		text("Drücken Sie, \num Sterne zu erzeugen", centerX, centerY);
+		text("Clicken Sie, \num Sterne zu erzeugen", centerX, centerY);
 		return;
 	}
 	
