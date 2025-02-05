@@ -427,7 +427,7 @@
   border-radius: 5px;
   cursor: pointer;
   font-weight: bold;
-  transition: background-color 0.3s;
+  transition: 0.3s;
 }
   
 .send-button:hover {
@@ -491,6 +491,8 @@
   #contact-proportion{
     grid-template-rows: 100% 0%;
   }
+
+
 }
 
 @media (max-width: 750px) {
@@ -511,7 +513,10 @@
     --cardHeight: calc(100vh - 50px);
   }
 
+  #card1 {
+    margin-top: 50px;
 
+  }
 
   .card {
     top: 50px;
@@ -580,6 +585,10 @@
 
   #joblab-cards-container {
     --cardHeight: calc(100vh - 39px);
+  }
+
+  #card1 {
+    margin-top: 39px;
   }
 
   #services-cards-container-mobile-landscape{

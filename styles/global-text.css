@@ -104,10 +104,9 @@ a {
 
 #card1 h1 {
   font-size: 2.5em;
-  padding-bottom: 0;
-  padding-top: 5vh;
   user-select: none;
   font-weight: 800;
+  text-align: center;
 }
 
 #card1 p {
@@ -115,6 +114,7 @@ a {
   line-height: 1;
   user-select: none;
   font-weight: 800;
+  text-align: center;
 }
 
 
@@ -158,6 +158,7 @@ a {
 
   #card1 h1 {
     font-size: 1.8em;
+
   }
 
   #card1 p {
