@@ -27,7 +27,7 @@ function draw() {
 
 	
 	if(mouseX){
-		for(let i = 0; i < 1; i++){
+		for(let i = 0; i < 10; i++){
 			let x = mouseX + random(-100, 100);
 			let y = mouseY + random(-100, 100);
 			var blob = {
@@ -49,6 +49,7 @@ function draw() {
 		noStroke();
 		fill(255);
 		textSize(30);
+		text("Press to emmit stars", centerX, centerY);
 		return;
 	}
 	

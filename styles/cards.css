@@ -347,7 +347,7 @@
 }
 
 #card1 .card-body-intro {
-  background-color: #00000087;
+  background-color: #00000060;
 }
 
 .container {
@@ -385,14 +385,14 @@
 
 .card-body-intro {
   box-sizing: border-box;
-  height: var(--cardHeight);
+  height: calc(100vh - 66px);
   display: flex;
   flex-direction: column; 
-  justify-content: flex-start; 
+  justify-content: center; 
   color: #ffffff;
   border-top: 1px solid white;
-  padding: 20px; 
-  margin-top: 20px; 
+  align-items: center;
+  margin-bottom: 20px;
 }
 
 .left {
