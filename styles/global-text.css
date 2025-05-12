@@ -10,12 +10,20 @@
   font-weight: 300;
   font-style: normal;
 }
+@font-face {
+  font-family: 'Handjet';
+  src: url('font/Handjet-Light.ttf') format('truetype');
+  font-weight: 400;
+  font-style: normal;
+}
 
 body {
   font-family: 'Roboto', Arial, Helvetica, sans-serif;
   overflow-x: hidden;
   background-color: #000000;
 }
+
+
 
 body::-webkit-scrollbar {
   display: none;
@@ -103,10 +111,16 @@ a {
 }
 
 #card1 h1 {
-  font-size: 2.5em;
+  font-size: 7rem;
   user-select: none;
-  font-weight: 800;
+  font-weight: 400;
   text-align: center;
+  font-family: 'Handjet', 'Arial Narrow Bold', sans-serif;
+  text-shadow:
+  -7px -7px 7px #000,  
+   7px -7px 7px #000,
+  -7px  7px 7px #000,
+   7px  7px 7px #000;
 }
 
 #card1 p {
@@ -115,6 +129,7 @@ a {
   user-select: none;
   font-weight: 800;
   text-align: center;
+  
 }
 
 
@@ -157,7 +172,7 @@ a {
   }
 
   #card1 h1 {
-    font-size: 1.8em;
+    font-size: 2rem;
 
   }
 

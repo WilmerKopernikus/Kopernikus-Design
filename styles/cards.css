@@ -347,7 +347,7 @@
 }
 
 #card1 .card-body-intro {
-  background-color: #00000060;
+  background-color: #00000000;
 }
 
 .container {
@@ -364,7 +364,6 @@
   padding-bottom: calc(var(--cards) * var(--cardTopPadding));
   margin-bottom: var(--cardMargin);   
 }
-
 .card {
   position: sticky;
   top: 66px;

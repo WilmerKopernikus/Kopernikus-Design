@@ -20,7 +20,7 @@ function setup() {
 	centerX = width/2;
 	centerY = height/2;
 	
-	colors = [color("#E32C36"), color("#FF5733"), color("#DCA80D"), color("#1AC7C4"), color("#FFFFFF")];
+	colors = [color("#581845"), color("#900C3F"), color("#C70039"), color("#FF5733"), color("#FFC300")];
 }
 
 function draw() {
