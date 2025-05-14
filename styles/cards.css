@@ -455,6 +455,10 @@
     grid-template-rows: 100% 0%;
   }
 
+  #contact-proportion-text{
+    grid-template-rows: 0% 100%;
+  }
+
   #cases {
     grid-template-rows: 30% 70%;
   }
