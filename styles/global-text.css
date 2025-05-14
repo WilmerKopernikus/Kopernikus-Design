@@ -64,6 +64,10 @@ a {
   font-weight: 400;
 }
 
+#title-small {
+  font-size: 3.3rem;
+}
+
 .title-cases {
   font-size: 5rem;
   margin-bottom: 10px;
