@@ -262,6 +262,8 @@ a {
   .title{
     font-size: 3rem;
     text-align: center;
+    margin-left: 20px;
+    margin-right: 20px;
   }
   #title-small {
     font-size: 2rem;
