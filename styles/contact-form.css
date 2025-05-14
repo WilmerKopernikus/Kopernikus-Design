@@ -5,6 +5,7 @@
     flex-direction: column;
     gap: 20px;
     border-radius: 10px;
+
   }
   
   .form-group {
@@ -15,6 +16,7 @@
   .form-group label {
     margin-bottom: 8px;
     color: #ffffff;
+    font-size: 1.7rem;
   }
   
   .form-group input,
@@ -24,6 +26,8 @@
     border-radius: 5px;
     background-color: #444;
     color: #ffffff;
+    font-size: 1.7rem;
+    
   }
   
   .form-group input:focus,
@@ -89,7 +93,17 @@
   .send-button{
     font-size: 1.5rem
   }
-}
+
+  .contact-form {
+    margin-left:180px;
+    margin-right:180px;
+  }
+
+  .form-group input,
+  .form-group textarea {
+    padding: 20px;
+    font-size: 1.7rem
+}}
 
 @media screen and (max-width: 821px) and (min-width: 431px) and (orientation: portrait) {
   .form-group label {

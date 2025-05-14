@@ -82,9 +82,6 @@ a {
   line-height: 1.5;
 }
 
-.form-group label {
-  font-size: 1.1rem;
-}
 
 .send-button {
   font-size: 1rem;
@@ -157,9 +154,6 @@ a {
     line-height: 1.2;
   }
 
-  .form-group label {
-    font-size: 2.4rem;
-  }
   
   .send-button {
     font-size: 2.2rem;;
@@ -215,9 +209,6 @@ a {
     margin-right: 50px;
   }
 
-  .form-group label {
-    font-size: 1.7rem;
-  }
   
   .send-button {
     font-size: 1.7rem;
@@ -248,9 +239,7 @@ a {
     margin-right: 30px;
   }
 
-  .form-group label {
-    font-size: 1.6rem;
-  }
+
   
   .send-button {
     font-size: 1.6rem;
@@ -284,9 +273,6 @@ a {
     margin-right: 20px;
   }
 
-  .form-group label {
-    font-size: 1rem;
-  }
   
   .send-button {
     font-size: 1rem;
@@ -317,9 +303,7 @@ a {
     margin-right: 20px;
   }
 
-  .form-group label {
-    font-size: 0.8rem;
-  }
+
   
   .send-button {
     font-size: 0.8rem;
@@ -343,9 +327,7 @@ a {
     line-height: 1.1;
   }
 
-  .form-group label {
-    font-size: 1rem;
-  }
+
   
   .send-button {
     font-size: 1rem;
