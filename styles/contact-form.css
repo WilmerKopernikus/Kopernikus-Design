@@ -48,6 +48,11 @@
     font-weight: bold;
     transition: background-color 0.3s;
     font-family: 'Roboto', Arial, Helvetica, sans-serif;
+    
+  }
+
+  #button-cases {
+    margin-left: 30px;
   }
   
   .send-button:hover {

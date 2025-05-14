@@ -1,37 +1,19 @@
 
-
 .cards-mobile {
   display: none;
 }
-
-
 .cards-screens {
   display: block;
 }
-
 .cards-mobile-landscape {
   display: none;
 }	
-
 :root {
   --cards: 1;
   --cardHeight: calc(100vh - 66px);
   --cardTopPadding: 0px;
   --cardMargin: 4vw;
 }
-
-#cases-cards-container {
-  --cards: 3;
-}
-
-#cases-cards-container-mobile {
-  --cards: 4;
-}
-
-#cases-cards-container-mobile-landscape {
-  --cards: 3;
-}
-
 #services-cards-container {
   --cards: 8;
 }
@@ -62,55 +44,6 @@
 
 
 
-#card1-cases {
-  --index: 1;
-  margin-top: 66px;
-}
-
-#card2-cases {
-  --index: 2;
-  margin-top: 66px;
-}
-
-#card3-cases {
-  --index: 3;
-  margin-top: 66px;
-}
-
-#card1-cases-mobile {
-  --index: 1;
-  margin-top: 66px;
-}
-
-#card2-cases-mobile {
-  --index: 2;
-  margin-top: 66px;
-}
-
-#card3-cases-mobile {
-  --index: 3;
-  margin-top: 66px;
-}
-
-#card4-cases-mobile {
-  --index: 4;
-  margin-top: 66px;
-}
-
-#card1-cases-mobile-landscape {
-  --index: 1;
-  margin-top: 40px;
-}
-
-#card2-cases-mobile-landscape {
-  --index: 2;
-  margin-top: 40px;
-}
-
-#card3-cases-mobile-landscape {
-  --index: 3;
-  margin-top: 40px;
-}
 
 #card1-services {
   --index: 1;
@@ -499,11 +432,13 @@
 
   .left {
     background-color: #000000;
-    padding: 30px;
+    padding: 0;
+    padding-left: 0;
+    padding-right: 0;
   } 
 
   .right {
-    padding: 20px;
+    padding: 0;
     padding-top: 0px;
     border-top: 1px solid rgb(0, 0, 0); 
   }
@@ -518,6 +453,10 @@
 
   #contact-proportion{
     grid-template-rows: 100% 0%;
+  }
+
+  #cases {
+    grid-template-rows: 30% 70%;
   }
 
 
