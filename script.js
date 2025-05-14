@@ -107,12 +107,12 @@ document.querySelectorAll('.tab').forEach(function(tab) {
 });
 
 
-  document.fonts.ready.then(() => {
-    const section = document.querySelector('.card-body-intro');
-    if (section) {
+document.fonts.ready.then(() => {
+    const sections = document.querySelectorAll('.card-body-intro');
+    sections.forEach(section => {
       section.classList.remove('font-loading');
       section.classList.add('font-loaded');
-    }
+    });
   });
 
 
