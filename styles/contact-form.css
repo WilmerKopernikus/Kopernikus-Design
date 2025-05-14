@@ -122,6 +122,11 @@
     margin-left: 20px;
   }
 
+  .contact-form {
+    margin-left:70px;
+    margin-right:70px;
+  }
+
 }
 
 @media screen and (max-width: 431px) and (orientation: portrait) {
@@ -135,11 +140,14 @@
 
   .contact-form {
     gap: 15px;
+    margin-left:0;
+    margin-right:0;
   } 
 
   #button-cases {
     margin-left: 20px;
   }
+
 
 
 }
@@ -155,6 +163,7 @@
 
   .contact-form {
     gap: 15px;
+
   } 
 
 
