@@ -105,3 +105,14 @@ document.querySelectorAll('.tab').forEach(function(tab) {
         this.classList.add('active');
     });
 });
+
+
+  document.fonts.ready.then(() => {
+    const section = document.querySelector('.card-body-intro');
+    if (section) {
+      section.classList.remove('font-loading');
+      section.classList.add('font-loaded');
+    }
+  });
+
+

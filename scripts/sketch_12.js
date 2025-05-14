@@ -2,13 +2,14 @@ var blobs = [];
 var colors;
 let variation = 0;
 let xScale, yScale, centerX, centerY;
+let canvas;
 
 //auto change
 let changeDuration = 3000;
 let lastChange = 0;
 
 function setup() {
-	let canvas = createCanvas(windowWidth, windowHeight);
+	canvas = createCanvas(window.visualViewport.width, window.visualViewport.height);
     canvas.position(0, 0);
     canvas.style('z-index', '-1'); // Ensures it stays behind content
 	canvas.style('position', 'fixed'); 
@@ -135,3 +136,7 @@ function getXPrint(x){
 function getYPrint(y){
 	return yScale*y+centerY;
 }
+
+window.visualViewport.addEventListener('resize', () => {
+	resizeCanvas(window.visualViewport.width, window.visualViewport.height);
+  });
