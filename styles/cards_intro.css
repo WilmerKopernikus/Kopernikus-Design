@@ -1,0 +1,28 @@
+#intro-cards-container {
+    --cards: 5;
+  }
+#card1 {
+    --index: 1;
+    margin-top: 66px;
+  }
+#card2 {
+    --index: 2;
+    margin-top: 66px;
+}
+#card3 {
+  --index: 3;
+  margin-top: 66px;
+}
+#card4 {
+  --index: 4;
+  margin-top: 66px;
+}
+#card5 {
+  --index: 5;
+  margin-top: 66px;
+}
+@media (max-width: 750px) {
+    #intro-mobile{
+        grid-template-rows: 50% 50%;
+    }
+}

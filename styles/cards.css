@@ -57,10 +57,7 @@
   --cards: 8;
 }
 
-#card1 {
-  --index: 1;
-  margin-top: 66px;
-}
+
 
 #card1-cases {
   --index: 1;
@@ -396,20 +393,32 @@
 
 .left {
   grid-area: left; 
-  background-color: #232323;
+  background-color: #000000;
   padding-left: 50px;
   padding-right: 50px;
   padding-top: 0;
   border-top: 1px solid white; 
 }
-  
+.left2{
+  grid-area: left; 
+  background-color: #000000;
+  padding: 50px;
+  border-top: 1px solid white; 
+}
 .right {
   grid-area: right; 
   background-color: #000000;
   padding: 50px;
   border-top: 1px solid white; 
 }
-
+.right2 {
+  grid-area: right; 
+  background-color: #000000;
+  padding-left: 50px;
+  padding-right: 50px;
+  padding-top: 0;
+  border-top: 1px solid white; 
+}
 .right-gif {
   grid-area: right; 
   background-color: #000000;
@@ -501,7 +510,7 @@
   }
 
   :root {
-    --cardHeight: calc(100dvh - 55px);
+    --cardHeight: calc(100vh - 55px);
   }
 
   #cases-cards-container {
