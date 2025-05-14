@@ -64,6 +64,19 @@ display: none;
   border-radius: 15px;
 }  
   
+.image-container-landing {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+  
+.image-container-landing img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
 .image-container-joblab {
   width: 100%;
   display: flex;
@@ -223,7 +236,11 @@ display: none;
 
 
 
-
+@media (max-width: 1024px) and (orientation: portrait) {
+  .image-container-landing img {
+    max-width: 70%;
+  }
+}
 
 
 
