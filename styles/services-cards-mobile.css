@@ -1,5 +1,5 @@
 #services-cards-container-mobile {
-    --cards: 9;
+    --cards: 7;
   }
   #card1-services-mobile {
     --index: 1;
@@ -27,13 +27,5 @@
   }
   #card7-services-mobile {
     --index: 7;
-    margin-top: 66px;
-  }
-  #card8-services-mobile {
-    --index: 8;
-    margin-top: 66px;
-  }
-  #card9-services-mobile {
-    --index: 9;
     margin-top: 66px;
   }
