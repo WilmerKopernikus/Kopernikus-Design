@@ -162,7 +162,6 @@ a {
 
 
 
-
 @media (max-width: 750px) {
   
   :root {
@@ -213,9 +212,6 @@ a {
   }
 }
 
-
-
-
 @media screen and (max-width: 821px) and (min-width: 431px) and (orientation: portrait) {
   
   .title{
@@ -238,56 +234,11 @@ a {
   }
 }
 
-
-
-
-
-
-
-
-
-@media screen and (width: 1024px) and (height: 600px) and (orientation: landscape) {
-  .title{
-    font-size: 1.61rem;
-    margin-top: 0;
-  }
-  
-  .text{
-    font-size: 1rem;
-    line-height: 1.1;
-  }
-
-  .form-group label {
-    font-size: 1rem;
-  }
-  
-  .send-button {
-    font-size: 1rem;
-  }
-
-  
-}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 @media screen and (max-width: 431px) and (orientation: portrait) {
   
   .title{
-    font-size: 1.61em;
-    margin-bottom: 10px;
-    margin-top: 0px;
+    font-size: 3rem;
+    text-align: center;
   }
 
   .impressum {
@@ -314,6 +265,58 @@ a {
 }
 
 
+
+
+
+
+@media screen and (max-width: 376px) and (orientation: portrait) {
+
+
+  .impressum {
+    margin-top: 20px;
+  }
+
+  .text{
+    font-size: 0.8rem;
+    line-height: 1.1;
+  }
+
+  .form-group label {
+    font-size: 0.8rem;
+  }
+  
+  .send-button {
+    font-size: 0.8rem;
+  }
+
+  .form-group input,
+  .form-group textarea {
+    font-size: 0.8rem;
+  }
+}
+
+
+@media screen and (width: 1024px) and (height: 600px) and (orientation: landscape) {
+  .title{
+    font-size: 1.61rem;
+    margin-top: 0;
+  }
+  
+  .text{
+    font-size: 1rem;
+    line-height: 1.1;
+  }
+
+  .form-group label {
+    font-size: 1rem;
+  }
+  
+  .send-button {
+    font-size: 1rem;
+  }
+
+  
+}
 
 @media screen and (max-height: 431px) and (orientation: landscape) {
   .title{
@@ -352,38 +355,6 @@ a {
     font-size: 1.5em;
   }
 }
-
-
-
-@media screen and (max-width: 376px) and (orientation: portrait) {
-  .title{
-    font-size: 3rem;
-    text-align: center;
-  }
-
-  .impressum {
-    margin-top: 20px;
-  }
-
-  .text{
-    font-size: 0.8rem;
-    line-height: 1.1;
-  }
-
-  .form-group label {
-    font-size: 0.8rem;
-  }
-  
-  .send-button {
-    font-size: 0.8rem;
-  }
-
-  .form-group input,
-  .form-group textarea {
-    font-size: 0.8rem;
-  }
-}
-
 
 
 @media screen and (max-height: 376px) and (orientation: landscape) {
