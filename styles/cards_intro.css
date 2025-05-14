@@ -21,6 +21,28 @@
   --index: 5;
   margin-top: 66px;
 }
+.text-shadow{
+  font-size: 120px;
+  font-family: 'Handjet';
+  text-shadow:
+  -7px -7px 7px #000,  
+   7px -7px 7px #000,
+  -7px  7px 7px #000,
+   7px  7px 7px #000;
+}
+.with-arrow .arrow {
+  position: absolute;
+  bottom: 0;      
+  right: 20px;      
+  margin: 0;         
+}
+.intro-card {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center; 
+  align-items: center;
+}
 @media (max-width: 750px) {
     #intro-mobile{
         grid-template-rows: 50% 50%;
