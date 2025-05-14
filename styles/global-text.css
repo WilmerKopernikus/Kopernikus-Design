@@ -202,12 +202,6 @@ a {
   .title{
     font-size: 6rem;
     text-align: center;
-    margin-bottom: 20px;
-    margin-top: 0;
-  }
-  .title-cases {
-    font-size: 4rem;
-    text-align: center;
     margin-bottom: 10px;
     margin-top: 0;
     margin-left: 30px;
@@ -268,6 +262,9 @@ a {
   .title{
     font-size: 3rem;
     text-align: center;
+  }
+  #title-small {
+    font-size: 2rem;
   }
   .title-cases{
     font-size: 3rem;
