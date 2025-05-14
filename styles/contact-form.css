@@ -123,8 +123,8 @@
   }
 
   .contact-form {
-    margin-left:70px;
-    margin-right:70px;
+    margin-left:50px;
+    margin-right:50px;
   }
 
 }
@@ -163,8 +163,10 @@
 
   .contact-form {
     gap: 15px;
-
-  } 
+    margin-left:0;
+    margin-right:0;
+  }
+  
 
 
 }

@@ -138,7 +138,10 @@ display: none;
 
 #services-animation{
   display: block;
-  width: 70%;
+  width: 50%;
+  max-width: 70%;
+  height: auto;
+  margin: 0 auto; /* centra el video */
 }
 
 #sketch-small{
