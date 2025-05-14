@@ -1,0 +1,39 @@
+#services-cards-container-mobile {
+    --cards: 9;
+  }
+  #card1-services-mobile {
+    --index: 1;
+    margin-top: 66px;
+  }
+  #card2-services-mobile {
+    --index: 2;
+    margin-top: 66px;
+  }
+  #card3-services-mobile {
+    --index: 3;
+    margin-top: 66px;
+  }
+  #card4-services-mobile {
+    --index: 4;
+    margin-top: 66px;
+  }
+  #card5-services-mobile {
+    --index: 5;
+    margin-top: 66px;
+  }
+  #card6-services-mobile {
+    --index: 6;
+    margin-top: 66px;
+  }
+  #card7-services-mobile {
+    --index: 7;
+    margin-top: 66px;
+  }
+  #card8-services-mobile {
+    --index: 8;
+    margin-top: 66px;
+  }
+  #card9-services-mobile {
+    --index: 9;
+    margin-top: 66px;
+  }
