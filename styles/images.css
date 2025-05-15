@@ -144,6 +144,14 @@ display: none;
   margin: 0 auto; /* centra el video */
 }
 
+#services-animation-cases{
+  display: block;
+  width: 60%;
+  max-width: 100%;
+  height: auto;
+  margin: 0 auto; 
+}
+
 #sketch-small{
   display: none;
 }
@@ -265,7 +273,9 @@ display: none;
     width: 55%;
   }
 
-  
+  #services-animation-cases{
+    width: 65%;
+  } 
 
 }
 
@@ -315,6 +325,11 @@ display: none;
   }
 
   #services-animation{
+    width: 70%;
+
+  }
+
+  #services-animation-cases{
     width: 70%;
   }
 }
