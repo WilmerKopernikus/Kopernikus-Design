@@ -259,7 +259,11 @@ display: none;
     max-height: 100%;
     height: auto;
     border-radius: 15px;
-  }  
+  } 
+  
+  #services-animation{
+    width: 55%;
+  }
 
   
 
@@ -308,6 +312,10 @@ display: none;
 
   #sketch-small{
     display: block;
+  }
+
+  #services-animation{
+    width: 70%;
   }
 }
 
