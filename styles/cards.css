@@ -1,4 +1,3 @@
-
 .cards-mobile {
   display: none;
 }
@@ -14,9 +13,7 @@
   --cardTopPadding: 0px;
   --cardMargin: 4vw;
 }
-#services-cards-container {
-  --cards: 8;
-}
+
 
 #services-cards-container-mobile-landscape {
   --cards: 8;
@@ -37,51 +34,6 @@
 #blancec-cards-container {
   --cards: 8;
 }
-
-
-
-
-#card1-services {
-  --index: 1;
-  margin-top: 66px;
-}
-
-#card2-services {
-  --index: 2;
-  margin-top: 66px;
-}
-
-#card3-services {
-  --index: 3;
-  margin-top: 66px;
-}
-
-#card4-services {
-  --index: 4;
-  margin-top: 66px;
-}
-
-#card5-services {
-  --index: 5;
-  margin-top: 66px;
-}
-
-#card6-services {
-  --index: 6;
-  margin-top: 66px;
-}
-
-#card7-services {
-  --index: 7;
-  margin-top: 66px;
-}
-
-#card8-services {
-  --index: 8;
-  margin-top: 66px;
-}
-
-
 
 #card1-services-mobile-landscape {
   --index: 1;
