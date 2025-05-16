@@ -14,7 +14,7 @@ function isWeChatBrowser() {
           <img src="${gifSrc}"
                alt="Animated Services GIF ${index + 1}"
                class="wechat-services-gif"
-               style="width: 100%; height: auto;" />
+               style="width: 80%; height: auto;" />
         `;
       });
     }
