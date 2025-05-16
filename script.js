@@ -8,7 +8,7 @@ function isWeChatBrowser() {
 
       if (wechatContainer) {
         wechatContainer.innerHTML = `
-          <img src="imagenes/videos/services_01b.gif"
+          <img src="imagenes/videos/services_01.gif"
                alt="Animated Services GIF"
                id="wechat-services-gif"
                style="width: 100%; height: auto;" />
