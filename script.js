@@ -1,21 +1,25 @@
 function isWeChatBrowser() {
     return /MicroMessenger/i.test(navigator.userAgent);
   }
-
+  
   window.addEventListener("DOMContentLoaded", function () {
     if (isWeChatBrowser()) {
-      const wechatContainer = document.getElementById("wechat-video-container");
-
-      if (wechatContainer) {
-        wechatContainer.innerHTML = `
-          <img src="imagenes/videos/services_01.gif"
-               alt="Animated Services GIF"
-               id="wechat-services-gif"
+      const videoBlocks = document.querySelectorAll('.wechat-video-wrapper');
+  
+      videoBlocks.forEach((block, index) => {
+        const gifSrc = block.dataset.gif;
+  
+        // Replace video with corresponding GIF
+        block.innerHTML = `
+          <img src="${gifSrc}"
+               alt="Animated Services GIF ${index + 1}"
+               class="wechat-services-gif"
                style="width: 100%; height: auto;" />
         `;
-      }
+      });
     }
   });
+  
 
 document.addEventListener("DOMContentLoaded", function() {
     const hamburger = document.getElementById("hamburger");
