@@ -3,28 +3,22 @@ function isWeChatBrowser() {
   }
   
   window.addEventListener("DOMContentLoaded", function () {
-    const isSmallScreen = window.matchMedia("(max-width: 576px)").matches;
-  
-    // only swap to GIF on WeChat or on very narrow (≤576px) screens
-    if (isWeChatBrowser() || isSmallScreen) {
+    if (isWeChatBrowser()) {
       const videoBlocks = document.querySelectorAll('.wechat-video-wrapper');
   
       videoBlocks.forEach((block, index) => {
         const gifSrc = block.dataset.gif;
   
-        // replace <video> with the corresponding GIF
+        // Replace video with corresponding GIF
         block.innerHTML = `
-          <img
-            src="${gifSrc}"
-            alt="Animated Services GIF ${index + 1}"
-            class="wechat-services-gif"
-            style="width: 80%; height: auto; display: block; margin: 0 auto;"
-          />
+          <img src="${gifSrc}"
+               alt="Animated Services GIF ${index + 1}"
+               class="wechat-services-gif"
+               style="width: 80%; height: auto; display: block; margin: 0 auto;" />
         `;
       });
     }
   });
-  
   
 
 document.addEventListener("DOMContentLoaded", function() {
