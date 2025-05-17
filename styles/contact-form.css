@@ -41,27 +41,15 @@
     min-height: 50px;
   }
   
-  .send-button {
-    width: 200px; 
-    padding: 15px;
-    background-color: #ffcc00;
-    color: #000000;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    font-weight: bold;
-    transition: background-color 0.3s;
-    font-family: 'Roboto', Arial, Helvetica, sans-serif;
-    
-  }
+  
 
   #button-cases {
     margin-left: 30px;
   }
-  
+  /*
   .send-button:hover {
     background-color: #ff7300;
-  }
+  }*/
 
   #message {
     resize: vertical;
