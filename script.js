@@ -23,40 +23,7 @@ function isWeChatBrowser() {
 
 
 
-  document.addEventListener('DOMContentLoaded', () => {
-    const preloader     = document.getElementById('preloader');
-    const mainContent   = document.getElementById('main-content');
-  
-    // Crea promesas para cada imagen
-    const imgPromises = Array.from(document.images).map(img => {
-      return new Promise(resolve => {
-        if (img.complete) {
-          resolve();                  // ya cargada
-        } else {
-          img.addEventListener('load', resolve);
-          img.addEventListener('error', resolve);
-        }
-      });
-    });
-  
-    // Crea promesas para cada vídeo
-    const videoPromises = Array.from(document.querySelectorAll('video')).map(video => {
-      return new Promise(resolve => {
-        // 'loadeddata' se dispara cuando ya puede reproducir
-        video.addEventListener('loadeddata', resolve);
-        video.addEventListener('error', resolve);
-      });
-    });
-  
-    // Espera a que TODOS terminen de cargar
-    Promise
-      .all([ ...imgPromises, ...videoPromises ])
-      .then(() => {
-        // Oculta el preloader y muestra el contenido
-        preloader.style.display   = 'none';
-        mainContent.style.display = '';
-      });
-  });
+ 
   
 
 
