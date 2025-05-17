@@ -23,13 +23,6 @@ function isWeChatBrowser() {
 
 
 
- 
-  
-
-
-
-
-
   
 
 document.addEventListener("DOMContentLoaded", function() {
