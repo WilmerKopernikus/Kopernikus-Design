@@ -173,7 +173,7 @@ display: none;
   top: 30%;
   left: 50%;
   transform: translate(-50%, -50%);
-  width: 120%;       /* o el ancho que necesites */
+  width: 130%;       /* o el ancho que necesites */
   height: auto;
 }
 
