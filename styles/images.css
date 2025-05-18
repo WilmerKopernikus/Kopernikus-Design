@@ -168,6 +168,20 @@ display: none;
   max-width: 100%;
 }
 
+.wechat-video-wrapper.services-wrapper {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 100%;       /* o el ancho que necesites */
+  height: auto;
+}
+
+.wechat-video-wrapper.services-wrapper video {
+  width: 100%;
+  height: auto;     /* evita el 100% global */
+}
+
 
 
 
