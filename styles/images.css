@@ -170,7 +170,7 @@ display: none;
 
 .wechat-video-wrapper.services-wrapper {
   position: absolute;
-  top: 50%;
+  top: 30%;
   left: 50%;
   transform: translate(-50%, -50%);
   width: 100%;       /* o el ancho que necesites */
