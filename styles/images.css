@@ -178,7 +178,7 @@ display: none;
 }
 
 .wechat-video-wrapper.services-wrapper video {
-  width: 100%;
+  width: 120%;
   height: auto;     /* evita el 100% global */
 }
 
