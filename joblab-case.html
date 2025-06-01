@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Job Lab - Kopernikus Design</title>
-    <link rel="stylesheet" href="styles/header.css">
+    <link rel="stylesheet" href="styles/header_test.css">
     <link rel="stylesheet" href="styles/cards.css">
     <link rel="stylesheet" href="styles/images.css">
     <link rel="stylesheet" href="styles/global-text.css">
@@ -14,7 +14,7 @@
 <body>
     <div class="container">
         <div class="header">
-            <div>
+            <div class="nav-container">
               <a href="index_en.html">
                     <img src="imagenes/KopernikusLogo.png" alt="Kopernikus Design Logo" class='header-logo'>
                 </a>
@@ -27,18 +27,25 @@
                 <span></span>
             </div>
         </div>
+        <div class="language-selector">
+          <input type="checkbox" id="langToggle" hidden />
+          <label for="langToggle" class="current-lang">DE ▼</label>
+        
+          <ul class="language-options">
+            <li><a href="joblab-projekt.html" class="lang-button">EN</a></li>
+          </ul>
+        </div>
+
         <div class="menu-overlay" id="menuOverlay">
-            <ul>
-              <li><a href="index_en.html">Home</a></li>
-              <li><a href="cases.html">Cases</a></li>
-              <li class="cards-mobile"><a href="services-mobile.html">Services</a></li>
-              <li class="cards-screens"><a href="services.html">Services</a></li>
-              <li class="cards-mobile-landscape"><a href="services-mobile-landscape.html">Services</a></li>
-              <li><a href="contact.html">Contact</a></li>
-              <li><a href="joblab-projekt.html">Deutsch</a></li>
-              
-            </ul>
-        </div>  
+          <ul>
+              <li><a href="index_en.html"><img class="menu-icon" src="imagenes/svg/cubo.svg" alt="Startseite Icon">Home</a></li>
+              <li><a href="cases.html"><img class="menu-icon" src="imagenes/svg/cases.svg" alt="Projekte Icon">Cases</a></li>
+              <li class="cards-mobile"><a href="services-mobile.html"><img class="menu-icon" src="imagenes/svg/services.svg" alt="Services Icon">Services</a></li>
+              <li class="cards-screens"><a href="services.html"><img class="menu-icon" src="imagenes/svg/services.svg" alt="Services Icon">Services</a></li>
+              <li class="cards-mobile-landscape"><a href="services-mobile-landscape.html"><img class="menu-icon" src="imagenes/svg/services.svg" alt="Services Icon">Services</a></li>
+              <li><a href="contact.html"><img class="menu-icon" src="imagenes/svg/contact.svg" alt="Contact Icon">Contact</a></li>
+          </ul>
+      </div>   
         <div class="video-container">
             <div class="video-background cards-screens">
                 <video autoplay muted loop>

@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Blancec - Kopernikus Design</title>
-    <link rel="stylesheet" href="styles/header.css">
+    <link rel="stylesheet" href="styles/header_test.css">
     <link rel="stylesheet" href="styles/cards.css">
     <link rel="stylesheet" href="styles/images.css">
     <link rel="stylesheet" href="styles/global-text.css">
@@ -13,8 +13,9 @@
 </head>
 <body>
   <div class="container">
+
     <div class="header">
-      <div>
+      <div class="nav-container">
         <a href="index.html">
           <img src="imagenes/KopernikusLogo.png" alt="Kopernikus Design Logo" class='header-logo'>
         </a>
@@ -27,17 +28,24 @@
                 <span></span>
             </div>
         </div>
+        <div class="language-selector">
+          <input type="checkbox" id="langToggle" hidden />
+          <label for="langToggle" class="current-lang">EN ▼</label>
+        
+          <ul class="language-options">
+            <li><a href="blancec-case.html" class="lang-button">DE</a></li>
+          </ul>
+        </div>
         <div class="menu-overlay" id="menuOverlay">
-            <ul>
-              <li><a href="index.html">Startseite</a></li>
-              <li><a href="projekte.html">Projekte</a></li>
-              <li class="cards-mobile"><a href="services_de_mobile.html">Services</a></li>
-              <li class="cards-screens"><a href="services_de.html">Services</a></li>
-              <li class="cards-mobile-landscape"><a href="services_de_mobile_landscape.html">Services</a></li>
-              <li><a href="kontakt.html">Kontakt</a></li>
-              <li><a href="blancec-case.html">English</a></li>
-            </ul>
-        </div>  
+          <ul>
+              <li><a href="index_en.html"><img class="menu-icon" src="imagenes/svg/cubo.svg" alt="Startseite Icon">Home</a></li>
+              <li><a href="cases.html"><img class="menu-icon" src="imagenes/svg/cases.svg" alt="Projekte Icon">Cases</a></li>
+              <li class="cards-mobile"><a href="services-mobile.html"><img class="menu-icon" src="imagenes/svg/services.svg" alt="Services Icon">Services</a></li>
+              <li class="cards-screens"><a href="services.html"><img class="menu-icon" src="imagenes/svg/services.svg" alt="Services Icon">Services</a></li>
+              <li class="cards-mobile-landscape"><a href="services-mobile-landscape.html"><img class="menu-icon" src="imagenes/svg/services.svg" alt="Services Icon">Services</a></li>
+              <li><a href="contact.html"><img class="menu-icon" src="imagenes/svg/contact.svg" alt="Contact Icon">Contact</a></li>
+          </ul>
+      </div>  
 
 
         <div class="video-container">
