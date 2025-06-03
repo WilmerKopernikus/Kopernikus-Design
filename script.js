@@ -1,3 +1,15 @@
+window.onload = function() {
+    try {
+        preloadAndSwapImage();
+    } catch (error) {
+        console.error('Error in preloadAndSwapImage:', error);
+    }
+
+    // Ocultar el loader
+    document.getElementById('loadingScreen').style.display = 'none';
+};
+
+
 function isWeChatBrowser() {
     return /MicroMessenger/i.test(navigator.userAgent);
   }
