@@ -16,8 +16,8 @@ function draw() {
   let gradient = ctx.createRadialGradient(mouseX, mouseY, 0, mouseX, mouseY, 700);
 
   // Define color stops for the gradient
-  gradient.addColorStop(0, '#006cff');
-  gradient.addColorStop(1, '#000000');
+  gradient.addColorStop(0, '#00aeff');
+  gradient.addColorStop(1, '#121854');
 
 
   // Set the fill style to the gradient
