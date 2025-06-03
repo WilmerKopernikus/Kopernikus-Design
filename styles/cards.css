@@ -271,24 +271,6 @@
   border-top: 1px solid white; 
 }
 
-
-
-.send-button {
-  width: 200px; 
-  padding: 15px;
-  background-color: #ffcc00;
-  color: #000000;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
-  font-weight: bold;
-  transition: 0.3s;
-  font-family: 'Roboto', Arial, Helvetica, sans-serif;
-}
-  
-.send-button:hover {
-  background-color: #ff7300;
-}
 .font-loading .fade-in-text {
   visibility: hidden;
 }
@@ -422,9 +404,7 @@
     grid-template-rows: 25% 70%;
   }
 
-  .send-button{
-    width: 150px;
-  }
+
 
   .right-gif {
     padding: 20px;
