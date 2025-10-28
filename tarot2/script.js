@@ -72,7 +72,7 @@ const resultado = document.getElementById("resultado");
 
 // Función para crear carta volteada
 function crearCartaHTML(nombreCarta) {
-  const nombreArchivo = imagenesCartas[nombreCarta] || "reverso.jpg"; // fallback
+  const nombreArchivo = imagenesCartas[nombreCarta] || "reverso2.jpg"; // fallback
   const cartaId = `carta-${Math.random().toString(36).substr(2, 9)}`;
 
   return `
@@ -82,7 +82,7 @@ function crearCartaHTML(nombreCarta) {
           <img src="${nombreArchivo}" alt="${nombreCarta}">
         </div>
         <div class="card-side card-back">
-          <img src="reverso.jpg" alt="Reverso">
+          <img src="reverso2.jpg" alt="Reverso">
         </div>
       </div>
       <!--<p><strong>${nombreCarta}</strong></p>>-->
