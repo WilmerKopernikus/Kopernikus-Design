@@ -73,20 +73,32 @@ body {
     object-fit: cover;
   }
 
-  @media screen and (max-width: 750px) {
+ /* --- Parche móvil: da altura real a la carta --- */
+@media (max-width: 750px) {
+  .card-inner {
+    width: 86vw;              /* o 80vw si prefieres */
+    aspect-ratio: 2 / 3;      /* mantiene 400x600 => 2:3 */
+    height: auto;             /* válido con aspect-ratio */
+    position: relative;
+    transform-style: preserve-3d;
+    -webkit-transform-style: preserve-3d; /* iOS */
+  }
+
+  /* Fallback si el navegador no soporta aspect-ratio */
+  @supports not (aspect-ratio: 2 / 3) {
     .card-inner {
-      width: 80vw;  /* 80% del viewport width */
-      height: auto; /* Ajusta la altura si es necesario, o usa aspect-ratio */
-      max-width: 100%;
-    }
-  
-    .tarot-card {
-      margin: 0.5rem;
-    }
-  
-    .card-side img {
-      object-fit: contain; /* Para que la imagen no se deforme */
+      width: 86vw;
+      height: calc(86vw * 1.5); /* 2:3 => alto = 1.5 * ancho */
     }
   }
+
+  .card-side {
+    position: absolute;
+    inset: 0;
+    backface-visibility: hidden;
+    -webkit-backface-visibility: hidden; /* iOS/Safari */
+  }
+}
+
   
   
