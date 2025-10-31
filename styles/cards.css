@@ -377,10 +377,6 @@
     --cardHeight: calc(100vh - 50px);
   }
 
-  #card1 {
-    margin-top: 50px;
-
-  }
 
   .card {
     top: 50px;
@@ -450,9 +446,7 @@
     --cardHeight: calc(100vh - 39px);
   }
 
-  #card1 {
-    margin-top: 39px;
-  }
+
 
   #services-cards-container-mobile-landscape{
     --cardHeight: calc(100vh - 39px);
@@ -501,7 +495,6 @@
   }
 
   #card1 {
-    margin-top: 40px;
     --cardHeight: calc(100vh - 40px);
   }
 
