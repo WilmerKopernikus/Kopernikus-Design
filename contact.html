@@ -9,6 +9,7 @@
     <link rel="stylesheet" href="styles/images.css">
     <link rel="stylesheet" href="styles/global-text.css">
     <link rel="stylesheet" href="styles/contact-form.css">
+    <link rel="stylesheet" href="styles/cards_intro.css">
     <script src="p5.js"></script>
 </head>
 <body>
@@ -53,10 +54,10 @@
         </div>
         <div class="language-selector">
           <input type="checkbox" id="langToggle" hidden />
-          <label for="langToggle" class="current-lang">DE ▼</label>
+          <label for="langToggle" class="current-lang">EN ▼</label>
         
           <ul class="language-options">
-            <li><a href="kontakt.html" class="lang-button">EN</a></li>
+            <li><a href="kontakt.html" class="lang-button">DE</a></li>
           </ul>
       </div>
 
@@ -72,22 +73,16 @@
     </div> 
 
         <div class="video-container">
-            <div class="video-background">
-              <div class="wechat-video-wrapper services-wrapper" data-gif="imagenes/videos/contact.gif">
-                <video autoplay loop muted playsinline preload="auto" poster="imagenes/videos/contact.jpg">
-                  <source src="imagenes/videos/contact_compressed.mp4" type="video/mp4">
-                  Your browser does not support the video tag.
-              </video>
+          <div   id="card1">
+            <div class="card-body-intro with-arrow font-loading">
+                <div class="intro-card">
+                  <h1 class="fade-in-text">CONTACT</h1><br>
+                </div>
+                <div class="arrow">
+                  <h1 class="text-shadow fade-in-text">↓</h1>
+                </div>                        
               </div>
-            </div>
-            <div class="video-background-cube" id="cube-video">
-              <div class="wechat-video-wrapper" data-gif="imagenes/videos/cubo.gif">
-                <video autoplay loop muted playsinline preload="auto" poster="imagenes/videos/cube.jpg">
-                  <source src="imagenes/videos/cube_compressed.mp4" type="video/mp4">
-                  Your browser does not support the video tag.
-                </video>
-              </div>
-            </div>
+          </div>
         </div>
 
         <div class="intro-div"></div>
