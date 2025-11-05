@@ -38,9 +38,9 @@ body {
 }
 
 .card-inner {
-  width: 400px;
+  width: 340px;
   height: 600px;
-  aspect-ratio: 2 / 3;
+  aspect-ratio: 9 / 16;
   position: relative;
   transform-style: preserve-3d;
   transition: transform 0.6s;

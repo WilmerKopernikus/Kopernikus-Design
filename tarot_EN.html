@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="en">
 <head>
 
     
@@ -7,11 +7,12 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <link rel="preload" as="image" href="tarot/reverse.webp">
 
-  <title>Tarot Interactivo</title>
+  <title >Interactive Tarot</title>
   <link rel="preload" as="image" href="reverse.webp" fetchpriority="high">
 
   <link rel="stylesheet" href="style-tarot.css">
-
+    <link rel="stylesheet" href="styles/cards.css">
+    <link rel="stylesheet" href="styles/cards_services.css">
   <link rel="stylesheet" href="styles/header_test.css">
 
   <link rel="stylesheet" href="styles/global-text.css">
@@ -35,20 +36,25 @@
 
     <div class="language-selector">
       <input type="checkbox" id="langToggle" hidden />
-      <label for="langToggle" class="current-lang">DE ▼</label>
+      <label for="langToggle" class="current-lang">EN ▼</label>
       <ul class="language-options">
-        <li><a href="index_en.html" class="lang-button">EN</a></li>
+        <li><a href="tarot_DE.html" class="lang-button">DE</a></li>
       </ul>
     </div>
 
     <div class="menu-overlay" id="menuOverlay">
       <ul>
-        <!-- ... -->
+          <li><a href="index_en.html"><img class="menu-icon" src="imagenes/svg/cubo.svg" alt="Startseite Icon">Home</a></li>
+          <li><a href="cases.html"><img class="menu-icon" src="imagenes/svg/cases.svg" alt="Projekte Icon">Cases</a></li>
+          <li class="cards-mobile"><a href="services-mobile.html"><img class="menu-icon" src="imagenes/svg/services.svg" alt="Services Icon">Services</a></li>
+          <li class="cards-screens"><a href="services.html"><img class="menu-icon" src="imagenes/svg/services.svg" alt="Services Icon">Services</a></li>
+          <li class="cards-mobile-landscape"><a href="services-mobile-landscape.html"><img class="menu-icon" src="imagenes/svg/services.svg" alt="Services Icon">Services</a></li>
+          <li><a href="contact.html"><img class="menu-icon" src="imagenes/svg/contact.svg" alt="Contact Icon">Contact</a></li>
       </ul>
-    </div>
-  </div> <!-- /container -->
+  </div>  
 
-  <h1>Interactive Tarot</h1>
+
+  <h2 class="title">INTERACTIVE TAROT</h2>
   <button id="una-carta">Pull a card</button>
   <button id="triada">Pull a triad</button>
 

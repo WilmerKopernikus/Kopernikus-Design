@@ -6,28 +6,28 @@ const arcanosMayores = ["El Loco", "El Mago", "La Sacerdotisa", "La Emperatriz",
 
 // Relacionar cartas con nombres de archivo (en minúsculas y con guiones)
 const imagenesCartas = {
-  "El Loco": "00_Il_Matto.jpg",
-  "El Mago": "01_Il_Bagatto.jpg",
-  "La Sacerdotisa": "02_La_Papessa.jpg",
-  "La Emperatriz": "03_L'Imperatrice.jpg",
-  "El Emperador": "04_L'Imperatore.jpg",
-  "El Sumo Sacerdote": "05_Il_Papa.jpg",
-  "Los Enamorados": "06_Gli_Innamorati.jpg",
-  "El Carro": "07_Il_Carro.jpg",
-  "La Fuerza": "11_La_Forza.jpg",
-  "El Ermitaño": "09_L'Eremita.jpg",
-  "La Rueda de la Fortuna": "10_La_Ruota.jpg",  
-  "La Justicia": "08_La_Giustizia.jpg",
-  "El Colgado": "12_L'Appeso.jpg",
-  "La Muerte": "13_La_Morte.jpg",
-  "La Templanza": "14_La_Temperanza.jpg",
-  "El Diablo": "15_Il_Diavolo.jpg",
-  "La Torre": "16_La_Torre.jpg",
-  "La Estrella": "17_ Le_Stelle.jpg",
-  "La Luna": "18_La_Luna.jpg",
-  "El Sol": "19_Il_Sole.jpg",
-  "El Juicio": "20_Il_Giudizio.jpg",
-  "El Mundo": "21_Il_Mondo.jpg",
+  "El Loco": "el-loco.webp",
+  "El Mago": "el-mago.webp",
+  "La Sacerdotisa": "la-sacerdotisa.webp",
+  "La Emperatriz": "la-emperatriz.webp",
+  "El Emperador": "el-emperador.webp",
+  "El Sumo Sacerdote": "el-sumo-sacerdote.webp",
+  "Los Enamorados": "los-enamorados.webp",
+  "El Carro": "el-carro.webp",
+  "La Fuerza": "la-fuerza.webp",
+  "El Ermitaño": "el-ermitaño.webp",
+  "La Rueda de la Fortuna": "la-rueda-de-la-fortuna.webp",  
+  "La Justicia": "la-justicia.webp",
+  "El Colgado": "el-colgado.webp",
+  "La Muerte": "la-muerte.webp",
+  "La Templanza": "la-templanza.webp",
+  "El Diablo": "el-diablo.webp",
+  "La Torre": "la-torre.webp",
+  "La Estrella": "la-estrella.webp",
+  "La Luna": "la-luna.webp",
+  "El Sol": "el-sol.webp",
+  "El Juicio": "el-juicio.webp",
+  "El Mundo": "el-mundo.webp",
 };
 
   /*
@@ -82,7 +82,7 @@ function crearCartaHTML(nombreCarta) {
             <img src="tarot2/${nombreArchivo}" alt="${nombreCarta}">
           </div>
           <div class="card-side card-back">
-            <img src="tarot2/reverso.jpg" alt="Reverso">
+            <img src="tarot2/reverse.webp" alt="Reverso">
           </div>
         </div>
       </div>
