@@ -1,8 +1,8 @@
 #cases-cards-container {
-    --cards: 3;
+    --cards: 4;
   }
 #cases-cards-container-mobile {
-    --cards: 4;
+    --cards: 5;
   }
 #cases-cards-container-mobile-landscape {
     --cards: 3;
@@ -19,6 +19,10 @@
     --index: 3;
     margin-top: 66px;
   }
+#card4-cases {
+    --index: 4;
+    margin-top: 66px;
+  }
 #card1-cases-mobile {
     --index: 1;
     margin-top: 66px;
@@ -33,6 +37,10 @@
   }
 #card4-cases-mobile {
     --index: 4;
+    margin-top: 66px;
+  }
+#card5-cases-mobile {
+    --index: 5;
     margin-top: 66px;
   }
 #card1-cases-mobile-landscape {
