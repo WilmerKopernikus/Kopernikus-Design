@@ -6,28 +6,28 @@ const arcanosMayores = ["El Loco", "El Mago", "La Sacerdotisa", "La Emperatriz",
 
 // Relacionar cartas con nombres de archivo (en minúsculas y con guiones)
 const imagenesCartas = {
-  "El Loco": "00_Il_Matto.jpg",
-  "El Mago": "01_Il_Bagatto.jpg",
-  "La Sacerdotisa": "02_La_Papessa.jpg",
-  "La Emperatriz": "03_L'Imperatrice.jpg",
-  "El Emperador": "04_L'Imperatore.jpg",
-  "El Sumo Sacerdote": "05_Il_Papa.jpg",
-  "Los Enamorados": "06_Gli_Innamorati.jpg",
-  "El Carro": "07_Il_Carro.jpg",
-  "La Fuerza": "11_La_Forza.jpg",
-  "El Ermitaño": "09_L'Eremita.jpg",
-  "La Rueda de la Fortuna": "10_La_Ruota.jpg",  
-  "La Justicia": "08_La_Giustizia.jpg",
-  "El Colgado": "12_L'Appeso.jpg",
-  "La Muerte": "13_La_Morte.jpg",
-  "La Templanza": "14_La_Temperanza.jpg",
-  "El Diablo": "15_Il_Diavolo.jpg",
-  "La Torre": "16_La_Torre.jpg",
-  "La Estrella": "17_ Le_Stelle.jpg",
-  "La Luna": "18_La_Luna.jpg",
-  "El Sol": "19_Il_Sole.jpg",
-  "El Juicio": "20_Il_Giudizio.jpg",
-  "El Mundo": "21_Il_Mondo.jpg",
+  "El Loco": "00.jpg",
+  "El Mago": "01.jpg",
+  "La Sacerdotisa": "02.jpg",
+  "La Emperatriz": "03.jpg",
+  "El Emperador": "04.jpg",
+  "El Sumo Sacerdote": "05.jpg",
+  "Los Enamorados": "06.jpg",
+  "El Carro": "07.jpg",
+  "La Fuerza": "08.jpg",
+  "El Ermitaño": "09.jpg",
+  "La Rueda de la Fortuna": "10.jpg",  
+  "La Justicia": "11.jpg",
+  "El Colgado": "12.jpg",
+  "La Muerte": "13..jpg",
+  "La Templanza": "14.jpg",
+  "El Diablo": "15.jpg",
+  "La Torre": "16.jpg",
+  "La Estrella": "17.jpg",
+  "La Luna": "18.jpg",
+  "El Sol": "19.jpg",
+  "El Juicio": "20.jpg",
+  "El Mundo": "21.jpg",
 };
 
   /*
@@ -79,7 +79,7 @@ function crearCartaHTML(nombreCarta) {
       <div class="tarot-card" id="${cartaId}">
         <div class="card-inner">
           <div class="card-side card-front">
-            <img src="tarot2/${nombreArchivo}" alt="${nombreCarta}">
+            <img src="tarot_deutsch/${nombreArchivo}" alt="${nombreCarta}">
           </div>
           <div class="card-side card-back">
             <img src="tarot2/reverso.jpg" alt="Reverso">
