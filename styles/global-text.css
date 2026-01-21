@@ -22,6 +22,28 @@ body {
   overflow-x: hidden;
   background-color: #000000;
 }
+ /*background: linear-gradient(
+    270deg,
+    #3a7bd5,   
+    #6a5acd,    
+    #9b5de5,  
+    #4ea8de     
+  );
+  background-size: 600% 600%;
+  animation: gradientFlow 12s ease infinite;
+}
+
+@keyframes gradientFlow {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}*/
 
 
 
@@ -64,6 +86,19 @@ a {
   font-weight: 400;
 }
 
+.subtitle {
+  font-size: 2.5rem;
+  margin-bottom: 10px;
+  font-family: 'Roboto', 'Arial Narrow Bold', sans-serif;
+  font-weight: 200;
+  text-align: center;
+      text-shadow:
+  -7px -7px 7px #000,  
+   7px -7px 7px #000,
+  -7px  7px 7px #000,
+   7px  7px 7px #000;
+}
+
 #title-small {
   font-size: 3.3rem;
 }
@@ -82,7 +117,7 @@ a {
 /*----------- All Texts -----------*/
 
 .text {
-  font-size: 1.1rem;
+  font-size: 2rem;
   line-height: 1.5;
 }
 
@@ -146,12 +181,12 @@ a {
 }
 
 #card1 h1 {
-  font-size: 7rem;
+  font-size: 8rem;
   user-select: none;
   font-weight: 400;
   text-align: center;
   font-family: 'Handjet', 'Arial Narrow Bold', sans-serif;
-  text-shadow:
+    text-shadow:
   -7px -7px 7px #000,  
    7px -7px 7px #000,
   -7px  7px 7px #000,
