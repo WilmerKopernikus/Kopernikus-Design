@@ -6,7 +6,7 @@ const languagesContent = {
     //menu
     menuIndex: `Home`,
     menuProjekte: `Projects`,
-    menuCV: `Curriculum Vitae`,
+    menuServices: `Services`,
     menuKontakt: `Contact`,
 
     //index
@@ -23,7 +23,7 @@ const languagesContent = {
     topLoadingTimes: "TOP LOADING TIMES",
 
     indexSubtitle: `FOR BUSINESSES THAT WANT RESULTS`,
-    homeButton: `► Start a Project`,
+    homeButton: `Start a Project`,
     wilmerIntroduction: "I am a web developer, graphic designer, and visual artist with international experience in Germany, China, and Colombia. In this portfolio, I present both professional and personal projects that reflect my approach: combining design, technology, and creativity to develop high-quality digital solutions.",
     projectTitle: `PROJECTS`,
     projectContent: `Discover a selection of project examples that show how I have supported clients through impactful web design and development.`,
@@ -98,7 +98,7 @@ const languagesContent = {
     //Menu
     menuIndex: `Startseite`,
     menuProjekte: `Projekte`,
-    menuCV: `Lebenslauf`,
+    menuServices: `Dienstleistungen`,
     menuKontakt: `Kontakt`,
 
     //Index
@@ -115,7 +115,7 @@ const languagesContent = {
     topLoadingTimes: "TOP-LADEZEITEN",
 
     indexSubtitle: `FÜR UNTERNEHMEN, DIE ERGEBNISSE WOLLEN`,
-    homeButton: `► Projekt starten`,
+    homeButton: `Projekt starten`,
     wilmerIntroduction: "Ich bin Webentwickler, Grafikdesigner und bildender Künstler mit internationaler Erfahrung in Deutschland, China und Kolumbien. In diesem Portfolio präsentiere ich sowohl berufliche als auch persönliche Projekte, die meinen Ansatz widerspiegeln: Design, Technologie und Kreativität zu verbinden, um digitale Lösungen auf höchstem Niveau zu entwickeln.",
     projectTitle: "PROJEKTE",
     projectContent: "Erfahren Sie in verschiedenen Projektbeispielen, wie ich Kunden mit wirkungsvollem Webdesign und -entwicklung unterstützt habe.",
@@ -190,7 +190,7 @@ const languagesContent = {
     //Menu
     menuIndex: 'Inicio',
     menuProjekte: 'Proyectos',
-    menuCV: 'Currículum Vitae',
+    menuServices: 'Servicios',
     menuKontakt: 'Contacto',
 
     //Index
@@ -205,9 +205,9 @@ const languagesContent = {
     onlineShops: "TIENDAS ONLINE",
     futureProof: "A PRUEBA DEL FUTURO",
     topLoadingTimes: "TIEMPOS DE CARGA TOP",
-    
+
     indexSubtitle: 'PARA EMPRESAS QUE QUIEREN RESULTADOS',
-    homeButton: `► Iniciar un proyecto`,
+    homeButton: `Iniciar un proyecto`,
     projectTitle: 'PROYECTOS',
     projectContent: 'Descubre una selección de ejemplos de proyectos que muestran cómo he apoyado a los clientes a través de un diseño y desarrollo web impactantes.',
     projectButton: 'Ver mis proyectos',
