@@ -296,12 +296,7 @@ padding-top: 0;
   transform: translateY(0);
 }
 
-/* Ensure rotating text (same element as .fade-in-text) remains visible so its child spans can animate */
-.fade-in-text.rotating-text {
-  visibility: visible !important;
-  opacity: 1 !important;
-  transform: none !important;
-}
+
 
 
 @media screen and (min-width: 2560px) and (orientation: landscape) {
