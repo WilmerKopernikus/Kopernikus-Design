@@ -22,11 +22,11 @@ function setup() {
 	centerY = height/2;
 	
 	colors = [
-  color("#0A2540"),  // azul marino profundo
-  color("#0F4C75"),  // azul océano
-  color("#1B6CA8"),  // azul medio
-  color("#2EC4B6"),  // agua marina
-  color("#A8E6CF")   // turquesa claro
+  color("#010027"),  // azul marino profundo
+  color("#000dff"),  // azul océano
+  color("#0091ff"),  // azul medio
+  color("#00124c"),  // agua marina
+  color("#001e95")   // turquesa claro
 ];
 }
 

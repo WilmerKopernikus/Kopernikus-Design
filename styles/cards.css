@@ -238,12 +238,18 @@
 
 .left {
   grid-area: left; 
-  background-color: #000000;
+
   padding-left: 50px;
   padding-right: 50px;
   padding-top: 0;
   border-top: 1px solid white; 
+background: linear-gradient(
+  to right in oklab,
+  rgb(9, 0, 113),
+  rgb(0, 102, 255)
+);
 }
+
 .left2{
   grid-area: left; 
   background-color: #000000;
@@ -255,6 +261,9 @@
   background-color: #000000;
   padding: 50px;
   border-top: 1px solid white; 
+}
+#card2 .right {
+padding-top: 0;
 }
 .right2 {
   grid-area: right; 
@@ -285,6 +294,13 @@
   visibility: visible;
   opacity: 1;
   transform: translateY(0);
+}
+
+/* Ensure rotating text (same element as .fade-in-text) remains visible so its child spans can animate */
+.fade-in-text.rotating-text {
+  visibility: visible !important;
+  opacity: 1 !important;
+  transform: none !important;
 }
 
 

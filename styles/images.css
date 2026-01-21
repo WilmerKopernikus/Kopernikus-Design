@@ -90,6 +90,25 @@ display: none;
   display: block;
 }
 
+.image-container-home {
+  width: 100%;
+  /* Match the card height (cardHeight is defined in :root of cards.css) */
+  height: var(--cardHeight);
+  max-height: var(--cardHeight);
+  box-sizing: border-box;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+
+.image-container-home img {
+  max-height: 100%; /* scale image to container height */
+  width: auto;
+  display: block;
+  object-fit: contain;
+}
+
 #gif-container img {
   width: auto; 
   height: 83vh; 
