@@ -30,7 +30,7 @@
   .hamburger-menu {
     position: fixed;
     top: 8px;
-    left: 30px;
+    right: calc(20px + 70px + 12px);
     z-index: 1000;
     background-color: rgb(0, 0, 0);
     padding: 10px;
@@ -269,7 +269,7 @@
       }
       
       .hamburger-menu {
-          left: 5px;
+          right: calc(10px + 40px + 8px);
           top: 9px;
           padding: 5px;
       }
@@ -368,7 +368,7 @@
     }
   
     .hamburger-menu {
-      right: 30px;
+      right: calc(20px + 70px + 12px);
       top: 0;
       padding: 3px;
     }
