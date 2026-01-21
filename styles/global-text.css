@@ -149,8 +149,8 @@ a {
   opacity: 0;
   white-space: nowrap;
   /* start hidden; animation will reveal */
-  animation: rotateWords 33s infinite both;
-  -webkit-animation: rotateWords 33s infinite both;
+  animation: rotateWords 33s infinite ease-out;
+  -webkit-animation: rotateWords 33s infinite ease-out;
 }
 
 .rotating-text span:nth-child(1) { animation-delay: 0s; }
@@ -168,21 +168,20 @@ a {
 @keyframes rotateWords {
   0% {
     opacity: 0;
-    transform: translateY(10px);
+    transform: scale(1.5);
   }
 
-  10% {
+  5% {
     opacity: 1;
     transform: translateY(0);
   }
 
-  20% {
+  8% {
     opacity: 1;
   }
 
-  25% {
+  9% {
     opacity: 0;
-    transform: translateY(-10px);
   }
 
   100% {
