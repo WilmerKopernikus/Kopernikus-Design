@@ -168,11 +168,11 @@ a {
     transform: translateY(0);
   }
 
-  30% {
+  20% {
     opacity: 1;
   }
 
-  40% {
+  25% {
     opacity: 0;
     transform: translateY(-10px);
   }
