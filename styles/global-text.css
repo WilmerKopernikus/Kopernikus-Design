@@ -189,6 +189,16 @@ a {
   }
 }
 
+@media (max-width: 1024px) and (orientation: portrait) {
+  .rotating-text {
+    height: 2.6em;
+  }
+
+  .rotating-text span {
+    white-space: normal;
+    line-height: 1.15;
+  }
+}
 
 
 
@@ -330,8 +340,8 @@ a {
     margin-left: 20px;
   }
 
-}
 
+}
 
 
 

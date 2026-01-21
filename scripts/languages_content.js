@@ -11,16 +11,27 @@ const languagesContent = {
 
     //index
     digitalStrategy: "DIGITAL STRATEGY",
+    digitalStrategyMobile: "DIGITAL<br>STRATEGY",
     webTechnologies: "WEB TECHNOLOGIES",
+    webTechnologiesMobile: "WEB<br>TECHNOLOGIES",
     coolAnimations: "COOL ANIMATIONS",
+    coolAnimationsMobile: "COOL<br>ANIMATIONS",
     itSecurity: "IT SECURITY",
+    itSecurityMobile: "IT<br>SECURITY",
     graphicDesign: "GRAPHIC DESIGN",
+    graphicDesignMobile: "GRAPHIC<br>DESIGN",
     seoReach: "SEO REACH",
+    seoReachMobile: "SEO<br>REACH",
     dataProtection: "DATA PROTECTION",
+    dataProtectionMobile: "DATA<br>PROTECTION",
     aiImplementation: "AI IMPLEMENTATION",
+    aiImplementationMobile: "AI<br>IMPLEMENTATION",
     onlineShops: "ONLINE SHOPS",
+    onlineShopsMobile: "ONLINE<br>SHOPS",
     futureProof: "FUTURE-PROOF",
+    futureProofMobile: "FUTURE-<br>PROOF",
     topLoadingTimes: "TOP LOADING TIMES",
+    topLoadingTimesMobile: "TOP LOADING<br>TIMES",
 
     indexSubtitle: `FOR BUSINESSES THAT WANT RESULTS`,
     homeButton: `Start a Project`,
@@ -103,16 +114,27 @@ const languagesContent = {
 
     //Index
     digitalStrategy: "DIGITALSTRATEGIE",
+    digitalStrategyMobile: "DIGITALSTRATEGIE",
     webTechnologies: "WEBTECHNOLOGIEN",
+    webTechnologiesMobile: "WEBTECHNOLOGIEN",
     coolAnimations: "COOLE ANIMATIONEN",
+    coolAnimationsMobile: "COOLE<br>ANIMATIONEN",
     itSecurity: "IT-SICHERHEIT",
+    itSecurityMobile: "IT-<br>SICHERHEIT",
     graphicDesign: "GRAFIKDESIGN",
+    graphicDesignMobile: "GRAFIKDESIGN",
     seoReach: "SEO-REICHWEITE",
+    seoReachMobile: "SEO-<br>REICHWEITE",
     dataProtection: "DATENSCHUTZ",
+    dataProtectionMobile: "DATENSCHUTZ",
     aiImplementation: "KI-IMPLEMENTIERUNG",
+    aiImplementationMobile: "KI-<br>IMPLEMENTIERUNG",
     onlineShops: "ONLINE-SHOPS",
+    onlineShopsMobile: "ONLINE-<br>SHOPS",
     futureProof: "ZUKUNFTSSICHER",
+    futureProofMobile: "ZUKUNFTSSICHER",
     topLoadingTimes: "TOP-LADEZEITEN",
+    topLoadingTimesMobile: "TOP-<br>LADEZEITEN",
 
     indexSubtitle: `FÜR UNTERNEHMEN, DIE ERGEBNISSE WOLLEN`,
     homeButton: `Projekt starten`,
@@ -195,16 +217,27 @@ const languagesContent = {
 
     //Index
     digitalStrategy: "ESTRATEGIA DIGITAL",
+    digitalStrategyMobile: "ESTRATEGIA<br>DIGITAL",
     webTechnologies: "TECNOLOGÍAS WEB",
+    webTechnologiesMobile: "TECNOLOGÍAS<br>WEB",
     coolAnimations: "ANIMACIONES GENIALES",
+    coolAnimationsMobile: "ANIMACIONES<br>GENIALES",
     itSecurity: "SEGURIDAD INFORMÁTICA",
+    itSecurityMobile: "SEGURIDAD<br>INFORMÁTICA",
     graphicDesign: "DISEÑO GRÁFICO",
+    graphicDesignMobile: "DISEÑO<br>GRÁFICO",
     seoReach: "ALCANCE SEO",
+    seoReachMobile: "ALCANCE<br>SEO",
     dataProtection: "PROTECCIÓN DE DATOS",
+    dataProtectionMobile: "PROTECCIÓN DE<br>DATOS",
     aiImplementation: "IMPLEMENTACIÓN DE IA",
+    aiImplementationMobile: "IMPLEMENTACIÓN DE<br>IA",
     onlineShops: "TIENDAS ONLINE",
+    onlineShopsMobile: "TIENDAS<br>ONLINE",
     futureProof: "A PRUEBA DEL FUTURO",
+    futureProofMobile: "A PRUEBA<br>DEL FUTURO",
     topLoadingTimes: "TIEMPOS DE CARGA TOP",
+    topLoadingTimesMobile: "TIEMPOS DE<br>CARGA TOP",
 
     indexSubtitle: 'PARA EMPRESAS QUE QUIEREN RESULTADOS',
     homeButton: `Iniciar un proyecto`,
@@ -280,6 +313,10 @@ const languagesContent = {
 
 let currentLang = 'en';
 
+function isPortraitMobile() {
+  return window.matchMedia('(max-width: 1024px) and (orientation: portrait)').matches;
+}
+
 function applyLanguage(lang) {
   const dict = languagesContent[lang];
   if (!dict) return;
@@ -287,7 +324,10 @@ function applyLanguage(lang) {
   // 1) Actualizar textos de la página
   document.querySelectorAll('[data-i18n]').forEach((el) => {
     const key = el.dataset.i18n;
-    const value = dict[key];
+    const mobileKey = el.dataset.i18nMobile;
+    const value = isPortraitMobile() && mobileKey && dict[mobileKey]
+      ? dict[mobileKey]
+      : dict[key];
     if (!value) return;
 
     el.innerHTML = value;
@@ -371,6 +411,8 @@ document.addEventListener('DOMContentLoaded', () => {
       applyLanguage(lang);
     });
   });
+
+  window.addEventListener('resize', () => {
+    applyLanguage(currentLang);
+  });
 });
-
-
