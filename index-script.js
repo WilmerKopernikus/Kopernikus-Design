@@ -57,4 +57,47 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   
     observer.observe(image); // Observa la imagen
+
+    // Carousel functionality
+    const container = document.querySelector('.case-boxes-container');
+    const leftArrow = document.querySelector('.carousel-arrow-left');
+    const rightArrow = document.querySelector('.carousel-arrow-right');
+    const boxes = document.querySelectorAll('.case-box');
+    
+    if (container && leftArrow && rightArrow && boxes.length > 0) {
+      let currentIndex = 0;
+      
+      function updateCarousel() {
+        const boxWidth = boxes[0].offsetWidth + 20; // box width + gap
+        const translateAmount = currentIndex * boxWidth;
+        container.style.transform = `translateX(-${translateAmount}px)`;
+        
+        console.log('Current index:', currentIndex, 'Translate:', translateAmount);
+        
+        // Disable arrows at boundaries
+        leftArrow.disabled = currentIndex === 0;
+        rightArrow.disabled = currentIndex >= boxes.length - 3;
+      }
+      
+      leftArrow.addEventListener('click', () => {
+        console.log('Left arrow clicked');
+        if (currentIndex > 0) {
+          currentIndex--;
+          updateCarousel();
+        }
+      });
+      
+      rightArrow.addEventListener('click', () => {
+        console.log('Right arrow clicked');
+        if (currentIndex < boxes.length - 3) {
+          currentIndex++;
+          updateCarousel();
+        }
+      });
+      
+      // Initial state with delay to ensure elements are rendered
+      setTimeout(() => {
+        updateCarousel();
+      }, 100);
+    }
   });
