@@ -365,6 +365,17 @@ display: none;
   #services-animation-cases{
     width: 70%;
   }
+
+    .image-container-home {
+    height: auto;
+    max-height: none;
+  }
+
+  .image-container-home img {
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+  }
 }
 
 @media screen and (max-height: 415px) and (orientation: landscape) {
