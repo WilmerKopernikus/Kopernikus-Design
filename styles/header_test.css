@@ -190,7 +190,8 @@
     border-radius: 4px;
     list-style: none;
     z-index: 999;
-    min-width: 70px;
+    width: 100%;
+    min-width: 100%;
     box-sizing: border-box;
     color: #ffffff;
     justify-content: center;
@@ -305,7 +306,8 @@
       }
 
       .language-options {
-        min-width: 40px;
+        width: 100%;
+        min-width: 100%;
       }
 
       .nav-container {
