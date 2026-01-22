@@ -153,17 +153,49 @@ a {
   -webkit-animation: rotateWords 33s infinite ease-out;
 }
 
-.rotating-text span:nth-child(1) { animation-delay: 0s; }
-.rotating-text span:nth-child(2) { animation-delay: 3s; }
-.rotating-text span:nth-child(3) { animation-delay: 6s; }
-.rotating-text span:nth-child(4) { animation-delay: 9s; }
-.rotating-text span:nth-child(5) { animation-delay: 12s; }
-.rotating-text span:nth-child(6) { animation-delay: 15s; }
-.rotating-text span:nth-child(7) { animation-delay: 18s; }
-.rotating-text span:nth-child(8) { animation-delay: 21s; }
-.rotating-text span:nth-child(9) { animation-delay: 24s; }
-.rotating-text span:nth-child(10) { animation-delay: 27s; }
-.rotating-text span:nth-child(11) { animation-delay: 30s; }
+.rotating-text span:nth-child(1) {
+  animation-delay: 0s;
+}
+
+.rotating-text span:nth-child(2) {
+  animation-delay: 3s;
+}
+
+.rotating-text span:nth-child(3) {
+  animation-delay: 6s;
+}
+
+.rotating-text span:nth-child(4) {
+  animation-delay: 9s;
+}
+
+.rotating-text span:nth-child(5) {
+  animation-delay: 12s;
+}
+
+.rotating-text span:nth-child(6) {
+  animation-delay: 15s;
+}
+
+.rotating-text span:nth-child(7) {
+  animation-delay: 18s;
+}
+
+.rotating-text span:nth-child(8) {
+  animation-delay: 21s;
+}
+
+.rotating-text span:nth-child(9) {
+  animation-delay: 24s;
+}
+
+.rotating-text span:nth-child(10) {
+  animation-delay: 27s;
+}
+
+.rotating-text span:nth-child(11) {
+  animation-delay: 30s;
+}
 
 @keyframes rotateWords {
   0% {
@@ -325,7 +357,7 @@ a {
   }
 
   .subtitle {
-  font-size: 1.5rem;
+    font-size: 1.5rem;
   }
 
   #card1 p {
@@ -431,6 +463,11 @@ a {
     margin-right: 40px;
   }
 
+  .text-home {
+    font-size: 1.1rem;
+    line-height: 1.4;
+  }
+
   #title-small {
     font-size: 3rem;
     margin-top: 20px;
@@ -443,6 +480,7 @@ a {
     min-width: 280px;
   }
 }
+
 
 
 @media screen and (max-width: 431px) and (orientation: portrait) {
@@ -472,6 +510,11 @@ a {
     line-height: 1.1;
     margin-left: 20px;
     margin-right: 20px;
+  }
+
+    .text-home {
+    font-size: 0.95rem;
+    line-height: 1.35;
   }
 
 
@@ -506,6 +549,11 @@ a {
     line-height: 1.1;
     margin-left: 20px;
     margin-right: 20px;
+  }
+
+  .text-home {
+    font-size: 0.85rem;
+    line-height: 1.3;
   }
 
 
