@@ -38,7 +38,7 @@
   .hamburger-menu {
     position: fixed;
     top: 8px;
-    right: calc(20px + 70px + 12px);
+    right: 102px;
     z-index: 1000;
     background-color: rgb(0, 0, 0);
     padding: 10px;
@@ -181,7 +181,7 @@
   
   /* Language options dropdown */
   .language-options {
-    padding: 6px 10px;
+    padding: 6px 0;
     display: none;
     position: absolute;
     right: 0;
@@ -195,14 +195,15 @@
     box-sizing: border-box;
     color: #ffffff;
     justify-content: center;
+     align-items: center;
     text-align: center;
      font-weight: 600;
   }
   
   /* Show language dropdown when toggled via class */
   .language-options.show {
-    display: block;
-
+    display: flex;
+    flex-direction: column;
   }
   
 /* NO queremos líneas entre idiomas */
@@ -213,6 +214,9 @@
 /* Cada idioma será una cajita similar a .current-lang */
 .language-options li {
   margin-top: 6px; /* separa las cajas entre sí */
+  width: 100%;
+  display: flex;
+  justify-content: center;
 }
 
 /* Botón = caja blanca igual que el idioma actual */
@@ -233,6 +237,7 @@
   font-weight: 600;
   white-space: nowrap;
   box-sizing: border-box;
+  text-align: center;
 }
 
   
@@ -245,7 +250,8 @@
     justify-content: center;
   }
   #langToggle:checked ~ .language-options {
-    display: block;
+    display: flex;
+    flex-direction: column;
   }
   
 
