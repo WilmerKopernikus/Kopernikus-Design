@@ -43,7 +43,10 @@ const observer = new IntersectionObserver((entries, observer) => {
 }, { threshold: 0.1 });
 
 // Start observing the first element (h1)
-observer.observe(document.getElementById("demo"));
+const demoElement = document.getElementById("demo");
+if (demoElement) {
+    observer.observe(demoElement);
+}
 
 document.addEventListener("DOMContentLoaded", () => {
     const image = document.querySelector(".intro-image");
@@ -56,7 +59,9 @@ document.addEventListener("DOMContentLoaded", () => {
       });
     });
   
-    observer.observe(image); // Observa la imagen
+    if (image) {
+      observer.observe(image); // Observa la imagen
+    }
 
     // Carousel functionality
     const container = document.querySelector('.case-boxes-container');
