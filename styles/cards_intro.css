@@ -1,56 +1,78 @@
 #intro-cards-container {
-    --cards: 5;
-  }
-#card1 {
-    --index: 1;
-  }
-#card2 {
-    --index: 2;
-    margin-top: 66px;
+  --cards: 5;
 }
+
+#card1 {
+  --index: 1;
+}
+
+#card2 {
+  --index: 2;
+  margin-top: 66px;
+}
+
 #card3 {
   --index: 3;
   margin-top: 66px;
 }
+
 #card4 {
   --index: 4;
   margin-top: 66px;
 }
+
 #card5 {
   --index: 5;
   margin-top: 66px;
 }
-.text-shadow{
+
+.left-card2 {
+  background: linear-gradient(to right in oklab,
+      rgb(11, 10, 17),
+      rgb(45, 0, 159));
+}
+
+.text-shadow {
   font-size: 120px;
   font-family: 'Handjet';
 }
+
 .with-arrow .arrow {
   position: absolute;
-  bottom: 0;      
-  right: 20px;      
-  margin: 0;   
-  animation: bounce 1.5s ease-in-out infinite;      
+  bottom: 0;
+  right: 20px;
+  margin: 0;
+  animation: bounce 1.5s ease-in-out infinite;
 }
+
 @keyframes bounce {
   0% {
     transform: translateY(0);
   }
+
   50% {
     transform: translateY(10px);
   }
+
   100% {
     transform: translateY(0);
   }
 }
+
 .intro-card {
   flex: 1;
   display: flex;
   flex-direction: column;
-  justify-content: center; 
+  justify-content: center;
   align-items: center;
 }
+
+.cases-intro-card {
+
+}
+
 @media (max-width: 750px) {
-    #intro-mobile{
-        grid-template-rows: 50% 50%;
-    }
+  #intro-mobile {
+    grid-template-rows: 50% 50%;
+  }
 }
