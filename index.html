@@ -84,13 +84,22 @@
     /* Ocultar h1 y h2 de card1 inicialmente en móviles y tablets */
     @media (max-width: 1024px) {
       #card1 .intro-card h1,
-      #card1 .intro-card h2 {
+      #card1 .intro-card h2,
+      #card1 .intro-card .send-button {
         display: none;
       }
       
       #card1 .intro-card h1.show-content,
-      #card1 .intro-card h2.show-content {
+      #card1 .intro-card h2.show-content,
+      #card1 .intro-card .send-button.show-content {
         display: block;
+      }
+
+      #card1 .intro-card .send-button {
+        width: 140px;
+        padding: 8px 10px;
+        font-size: 0.8rem;
+        margin-top: 10px;
       }
     }
   </style>
@@ -103,9 +112,6 @@
         <a href="index_en.html">
           <img src="imagenes/KopernikusLogo.png" alt="Kopernikus Design Logo" class='header-logo'>
         </a>
-        <div class="header-cta">
-          <button class="send-button" data-i18n="homeButton">Start a Project</button>
-        </div>
       </div>
     </div>
     <div class="hamburger-menu">
@@ -181,7 +187,7 @@
                 <span data-i18n="topLoadingTimes" data-i18n-mobile="topLoadingTimesMobile">TOP LOADING TIMES</span>
               </h1>
               <h2 class="subtitle" data-i18n="indexSubtitle"> FOR BUSINESSES THAT WANT RESULTS</h2><br>
-
+              <button class="send-button" data-i18n="homeButton">Start a Project</button>
             </div>
             <div class="arrow">
               <h1 class="text-shadow fade-in-text">↓</h1>
@@ -317,9 +323,11 @@
             // Mostrar h1 y h2 de card1
             const h1 = document.querySelector('#card1 .intro-card h1');
             const h2 = document.querySelector('#card1 .intro-card h2');
+            const button = document.querySelector('#card1 .intro-card .send-button');
             
             if (h1) h1.classList.add('show-content');
             if (h2) h2.classList.add('show-content');
+            if (button) button.classList.add('show-content');
             
             // Activar animación del texto rotativo si existe
             if (h1) {
@@ -339,8 +347,10 @@
           overlay.style.display = 'none';
           const h1 = document.querySelector('#card1 .intro-card h1');
           const h2 = document.querySelector('#card1 .intro-card h2');
+          const button = document.querySelector('#card1 .intro-card .send-button');
           if (h1) h1.classList.add('show-content');
           if (h2) h2.classList.add('show-content');
+          if (button) button.classList.add('show-content');
         }
       });
     })();
