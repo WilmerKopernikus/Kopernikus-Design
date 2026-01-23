@@ -9,7 +9,7 @@ let changeDuration = 3000;
 let lastChange = 0;
 
 function setup() {
-	canvas = createCanvas(windowWidth, windowHeight);
+	canvas = createCanvas(window.visualViewport.width, window.visualViewport.height);
     canvas.position(0, 0);
     canvas.style('z-index', '-1'); // Ensures it stays behind content
 	canvas.style('position', 'fixed'); 
@@ -143,10 +143,6 @@ function getYPrint(y){
 	return yScale*y+centerY;
 }
 
-function windowResized() {
-	resizeCanvas(windowWidth, windowHeight);
-	xScale = width/20;
-	yScale = height/20*(width/height);
-	centerX = width/2;
-	centerY = height/2;
-}
+window.visualViewport.addEventListener('resize', () => {
+	resizeCanvas(window.visualViewport.width, window.visualViewport.height);
+  });
