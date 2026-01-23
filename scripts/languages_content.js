@@ -34,6 +34,7 @@ const languagesContent = {
     topLoadingTimesMobile: "TOP LOADING<br>TIMES",
 
     indexSubtitle: `FOR BUSINESSES THAT WANT RESULTS`,
+    clickToStart: `Click me to start`,
     homeButton: `Start a Project`,
     wilmerIntroduction: "I am a web developer, graphic designer, and visual artist with international experience in Germany, China, and Colombia. In this portfolio, I present both professional and personal projects that reflect my approach: combining design, technology, and creativity to develop high-quality digital solutions.",
     projectTitle: `PROJECTS`,
@@ -137,6 +138,7 @@ const languagesContent = {
     topLoadingTimesMobile: "TOP<br>LADEZEITEN",
 
     indexSubtitle: `FÜR UNTERNEHMEN, DIE ERGEBNISSE WOLLEN`,
+    clickToStart: `Klicken, um zu starten`,
     homeButton: `Projekt starten`,
     wilmerIntroduction: "Ich bin Webentwickler, Grafikdesigner und bildender Künstler mit internationaler Erfahrung in Deutschland, China und Kolumbien. In diesem Portfolio präsentiere ich sowohl berufliche als auch persönliche Projekte, die meinen Ansatz widerspiegeln: Design, Technologie und Kreativität zu verbinden, um digitale Lösungen auf höchstem Niveau zu entwickeln.",
     projectTitle: "PROJEKTE",
@@ -240,6 +242,7 @@ const languagesContent = {
     topLoadingTimesMobile: "TIEMPOS DE<br>CARGA TOP",
 
     indexSubtitle: 'PARA EMPRESAS QUE QUIEREN RESULTADOS',
+    clickToStart: `Toca para comenzar`,
     homeButton: `Iniciar un proyecto`,
     projectTitle: 'PROYECTOS',
     projectContent: 'Descubre una selección de ejemplos de proyectos que muestran cómo he apoyado a los clientes a través de un diseño y desarrollo web impactantes.',

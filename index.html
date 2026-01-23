@@ -39,6 +39,49 @@
     <img src="imagenes/videos/cubo.gif" alt="Loading..." style="width: 250px; height: auto; margin-bottom: 20px;">
     <img src="imagenes/loading.webp" style="width: 250px; height: auto; margin-bottom: 20px;">
   </div>
+  <!-- Overlay para activar p5.js en móviles y tablets -->
+  <div id="clickToStartOverlay" style="
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    z-index: 2000;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+  ">
+    <div style="
+      text-align: center;
+      color: #fff;
+      font-family: Arial, Helvetica, sans-serif;
+    ">
+      <h2 style="font-size: 24px; font-weight: normal; animation: pulse 2s infinite;" data-i18n="clickToStart">Click me to start</h2>
+    </div>
+  </div>
+
+  <style>
+    @keyframes pulse {
+      0%, 100% { opacity: 1; transform: scale(1); }
+      50% { opacity: 0.7; transform: scale(1.05); }
+    }
+    
+    /* Ocultar h1 y h2 de card1 inicialmente en móviles y tablets */
+    @media (max-width: 1024px) {
+      #card1 .intro-card h1,
+      #card1 .intro-card h2 {
+        display: none;
+      }
+      
+      #card1 .intro-card h1.show-content,
+      #card1 .intro-card h2.show-content {
+        display: block;
+      }
+    }
+  </style>
+
   <div class="container">
 
 
@@ -233,6 +276,62 @@
   </div>
   <script src="script.js"></script>
   <script src="index-script.js"></script>
+  
+  <script>
+    // Script para mostrar overlay en móviles y tablets
+    (function() {
+      // Detectar si es móvil o tablet
+      function isMobileOrTablet() {
+        return window.innerWidth <= 1024;
+      }
+      
+      // Mostrar overlay después de que se cargue la página
+      window.addEventListener('load', function() {
+        if (isMobileOrTablet()) {
+          const overlay = document.getElementById('clickToStartOverlay');
+          const loadingScreen = document.getElementById('loadingScreen');
+          
+          // Esperar a que desaparezca la pantalla de carga
+          setTimeout(function() {
+            overlay.style.display = 'flex';
+          }, 100);
+          
+          // Al hacer click, ocultar overlay y mostrar contenido
+          overlay.addEventListener('click', function() {
+            // Ocultar overlay
+            overlay.style.display = 'none';
+            
+            // Mostrar h1 y h2 de card1
+            const h1 = document.querySelector('#card1 .intro-card h1');
+            const h2 = document.querySelector('#card1 .intro-card h2');
+            
+            if (h1) h1.classList.add('show-content');
+            if (h2) h2.classList.add('show-content');
+            
+            // Activar animación del texto rotativo si existe
+            if (h1) {
+              h1.style.animation = 'none';
+              setTimeout(function() {
+                h1.style.animation = '';
+              }, 10);
+            }
+          });
+        }
+      });
+      
+      // Manejar cambios de tamaño de ventana
+      window.addEventListener('resize', function() {
+        const overlay = document.getElementById('clickToStartOverlay');
+        if (!isMobileOrTablet()) {
+          overlay.style.display = 'none';
+          const h1 = document.querySelector('#card1 .intro-card h1');
+          const h2 = document.querySelector('#card1 .intro-card h2');
+          if (h1) h1.classList.add('show-content');
+          if (h2) h2.classList.add('show-content');
+        }
+      });
+    })();
+  </script>
 </body>
 
 </html>
