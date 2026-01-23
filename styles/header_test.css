@@ -4,6 +4,9 @@
     top: 0;
     left: 0; 
     width: 100%;
+    max-width: 100%;
+    box-sizing: border-box;
+    overflow-x: hidden;
     z-index: 20; 
     background-color: rgb(0, 0, 0);
     border-bottom: 1px solid #ccc;
@@ -13,6 +16,8 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    width: 100%;
+    box-sizing: border-box;
     height: 66px;
 
   }
@@ -29,6 +34,7 @@
     z-index: 1;
     margin-top: 12px;
     width: 250px;
+     max-width: 70vw;
     transition: transform 0.7s ease;
   }
   .header-logo:hover {
@@ -269,7 +275,8 @@
       .header-logo {
           width: 200px;        
           height: auto; 
-          margin-top: 10px;   
+          margin-top: 10px;  
+           max-width: 70vw; 
       }
   
       .hamburger {
