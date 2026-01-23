@@ -69,12 +69,16 @@
     }
     
     /* Evitar selección de texto en overlay y h2 de card1 */
-    #clickToStartOverlay h2,
-    #card1 .intro-card h2 {
+    #clickToStartOverlay,
+    #clickToStartOverlay *,
+    #card1 .intro-card h2,
+    #card1 .intro-card h1 {
       user-select: none;
       -webkit-user-select: none;
       -moz-user-select: none;
       -ms-user-select: none;
+      -webkit-tap-highlight-color: transparent;
+      -webkit-touch-callout: none;
     }
     
     /* Ocultar h1 y h2 de card1 inicialmente en móviles y tablets */
