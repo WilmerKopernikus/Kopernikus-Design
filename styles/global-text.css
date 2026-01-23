@@ -201,7 +201,7 @@ a {
 @keyframes rotateWords {
   0% {
     opacity: 0;
-    transform: scale(1.5);
+    transform: scale(1.2);
   }
 
   5% {
