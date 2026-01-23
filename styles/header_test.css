@@ -3,7 +3,8 @@
     position: fixed;
     top: 0;
     left: 0; 
-    width: 100%;
+    right: 0;
+    width: auto;
     z-index: 20; 
     background-color: rgb(0, 0, 0);
     border-bottom: 1px solid #ccc;
@@ -60,7 +61,8 @@
     position: fixed;
     top: 66px;
     left: 0;
-    width: 100%;
+    right: 0;
+    width: auto;
     height: 30%;
     background-color: #000000;
     display: flex; 
