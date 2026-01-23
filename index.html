@@ -68,6 +68,15 @@
       50% { opacity: 0.7; transform: scale(1.05); }
     }
     
+    /* Evitar selección de texto en overlay y h2 de card1 */
+    #clickToStartOverlay h2,
+    #card1 .intro-card h2 {
+      user-select: none;
+      -webkit-user-select: none;
+      -moz-user-select: none;
+      -ms-user-select: none;
+    }
+    
     /* Ocultar h1 y h2 de card1 inicialmente en móviles y tablets */
     @media (max-width: 1024px) {
       #card1 .intro-card h1,
