@@ -36,6 +36,8 @@ const languagesContent = {
     indexSubtitle: `FOR BUSINESSES THAT WANT RESULTS`,
     clickToStart: `Click me to start`,
     homeButton: `Start a Project`,
+    aboutContent: `We are an international web design and development agency that helps businesses, institutions and individuals build modern, high-performing websites.<br><br>By combining clean visual design, intuitive user experience, and reliable, scalable development, we turn your website into a powerful tool.`,
+
     wilmerIntroduction: "I am a web developer, graphic designer, and visual artist with international experience in Germany, China, and Colombia. In this portfolio, I present both professional and personal projects that reflect my approach: combining design, technology, and creativity to develop high-quality digital solutions.",
     projectTitle: `PROJECTS`,
     projectContent: `Discover a selection of project examples that show how I have supported clients through impactful web design and development.`,
@@ -140,6 +142,8 @@ const languagesContent = {
     indexSubtitle: `FÜR UNTERNEHMEN, DIE ERGEBNISSE WOLLEN`,
     clickToStart: `Klicken, um zu starten`,
     homeButton: `Projekt starten`,
+aboutContent: `Wir sind eine internationale Webdesign- und Entwicklungsagentur, die Unternehmen, Institutionen und Einzelpersonen dabei unterstützt, moderne, leistungsstarke Websites zu erstellen.<br><br>Durch die Kombination von klarem visuellem Design, intuitiver Benutzererfahrung und zuverlässiger, skalierbarer Entwicklung verwandeln wir Ihre Website in ein leistungsstarkes Instrument.`,
+
     wilmerIntroduction: "Ich bin Webentwickler, Grafikdesigner und bildender Künstler mit internationaler Erfahrung in Deutschland, China und Kolumbien. In diesem Portfolio präsentiere ich sowohl berufliche als auch persönliche Projekte, die meinen Ansatz widerspiegeln: Design, Technologie und Kreativität zu verbinden, um digitale Lösungen auf höchstem Niveau zu entwickeln.",
     projectTitle: "PROJEKTE",
     projectContent: "Erfahren Sie in verschiedenen Projektbeispielen, wie ich Kunden mit wirkungsvollem Webdesign und -entwicklung unterstützt habe.",
@@ -244,6 +248,7 @@ const languagesContent = {
     indexSubtitle: 'PARA EMPRESAS QUE QUIEREN RESULTADOS',
     clickToStart: `Toca para comenzar`,
     homeButton: `Iniciar un proyecto`,
+    aboutContent: 'Somos una agencia internacional de diseño y desarrollo web que ayuda a empresas, instituciones e individuos a construir sitios web modernos y de alto rendimiento.<br><br>Al combinar un diseño visual limpio, una experiencia de usuario intuitiva y un desarrollo confiable y escalable, convertimos su sitio web en una poderosa herramienta.',
     projectTitle: 'PROYECTOS',
     projectContent: 'Descubre una selección de ejemplos de proyectos que muestran cómo he apoyado a los clientes a través de un diseño y desarrollo web impactantes.',
     projectButton: 'Ver mis proyectos',

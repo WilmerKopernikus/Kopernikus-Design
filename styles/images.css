@@ -91,15 +91,16 @@ display: none;
 }
 
 .image-container-home {
-  width: 100%;
+  width: 90%;
   /* Match the card height (cardHeight is defined in :root of cards.css) */
-  height: var(--cardHeight);
+  height: 90%;
   max-height: var(--cardHeight);
   box-sizing: border-box;
   display: flex;
   justify-content: center;
   align-items: center;
   overflow: hidden;
+
 }
 
 .image-container-home img {
@@ -107,6 +108,7 @@ display: none;
   width: auto;
   display: block;
   object-fit: contain;
+    border-radius: 50%;
 }
 
 #gif-container img {
