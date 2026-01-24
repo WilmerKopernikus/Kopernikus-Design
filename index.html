@@ -211,16 +211,42 @@
           <div class="card-body">
             <div class="left left-card2" id="center-services">
               <p class="text-home justify" data-i18n="aboutContent">
-                Kopernikus Design is an international web design and development agency that helps businesses,
-                institutions and individuals
-                build modern, high-performing websites that attract customers, communicate credibility, and support real
-                business growth. By combining clean visual design, intuitive user experience, and reliable, scalable
-                development, we turn
-                your website into a powerful business tool.
+                We are an international web design and development agency that helps businesses,
+                institutions and individuals build modern, high-performing websites.
+                <br><br>
+                By combining clean visual design, intuitive user experience, and reliable, scalable
+                development, we turn your website into a powerful business tool.
+                <!--
                 <br><br>
                 Whether you are launching a new brand, improving your corporate image, or expanding to new markets,
                 Kopernikus Design delivers structured, professional, and results-driven web solutions that help your
                 business, institution or personal project grow with confidence.
+                -->
+              </p>
+            </div>
+            <div class="right" id="responsive-sketch">
+              <div class="image-container-home">
+                <img src="imagenes/01.png" alt="Job Lab Logo Design">
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="card" id="card3">
+          <div class="card-body">
+            <div class="left left-card2" id="center-services">
+              <p class="text-home justify" data-i18n="aboutContent">
+                We are an international web design and development agency that helps businesses,
+                institutions and individuals build modern, high-performing websites.
+                <br><br>
+                By combining clean visual design, intuitive user experience, and reliable, scalable
+                development, we turn your website into a powerful business tool.
+                <!--
+                <br><br>
+                Whether you are launching a new brand, improving your corporate image, or expanding to new markets,
+                Kopernikus Design delivers structured, professional, and results-driven web solutions that help your
+                business, institution or personal project grow with confidence.
+                -->
               </p>
             </div>
             <div class="right" id="responsive-sketch">
@@ -230,7 +256,34 @@
             </div>
           </div>
         </div>
-        <div class="card" id="card3">
+
+        
+        <div class="card" id="card4">
+          <div class="card-body">
+            <div class="left left-card2" id="center-services">
+              <p class="text-home justify" data-i18n="aboutContent">
+                We are an international web design and development agency that helps businesses,
+                institutions and individuals build modern, high-performing websites.
+                <br><br>
+                By combining clean visual design, intuitive user experience, and reliable, scalable
+                development, we turn your website into a powerful business tool.
+                <!--
+                <br><br>
+                Whether you are launching a new brand, improving your corporate image, or expanding to new markets,
+                Kopernikus Design delivers structured, professional, and results-driven web solutions that help your
+                business, institution or personal project grow with confidence.
+                -->
+              </p>
+            </div>
+            <div class="right" id="responsive-sketch">
+              <div class="image-container-home">
+                <img src="imagenes/03.png" alt="Job Lab Logo Design">
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="card" id="card5">
           <div class="card-body">
             <div class="cases-intro-card">
               <h2 class="title" data-i18n="projectTitle">PROJECTS</h2>
@@ -260,16 +313,7 @@
             </div>
           </div>
         </div>
-        <div class="card" id="card4">
-          <div class="card-body">
-            <div class="left" id="center-services">
 
-            </div>
-            <div class="right" id="responsive-sketch">
-
-            </div>
-          </div>
-        </div>
         <!--<div class="card" id="card5">
           <div class="card-body">
             <div class="left" id="center-services">
@@ -308,76 +352,76 @@
   <script src="script.js"></script>
   <script src="index-script.js"></script>
 
-<script>
-  (function () {
-    const MOBILE_BREAKPOINT = 1024;
+  <script>
+    (function () {
+      const MOBILE_BREAKPOINT = 1024;
 
-    const body = document.body;
-    const overlay = document.getElementById('clickToStartOverlay');
-    const card = document.querySelector('#card1 .intro-card');
-    const h1 = card?.querySelector('h1');
-    const h2 = card?.querySelector('h2');
-    const button = card?.querySelector('.send-button');
-    const languageSelector = document.querySelector('.language-selector');
+      const body = document.body;
+      const overlay = document.getElementById('clickToStartOverlay');
+      const card = document.querySelector('#card1 .intro-card');
+      const h1 = card?.querySelector('h1');
+      const h2 = card?.querySelector('h2');
+      const button = card?.querySelector('.send-button');
+      const languageSelector = document.querySelector('.language-selector');
 
-    function isMobileOrTablet() {
-      return window.innerWidth <= MOBILE_BREAKPOINT;
-    }
-
-    function lockScroll() {
-      body.classList.add('scroll-locked');
-    }
-
-    function unlockScroll() {
-      body.classList.remove('scroll-locked');
-    }
-
-    function showIntroContent() {
-      h1?.classList.add('show-content');
-      h2?.classList.add('show-content');
-      button?.classList.add('show-content');
-      languageSelector?.classList.add('show-content');
-
-      if (h1) {
-        h1.style.animation = 'none';
-        requestAnimationFrame(() => {
-          h1.style.animation = '';
-        });
+      function isMobileOrTablet() {
+        return window.innerWidth <= MOBILE_BREAKPOINT;
       }
-    }
 
-    function showOverlay() {
-      lockScroll();
-      overlay.style.display = 'flex';
-    }
+      function lockScroll() {
+        body.classList.add('scroll-locked');
+      }
 
-    function hideOverlay() {
-      overlay.style.display = 'none';
-      unlockScroll();
-      showIntroContent();
-    }
+      function unlockScroll() {
+        body.classList.remove('scroll-locked');
+      }
 
-    window.addEventListener('load', () => {
-      if (!overlay) return;
+      function showIntroContent() {
+        h1?.classList.add('show-content');
+        h2?.classList.add('show-content');
+        button?.classList.add('show-content');
+        languageSelector?.classList.add('show-content');
 
-      if (isMobileOrTablet()) {
-        setTimeout(showOverlay, 100);
-      } else {
+        if (h1) {
+          h1.style.animation = 'none';
+          requestAnimationFrame(() => {
+            h1.style.animation = '';
+          });
+        }
+      }
+
+      function showOverlay() {
+        lockScroll();
+        overlay.style.display = 'flex';
+      }
+
+      function hideOverlay() {
+        overlay.style.display = 'none';
+        unlockScroll();
         showIntroContent();
       }
-    });
 
-    overlay?.addEventListener('click', hideOverlay);
+      window.addEventListener('load', () => {
+        if (!overlay) return;
 
-    window.addEventListener('resize', () => {
-      if (!overlay) return;
+        if (isMobileOrTablet()) {
+          setTimeout(showOverlay, 100);
+        } else {
+          showIntroContent();
+        }
+      });
 
-      if (!isMobileOrTablet()) {
-        hideOverlay();
-      }
-    });
-  })();
-</script>
+      overlay?.addEventListener('click', hideOverlay);
+
+      window.addEventListener('resize', () => {
+        if (!overlay) return;
+
+        if (!isMobileOrTablet()) {
+          hideOverlay();
+        }
+      });
+    })();
+  </script>
 
 </body>
 

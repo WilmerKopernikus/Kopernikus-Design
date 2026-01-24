@@ -13,19 +13,26 @@
 
 #card3 {
   --index: 3;
+  margin-top: 66px;
+}
+
+#card4 {
+  --index: 4;
+  margin-top: 66px;
+}
+
+#card5 {
+  --index: 3;
   margin-top: 56px;
   top: -50px !important;  /* Cambia este valor a lo que quieras */
   scroll-margin-top: -50px !important;
 }
 
-#card3 .card-body {
+#card5 .card-body {
   height: calc(100vh + 50px) !important;  /* Usa el mismo valor que top */
 }
 
-#card4 {
-  --index: 4;
-  margin-top: 150px;
-}
+
 
 #card5 {
   --index: 5;
@@ -33,9 +40,7 @@
 }
 
 .left-card2 {
-  background: linear-gradient(to right in oklab,
-      rgb(11, 10, 17),
-      rgb(45, 0, 159));
+  background-image: url("../imagenes/background.png");
 }
 
 .text-shadow {
@@ -81,15 +86,13 @@
   align-items: center;
   gap: 50px;
   grid-column: 1 / -1;
-  background-image: url('../imagenes/background02.png');
+  background-image: url('../imagenes/01.png');
   padding-top: 50px;
 }
 
 .cases-intro-card .title {
   margin-bottom: 0;
 }
-
-
 
 @media (max-width: 750px) {
   #intro-mobile {

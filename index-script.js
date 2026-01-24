@@ -63,10 +63,6 @@ document.addEventListener("DOMContentLoaded", () => {
       observer.observe(image); // Observa la imagen
     }
 
-  });
-
-  const track = document.querySelector(".carousel-track");
-const slides = document.querySelectorAll(".slide");
 const prev = document.querySelector(".prev");
 const next = document.querySelector(".next");
 const dots = document.querySelectorAll(".dot");
@@ -94,4 +90,6 @@ dots.forEach((dot, i) => {
     index = i;
     updateCarousel();
   });
+});
+
 });
