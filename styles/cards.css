@@ -255,7 +255,6 @@
   grid-area: right; 
 
   padding: 50px;
-  border-top: 1px solid white; 
 }
 #card2 .right {
 padding-top: 0;
@@ -330,16 +329,18 @@ padding-top: 0;
   }
 
   .left {
-    background-color: #000000;
     padding: 0;
     padding-left: 0;
     padding-right: 0;
   } 
 
+  #card2-background {
+  background-image: url('../imagenes/background-mobile.png');
+}
+
   .right {
     padding: 0;
     padding-top: 0px;
-    border-top: 1px solid rgb(0, 0, 0); 
   }
   
   .cards-mobile {
