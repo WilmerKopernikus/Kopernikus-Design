@@ -213,7 +213,7 @@ a {
 @keyframes rotateWords {
   0% {
     opacity: 0;
-    transform: scale(1.2);
+    transform: scale(1.5);
   }
 
   5% {
@@ -386,7 +386,29 @@ a {
     margin-left: 20px;
   }
 
+@keyframes rotateWords {
+  0% {
+    opacity: 0;
+    transform: scale(1);
+  }
 
+  5% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  8% {
+    opacity: 1;
+  }
+
+  9% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 0;
+  }
+}
 }
 
 
