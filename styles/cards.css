@@ -216,6 +216,7 @@
   color: #ffffff; 
   border-top: 1px solid white; 
   box-sizing: border-box;
+  background-image: url('../imagenes/background.png');
 }
 
 .card-body-intro {
@@ -238,7 +239,7 @@
   padding-right: 50px;
   padding-top: 0;
   border-top: 1px solid white; 
-  background-color: #000000;
+
 }
 
 .left2{
@@ -249,7 +250,7 @@
 }
 .right {
   grid-area: right; 
-  background-color: #000000;
+
   padding: 50px;
   border-top: 1px solid white; 
 }
