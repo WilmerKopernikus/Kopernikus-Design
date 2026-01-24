@@ -250,7 +250,6 @@
       </div>
     </div>
   </div>
-  </div>
   <script src="script.js"></script>
   <script src="index-script.js"></script>
 
@@ -260,10 +259,6 @@
 
     const body = document.body;
     const overlay = document.getElementById('clickToStartOverlay');
-    const card = document.querySelector('#card1 .intro-card');
-    const h1 = card?.querySelector('h1');
-    const h2 = card?.querySelector('h2');
-    const button = card?.querySelector('.send-button');
 
     function isMobileOrTablet() {
       return window.innerWidth <= MOBILE_BREAKPOINT;
@@ -277,19 +272,6 @@
       body.classList.remove('scroll-locked');
     }
 
-    function showIntroContent() {
-      h1?.classList.add('show-content');
-      h2?.classList.add('show-content');
-      button?.classList.add('show-content');
-
-      if (h1) {
-        h1.style.animation = 'none';
-        requestAnimationFrame(() => {
-          h1.style.animation = '';
-        });
-      }
-    }
-
     function showOverlay() {
       lockScroll();
       overlay.style.display = 'flex';
@@ -298,7 +280,6 @@
     function hideOverlay() {
       overlay.style.display = 'none';
       unlockScroll();
-      showIntroContent();
     }
 
     window.addEventListener('load', () => {
@@ -307,18 +288,15 @@
       if (isMobileOrTablet()) {
         setTimeout(showOverlay, 100);
       } else {
-        showIntroContent();
+        hideOverlay();
       }
     });
 
     overlay?.addEventListener('click', hideOverlay);
 
     window.addEventListener('resize', () => {
-      if (!overlay) return;
-
-      if (!isMobileOrTablet()) {
-        hideOverlay();
-      }
+      if (!overlay || isMobileOrTablet()) return;
+      hideOverlay();
     });
   })();
 </script>

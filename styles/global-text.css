@@ -33,6 +33,9 @@ body {
   overflow-y: scroll;
   background-color: #000000;
 }
+.overflow{
+  overflow-x: hidden;
+}
 
 /*background: linear-gradient(
     270deg,
