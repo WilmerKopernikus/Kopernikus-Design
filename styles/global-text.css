@@ -23,9 +23,14 @@
   font-style: normal;
 }
 
+html {
+  scrollbar-gutter: stable;
+}
+
 body {
   font-family: 'Roboto', Arial, Helvetica, sans-serif;
   overflow-x: hidden;
+  overflow-y: scroll;
   background-color: #000000;
 }
 

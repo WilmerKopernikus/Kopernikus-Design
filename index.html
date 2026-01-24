@@ -41,76 +41,26 @@
   <!-- Overlay para activar p5.js en móviles y tablets -->
   <div id="clickToStartOverlay" style="
     position: absolute;
-    left: 50%;
-    bottom: 50%;
-    transform: translateX(-50%);
-    padding: 12px 18px;
-    background-color: rgba(0, 0, 0, 0.82);
-    border-radius: 999px;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.896);
     z-index: 2000;
     display: none;
-
+    align-items: center;
+    justify-content: center;
     cursor: pointer;
-    text-align: center;
-    color: #fff;
-    font-family: Arial, Helvetica, sans-serif;
-    max-width: calc(100% - 32px);
-    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.35);
-  " role="button" aria-live="polite">
-    <h2 style="font-size: 24px; font-weight: normal; animation: pulse 2s infinite; margin: 0;" data-i18n="clickToStart">Click me to start</h2>
+  ">
+    <div style="
+      text-align: center;
+      color: #fff;
+      font-family: Arial, Helvetica, sans-serif;
+    ">
+      <h2 style="font-size: 24px; font-weight: normal; animation: pulse 2s infinite;" data-i18n="clickToStart">Click me
+        to start</h2>
+    </div>
   </div>
-
-  <style>
-    @keyframes pulse {
-
-      0%,
-      100% {
-        opacity: 1;
-        transform: scale(1);
-      }
-
-      50% {
-        opacity: 0.7;
-        transform: scale(1.05);
-      }
-    }
-
-    /* Evitar selección de texto en overlay y h2 de card1 */
-    #clickToStartOverlay,
-    #clickToStartOverlay *,
-    #card1 .intro-card h2,
-    #card1 .intro-card h1 {
-      user-select: none;
-      -webkit-user-select: none;
-      -moz-user-select: none;
-      -ms-user-select: none;
-      -webkit-tap-highlight-color: transparent;
-      -webkit-touch-callout: none;
-    }
-
-    /* Ocultar h1 y h2 de card1 inicialmente en móviles y tablets */
-    @media (max-width: 1024px) {
-
-      #card1 .intro-card h1,
-      #card1 .intro-card h2,
-      #card1 .intro-card .send-button {
-        display: none;
-      }
-
-      #card1 .intro-card h1.show-content,
-      #card1 .intro-card h2.show-content,
-      #card1 .intro-card .send-button.show-content {
-        display: block;
-      }
-
-      #card1 .intro-card .send-button {
-        width: 140px;
-        padding: 8px 10px;
-        font-size: 0.8rem;
-        margin-top: 10px;
-      }
-    }
-  </style>
 
   <div class="container">
 
@@ -305,63 +255,73 @@
   <script src="index-script.js"></script>
 
 <script>
-  // Script para mostrar el mensaje "Click me to start" en móviles y tablets
   (function () {
-      const overlay = document.getElementById('clickToStartOverlay');
-      const gatedElements = [
-        document.querySelector('#card1 .intro-card h1'),
-        document.querySelector('#card1 .intro-card h2'),
-        document.querySelector('#card1 .intro-card .send-button')
-      ];
-      let isActivated = false;
+    const MOBILE_BREAKPOINT = 1024;
 
-      function isMobileOrTablet() {
-        return window.innerWidth <= 1024;
-      }
+    const body = document.body;
+    const overlay = document.getElementById('clickToStartOverlay');
+    const card = document.querySelector('#card1 .intro-card');
+    const h1 = card?.querySelector('h1');
+    const h2 = card?.querySelector('h2');
+    const button = card?.querySelector('.send-button');
 
-     function setContentVisibility(visible) {
-        gatedElements.forEach(function(element) {
-          if (element) {
-            element.classList.toggle('show-content', visible);
-          }
+    function isMobileOrTablet() {
+      return window.innerWidth <= MOBILE_BREAKPOINT;
+    }
+
+    function lockScroll() {
+      body.classList.add('scroll-locked');
+    }
+
+    function unlockScroll() {
+      body.classList.remove('scroll-locked');
+    }
+
+    function showIntroContent() {
+      h1?.classList.add('show-content');
+      h2?.classList.add('show-content');
+      button?.classList.add('show-content');
+
+      if (h1) {
+        h1.style.animation = 'none';
+        requestAnimationFrame(() => {
+          h1.style.animation = '';
         });
       }
+    }
 
-      function refreshOverlay() {
-        if (!overlay) return;
+    function showOverlay() {
+      lockScroll();
+      overlay.style.display = 'flex';
+    }
 
-        if (isMobileOrTablet() && !isActivated) {
-          overlay.style.display = 'block';
-          setContentVisibility(false);
-          return;
-        }
-         overlay.style.display = 'none';
-        setContentVisibility(true);
+    function hideOverlay() {
+      overlay.style.display = 'none';
+      unlockScroll();
+      showIntroContent();
+    }
+
+    window.addEventListener('load', () => {
+      if (!overlay) return;
+
+      if (isMobileOrTablet()) {
+        setTimeout(showOverlay, 100);
+      } else {
+        showIntroContent();
       }
+    });
 
-      function activateContent() {
-        isActivated = true;
-        refreshOverlay();
+    overlay?.addEventListener('click', hideOverlay);
 
-        const rotatingText = gatedElements[0];
-        if (rotatingText) {
-          rotatingText.style.animation = 'none';
-          setTimeout(function() {
-            rotatingText.style.animation = '';
-          }, 10);
-        }
+    window.addEventListener('resize', () => {
+      if (!overlay) return;
+
+      if (!isMobileOrTablet()) {
+        hideOverlay();
       }
-
-      window.addEventListener('load', function() {
-        if (!overlay) return;
-
-        setTimeout(refreshOverlay, 100);
-        overlay.addEventListener('click', activateContent, { once: true });
-      });
-
-      window.addEventListener('resize', refreshOverlay);
-    })();
-  </script>
+    });
+  })();
+</script>
 
 </body>
 
