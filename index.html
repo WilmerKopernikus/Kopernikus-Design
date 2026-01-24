@@ -45,7 +45,7 @@
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: rgba(0, 0, 0, 0.896);
+    background-color: rgba(0, 0, 0, 0.8);
     z-index: 2000;
     display: none;
     align-items: center;
@@ -61,6 +61,60 @@
         to start</h2>
     </div>
   </div>
+
+  <style>
+    @keyframes pulse {
+
+      0%,
+      100% {
+        opacity: 1;
+        transform: scale(1);
+      }
+
+      50% {
+        opacity: 0.7;
+        transform: scale(1.05);
+      }
+    }
+
+    /* Evitar selección de texto en overlay y h2 de card1 */
+    #clickToStartOverlay,
+    #clickToStartOverlay *,
+    #card1 .intro-card h2,
+    #card1 .intro-card h1 {
+      user-select: none;
+      -webkit-user-select: none;
+      -moz-user-select: none;
+      -ms-user-select: none;
+      -webkit-tap-highlight-color: transparent;
+      -webkit-touch-callout: none;
+    }
+
+    /* Ocultar h1 y h2 de card1 inicialmente en móviles y tablets */
+    @media (max-width: 1024px) {
+
+      #card1 .intro-card h1,
+      #card1 .intro-card h2,
+      #card1 .intro-card .send-button,
+      .language-selector {
+        display: none;
+      }
+
+      #card1 .intro-card h1.show-content,
+      #card1 .intro-card h2.show-content,
+      #card1 .intro-card .send-button.show-content,
+      .language-selector.show-content {
+        display: block;
+      }
+
+      #card1 .intro-card .send-button {
+        width: 140px;
+        padding: 8px 10px;
+        font-size: 0.8rem;
+        margin-top: 10px;
+      }
+    }
+  </style>
 
   <div class="container">
 
@@ -250,6 +304,7 @@
       </div>
     </div>
   </div>
+  </div>
   <script src="script.js"></script>
   <script src="index-script.js"></script>
 
@@ -259,6 +314,11 @@
 
     const body = document.body;
     const overlay = document.getElementById('clickToStartOverlay');
+    const card = document.querySelector('#card1 .intro-card');
+    const h1 = card?.querySelector('h1');
+    const h2 = card?.querySelector('h2');
+    const button = card?.querySelector('.send-button');
+    const languageSelector = document.querySelector('.language-selector');
 
     function isMobileOrTablet() {
       return window.innerWidth <= MOBILE_BREAKPOINT;
@@ -272,6 +332,20 @@
       body.classList.remove('scroll-locked');
     }
 
+    function showIntroContent() {
+      h1?.classList.add('show-content');
+      h2?.classList.add('show-content');
+      button?.classList.add('show-content');
+      languageSelector?.classList.add('show-content');
+
+      if (h1) {
+        h1.style.animation = 'none';
+        requestAnimationFrame(() => {
+          h1.style.animation = '';
+        });
+      }
+    }
+
     function showOverlay() {
       lockScroll();
       overlay.style.display = 'flex';
@@ -280,6 +354,7 @@
     function hideOverlay() {
       overlay.style.display = 'none';
       unlockScroll();
+      showIntroContent();
     }
 
     window.addEventListener('load', () => {
@@ -288,15 +363,18 @@
       if (isMobileOrTablet()) {
         setTimeout(showOverlay, 100);
       } else {
-        hideOverlay();
+        showIntroContent();
       }
     });
 
     overlay?.addEventListener('click', hideOverlay);
 
     window.addEventListener('resize', () => {
-      if (!overlay || isMobileOrTablet()) return;
-      hideOverlay();
+      if (!overlay) return;
+
+      if (!isMobileOrTablet()) {
+        hideOverlay();
+      }
     });
   })();
 </script>
