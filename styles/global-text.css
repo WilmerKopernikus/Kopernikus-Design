@@ -261,12 +261,9 @@ a {
   transition: 0.3s;
   font-family: 'Roboto', Arial, Helvetica, sans-serif;
   box-shadow:
-    0 0 8px rgba(0, 136, 255, 0.8),
-    /* amarillo */
-    0 0 15px rgba(0, 51, 255, 0.7),
-    /* naranja */
-    0 0 20px rgba(72, 0, 255, 0.685);
-  /* rojo */
+  0 0 8px rgba(255, 247, 0, 0.8),   
+  0 0 15px rgba(255, 165, 0, 0.7), 
+  0 0 20px rgba(255, 0, 0, 0.6);   
   transition: box-shadow 0.3s ease;
   font-size: 1rem;
 }

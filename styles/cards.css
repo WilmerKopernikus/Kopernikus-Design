@@ -1,18 +1,22 @@
 .cards-mobile {
   display: none;
 }
+
 .cards-screens {
   display: block;
 }
+
 .cards-mobile-landscape {
   display: none;
 }	
+
 :root {
   --cards: 1;
   --cardHeight: calc(100vh - 66px);
   --cardTopPadding: 0px;
   --cardMargin: 4vw;
 }
+
 #services-cards-container-mobile-landscape {
   --cards: 8;
 }
@@ -31,45 +35,6 @@
 
 #blancec-cards-container {
   --cards: 8;
-}
-
-#card1-services-mobile-landscape {
-  --index: 1;
-  margin-top: 40px;
-}
-
-#card2-services-mobile-landscape {
-  --index: 2;
-  margin-top: 40px;
-}
-
-#card3-services-mobile-landscape {
-  --index: 3;
-  margin-top: 40px;
-}
-#card4-services-mobile-landscape {
-  --index: 4;
-  margin-top: 40px;
-}
-
-#card5-services-mobile-landscape {
-  --index: 5;
-  margin-top: 40px;
-}
-
-#card6-services-mobile-landscape {
-  --index: 6;
-  margin-top: 40px;
-}
-
-#card7-services-mobile-landscape {
-  --index: 7;
-  margin-top: 40px;
-}
-
-#card8-services-mobile-landscape {
-  --index: 8;
-  margin-top: 40px;
 }
 
 #card1-contact {
@@ -200,6 +165,7 @@
   padding-bottom: calc(var(--cards) * var(--cardTopPadding));
   margin-bottom: var(--cardMargin);   
 }
+
 .card {
   position: sticky;
   top: 66px;
@@ -209,8 +175,7 @@
 
 .card-body {
   display: grid; 
-  grid-template-areas: 
-    "left right"; 
+  grid-template-areas: "left right"; 
   grid-template-columns: 50% 50%; 
   height: var(--cardHeight); 
   color: #ffffff; 
@@ -218,6 +183,7 @@
   box-sizing: border-box;
   background-color: #000000;
 }
+
 #card2-background {
   background-image: url('../imagenes/background.png');
 }
@@ -231,18 +197,16 @@
   border-top: 1px solid white;
   margin-bottom: 20px;
 }
+
 .with-arrow {
   position: relative;
 }
 
 .left {
   grid-area: left; 
-
   padding-left: 50px;
   padding-right: 50px;
   padding-top: 0;
-  border-top: 1px solid white; 
-
 }
 
 .left2{
@@ -251,14 +215,16 @@
   padding: 50px;
   border-top: 1px solid white; 
 }
+
 .right {
   grid-area: right; 
-
   padding: 50px;
 }
+
 #card2 .right {
 padding-top: 0;
 }
+
 .right2 {
   grid-area: right; 
   background-color: #000000;
@@ -267,6 +233,7 @@ padding-top: 0;
   padding-top: 0;
   border-top: 1px solid white; 
 }
+
 .right-gif {
   grid-area: right; 
   background-color: #000000;
@@ -290,10 +257,8 @@ padding-top: 0;
   transform: translateY(0);
 }
 
-
-
-
 @media screen and (min-width: 2560px) and (orientation: landscape) {
+
   .right {
     padding-right: 200px;
     padding-left: 200px;
@@ -317,6 +282,7 @@ padding-top: 0;
     --cardHeight: calc(100vh - 100px);
   }
 }
+
 /* -------------------------Tablets Portrait------------------------------ */
 @media (max-width: 1024px) and (orientation: portrait) {
 
@@ -362,8 +328,6 @@ padding-top: 0;
   #cases {
     grid-template-rows: 30% 70%;
   }
-
-
 }
 
 @media (max-width: 750px) {
@@ -384,12 +348,9 @@ padding-top: 0;
     --cardHeight: calc(100vh - 50px);
   }
 
-
   .card {
     top: 50px;
   }
-
-
 
   #services {
     grid-template-rows: 40% 60%;
@@ -407,15 +368,11 @@ padding-top: 0;
     grid-template-rows: 25% 70%;
   }
 
-
-
   .right-gif {
     padding: 20px;
     border-top: 1px solid rgb(0, 0, 0); 
   }
 }
-
-
 
 @media screen and (max-width: 821px) and (min-width: 431px) and (orientation: portrait) {
   .left {
@@ -428,7 +385,6 @@ padding-top: 0;
     padding: 30px;
     padding-right: 40px;
   } 
-
 }
 
 @media screen and (max-height: 415px) and (orientation: landscape) {
@@ -452,8 +408,6 @@ padding-top: 0;
   #joblab-cards-container {
     --cardHeight: calc(100vh - 39px);
   }
-
-
 
   #services-cards-container-mobile-landscape{
     --cardHeight: calc(100vh - 39px);
@@ -516,7 +470,6 @@ padding-top: 0;
     padding-top: calc(var(--index) * var(--cardTopPadding));
     scroll-margin-top: 40px; 
   }
-
 }
 
 @media (max-width: 415px) and (orientation: portrait){
@@ -533,6 +486,5 @@ padding-top: 0;
   #cases{
     grid-template-rows: 30% 70%;
   }
-
 }
 

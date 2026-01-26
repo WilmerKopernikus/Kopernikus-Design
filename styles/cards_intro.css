@@ -32,14 +32,10 @@
   height: calc(100vh + 50px) !important;  /* Usa el mismo valor que top */
 }
 
-
-
 #card5 {
   --index: 5;
   margin-top: 66px;
 }
-
-
 
 .text-shadow {
   font-size: 120px;
